@@ -118,7 +118,7 @@ const GrowthOpportunites = () => {
             <button className="submit-button"
             onClick={(e) => {
                 e.preventDefault();
-                navigate('/persona');
+                navigate('/results');
             }}>Submit</button>
         </div>
     )

@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 const PersonaName = () => {
+
+    const navigate = useNavigate();
+
 
     return (
         <div className='persona-container'>
@@ -8,7 +13,11 @@ const PersonaName = () => {
 
             <input type='text' name='textbox' placeholder='Ex. Sasha Fierce'></input>
 
-            <button type='button'>Next</button>
+            <button type='button' 
+                onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/strengths');
+                }}>Next</button>
         </div>
     )
 }
