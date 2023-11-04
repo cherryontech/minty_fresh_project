@@ -96,11 +96,21 @@
     @include body_text;
 }
 
+@mixin input-field {
+    border-radius: 10px;
+    color: #515151;
+    padding: 1rem 1rem;
+    border: none;
+    background-color: #E5D5D1;
+    width: -webkit-fill-available;
+    @include body_text;
+}
+
 
 @mixin button {
     background-color: #F2994B;
     color: #212121;
-    padding: 0.3rem;
+    padding: 0.5rem;
     width: 95%;
     border: none;
     border-radius: 20px;

@@ -22,9 +22,16 @@ const GrowthOpportunites = () => {
 //TODO: fix checkboxes and do final styling
     return (
         <div className="growth">
-            <section>
-                <Header/>
-            </section>
+            <div className="growth__header">
+                <div className="growth__header-back">
+                </div>
+                <div className='growth__header-title'>
+                    <p>Externalize your impostor</p>
+                </div>
+            </div>
+            <div className="growth__progress"> 
+                <div className="growth__progress-bar"></div>
+            </div>
             <div className="growth_header-container">
                 <p className="step-text">Step 4</p>
                 <h1 className="title">Let's explore your opportunites for growth</h1>
