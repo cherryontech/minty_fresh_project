@@ -121,6 +121,22 @@
     }
 }
 
+@mixin homepage_button {
+    background-color: #F2994B;
+    color: #212121;
+    padding: 0.5rem;
+    width: 95%;
+    border: none;
+    border-radius: 20px;
+    @include desktop{
+        padding: 0.7rem;
+        width: 50%;
+        font-size: 1.3rem;
+    }
+}
+
+
+
 @mixin checkbox {
     background-color: #E5D5D1;
     border-radius: 10px;

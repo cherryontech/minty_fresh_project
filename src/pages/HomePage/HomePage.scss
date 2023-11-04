@@ -7,20 +7,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
-   
 }
 
 .homepage {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @include tablet {
+        flex-direction: row;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
     &_get-started-container {
         text-align: center;
         background-color: $light-grey;
         padding: 2rem;
+
         .mobile-logo{
             padding: .5rem;
+
+        }
+        .desktop-logo {
+            display: none;
         }
         h1{
             font-weight: lighter;
@@ -29,13 +39,26 @@
             padding: 1rem;
         }
         .get-started-btn {
-            @include button;
+            @include homepage_button;
         }
-
+        @include tablet {
+            padding: 5rem;
+        }
+        @include desktop {
+            // display: flex;
+            .mobile-logo {
+                display: none;
+            }
+            .desktop-logo {
+                display: block;
+            }
+        }
     }
     &_onboarding-container {
+        align-items: center;
         background-color: $light-yellow;
         padding: 1.5rem;
+
         .empower-yourself {
             text-align: center;
         }
@@ -44,6 +67,53 @@
         }
         p {
             padding: .5rem 0rem 2rem;
+        }
+        .top-stars, .bottom-stars {
+            display: none;
+        }
+
+        @include tablet {
+            border-radius: 2%;
+            margin: 4rem;
+            position: relative;
+
+            .top-stars {
+                display: block;
+                position: absolute;
+                top: -3rem;
+                right: -3rem;
+            }
+            .bottom-stars {
+                display: block;
+                position: absolute;
+                bottom: -3rem;
+                left: -3rem;
+            }
+        }
+
+        @include desktop {
+            border-radius: 2%;
+            margin: 6rem;
+            position: relative;
+
+            .top-stars {
+                display: block;
+                position: absolute;
+                top: -3rem;
+                right: -3rem;
+            }
+            .bottom-stars {
+                display: block;
+                position: absolute;
+                bottom: -3rem;
+                left: -3rem;
+            }
+        }
+    }
+
+    &_get-started-containter, &_onboarding-container {
+        @include desktop {
+            flex: 1;
         }
     }
 }
