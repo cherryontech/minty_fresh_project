@@ -8,7 +8,8 @@ const BackButton = () =>{
     return (
         <div>
             <button className="back__button">
-                <image className="back__arrow" src='../../assets/icons/icon.png'alt='back button'></image>
+                {/* <image className="back__arrow" alt='back button'></image> */}
+                <p> Push me</p>
             </button>
         </div>
     )

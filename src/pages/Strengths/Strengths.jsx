@@ -59,7 +59,7 @@ const Strengths = ({strengths, setStrengths}) => {
                             className="button__next" 
                             onClick={(e) => {
                                 e.preventDefault();
-                                navigate('/results');
+                                navigate('/futuregoals');
                             }}
                             > Next
                         </button>

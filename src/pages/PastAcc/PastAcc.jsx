@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const PastAccomplishments = () => {
+
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -18,9 +22,14 @@ const PastAccomplishments = () => {
             <input type='text' name='textbox' placeholder='Ex. I won a graphic design challenge posted by X 
             company blah blah blah blah blah.'></input>
 
-            <button type='button'>Next</button>
+            <button type='button' onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/strengths');
+                }}>Next</button>
         </div>
     )
 }
 
 export default PastAccomplishments;
+
+
