@@ -1,0 +1,49 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+   
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_get-started-container {
+        text-align: center;
+        background-color: $light-grey;
+        padding: 2rem;
+        .mobile-logo{
+            padding: .5rem;
+        }
+        h1{
+            font-weight: lighter;
+        }
+        p {
+            padding: 1rem;
+        }
+        .get-started-btn {
+            @include button;
+        }
+
+    }
+    &_onboarding-container {
+        background-color: $light-yellow;
+        padding: 1.5rem;
+        .empower-yourself {
+            text-align: center;
+        }
+        h2{
+            font-weight: lighter;
+        }
+        p {
+            padding: .5rem 0rem 2rem;
+        }
+    }
+}

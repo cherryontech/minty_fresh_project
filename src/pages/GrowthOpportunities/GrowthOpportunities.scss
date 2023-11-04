@@ -1,0 +1,52 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.growth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem .5rem;
+
+    &_header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+
+        .title{
+            @include headline_text
+        }
+    }
+    &_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &_question {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    
+        // @include body_text
+    }
+    &_question-text-area {
+        margin: .5rem;
+        @include form-field;
+    }
+    &_checkbox-label {
+        justify-content: space-between;
+    }
+    
+    .submit-button {
+        @include button;
+    }
+}
