@@ -1,6 +1,5 @@
 //MF1-15
 import "./FutureGoals.scss"
-import Header from '../../components/Header/Header';
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 

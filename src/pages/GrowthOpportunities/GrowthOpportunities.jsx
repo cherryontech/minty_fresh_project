@@ -1,7 +1,6 @@
 
 //MF1-13
 import "./GrowthOpportunities.scss"
-import Header from '../../components/Header/Header';
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 

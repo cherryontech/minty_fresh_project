@@ -48,14 +48,3 @@ const PersonaName = ({user, setUser}) => {
 
 export default PersonaName;
 
-{/* <div className='persona__header'>
-                <div className='persona__header-back'>
-                    <p> back button </p>
-                </div>
-                <div className='persona__header-title'>
-                    <p>Unleash your best self</p>
-                </div>
-                <div className="persona__header-progress"> 
-                    <div className="persona__header-progress-bar"></div>
-                </div>
-            </div> */}
