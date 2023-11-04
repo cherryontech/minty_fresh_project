@@ -114,6 +114,11 @@
     width: 95%;
     border: none;
     border-radius: 20px;
+    @include desktop{
+        padding: 0.7rem;
+        width: 13%;
+        font-size: 1.3rem;
+    }
 }
 
 @mixin checkbox {

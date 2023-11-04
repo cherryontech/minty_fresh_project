@@ -1,3 +1,6 @@
+@use '../src/styles/partials/mixins' as *;
+@use '../src/styles/partials/variables' as *;
+
 body {
   height: 100%;
   margin: 0;
@@ -38,6 +41,12 @@ footer{
   bottom: 0;
   width: 100%;
   justify-content: center;
+  @include desktop{
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+  }
+  
 }
 
 section{

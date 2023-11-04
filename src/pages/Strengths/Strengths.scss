@@ -19,35 +19,44 @@ textarea{
         padding-bottom: 1rem;
         padding-top: 1rem;
         padding-right: 5rem;
+        @include desktop{
+            justify-content: space-between;
+            padding-right: 4rem;
+            padding-left: 2rem;
+        }
         &-back{
             height: 1rem;
             width: 1rem;
             background-image: url('../../assets/icons/icon.png');
             background-color: transparent;
             border: none;
+            @include desktop{
+                background-size: cover;
+                height: 2rem;
+                width: 2rem;
+            }
         }
         &-title{
             @include body_text;
         }
-        &-progress {
-            height: 0.5rem;
-            width: 100%;
-            background-color: #D0D0D0;
-            &-bar{
-                height: 100%;
-                width: 20%;
-                background-color: #F5AB4B;
-            }
-        }
+        
     }
     &__progress {
         height: 0.4rem;
         width: 100%;
         background-color: #D0D0D0;
+        @include desktop{
+            height: 0.8rem;
+            border-radius: 5rem;
+            width: 85%;
+        }
             &-bar {
                 height: 100%;
                 width: 20%;
                 background-color: #F5AB4B;
+                @include desktop{
+                    border-radius: 5rem;
+                }
             }
             &-number{
                 padding-top: .5rem;
@@ -63,11 +72,16 @@ textarea{
         padding-top: .5rem;
         letter-spacing: .07rem;
         font-weight: normal;
+        @include desktop{
+            text-align: start;
+        }
     }
 
     &__form{
+        width: 100%;
         padding: 0rem .5rem;
         padding-top: .5rem;
+
         &-content{
             @include title_text;
             display: flex;
@@ -77,6 +91,10 @@ textarea{
             margin: 0.5rem;
             font-size: .9rem;
             letter-spacing: 0.02rem;
+            @include desktop{
+                padding-right: 48rem;
+                padding-left: 8rem;
+            }
         }
     }
 }
