@@ -9,5 +9,16 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+      monospace;
+}
+
+
+textarea {
+resize: none;
+}
+
+footer{
+position: absolute;
+bottom: 0;
+width: 100%;
 }
