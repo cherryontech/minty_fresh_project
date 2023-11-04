@@ -1,5 +1,5 @@
 import './Strengths.scss';
-import Header from '../../components/Header/Header';
+// import Header from '../../components/Header/Header';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -18,9 +18,16 @@ const Strengths = ({strengths, setStrengths}) => {
 
     return (
         <div className='strengths'>
-            <section> 
-                <Header/>
-            </section>
+            <div className="strengths__header">
+                <div className="strengths__header-back">
+                </div>
+                <div className='strengths__header-title'>
+                    <p>Unleash your best self</p>
+                </div>
+            </div>
+            <div className="strengths__progress"> 
+                <div className="strengths__progress-bar"></div>
+            </div>
             <p className="step__text"> Step 2 </p>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">

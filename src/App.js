@@ -15,6 +15,11 @@ import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
 
 function App() {
 
+  const [user, setUser] = useState({
+    name: ''
+  })
+
+
   // This is where the info from the strengths form will be stored (it is starting as empty strings and will be passed into different pages through props)
   const [strengths, setStrengths] = useState({
     compliments: '',
@@ -52,7 +57,10 @@ function App() {
           />
           <Route
             path="/personaname"
-            element={<PersonaName/>}
+            element={<PersonaName
+              user={user}
+              setUser={setUser}
+            />}
           />
 
           <Route 

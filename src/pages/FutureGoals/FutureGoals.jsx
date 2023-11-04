@@ -1,6 +1,5 @@
 //MF1-15
 import "./FutureGoals.scss"
-import Header from '../../components/Header/Header';
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 
@@ -29,12 +28,20 @@ const FutureGoals = () => {
 
     return (
         <div className="future-goals">
-            <section>
-                <Header/>
-            </section>
+            <div className="future__header">
+                    <div className="future__header-back">
+                    </div>
+                    <div className='future__header-title'>
+                        <p>Unleash your best self</p>
+                    </div>
+                </div>
+                <div className="future__progress"> 
+                    <div className="future__progress-bar"></div>
+                </div>
+            <p className='future__progress-number'>1/5</p>
             <div className="future-goals_header-container">
                 <p className="step-text">Step 4</p>
-                <h1 className="title">Let's see where you see yourself going</h1>
+                <h2 className="title">Let's see where you see yourself going</h2>
             </div>
             <form method="post" onSubmit={""}>
                 <div className="future-goals_form">

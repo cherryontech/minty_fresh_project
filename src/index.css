@@ -27,10 +27,17 @@ textarea {
 resize: none;
 }
 
+
+input {
+  resize: none;
+  }
+
 footer{
-position: absolute;
-bottom: 0;
-width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 section{
