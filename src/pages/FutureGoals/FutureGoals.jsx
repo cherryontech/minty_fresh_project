@@ -44,25 +44,25 @@ const FutureGoals = () => {
                 <h2 className="title">Let's see where you see yourself going</h2>
             </div>
             <form method="post" onSubmit={""}>
-                <div className="future-goals_form">
+                <div className="future-goals__form">
                 
-                    <label className="future-goals_question">
+                    <label className="future-goals__form-question">
                         <p>What job or role are you hoping to land?</p>
                         <textarea className="future-goals_question-text-area"
                         required
                         name="role-wanted"
                         placeholder="Ex. I'm actively looking to land a Game Illustrator position in a big corporation"/>
                     </label>
-                    <label className="future-goals_question">
+                    <label className="future-goals__form-question">
                         <p>Why do you want this job or role?</p>
                         <textarea className="future-goals_question-text-area"
                         required
                         name="why-this-role"
                         placeholder="Ex. This role would give me the oppotunity to reach many with my art and collaborate with other artists"/>
                     </label>
-                    <label className="future-goals_question"> 
+                    <label className="future-goals__form-question"> 
                         <p>What are the top 3 industries you see yourself working in?</p>
-                        <select className="future-goals_dropdown" 
+                        <select className="future-goals__form-dropdown" 
                         name="choice-1" 
                         value={selectedOption1} 
                         onChange={handleSelectChange1}>
@@ -70,7 +70,7 @@ const FutureGoals = () => {
                             <option>Option 2</option>
                             <option>Option 3</option>
                         </select>
-                        <select className="future-goals_dropdown" 
+                        <select className="future-goals__form-dropdown" 
                         name="choice-2" 
                         value={selectedOption2} 
                         onChange={handleSelectChange2}>
@@ -78,7 +78,7 @@ const FutureGoals = () => {
                             <option>Option 2</option>
                             <option>Option 3</option>
                         </select>
-                        <select className="future-goals_dropdown" 
+                        <select className="future-goals__form-dropdown" 
                         name="choice-3" 
                         value={selectedOption3} 
                         onChange={handleSelectChange3}>

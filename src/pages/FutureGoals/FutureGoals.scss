@@ -8,44 +8,56 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+//TODO: cleanup styling, fix header, and make it work better
 .future-goals {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     padding: 1rem .5rem;
 
+    @include tablet {
+
+    }
+
+    @include desktop {
+
+    }
+
     &_header-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
         padding-top: 1rem;
 
         .title{
             @include headline_text;
         }
     }
-    &_form {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        align-items: center;
-    }
-    &_question {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        width: 100%;
+    &__form {
+
+        &-question {
+
+            padding: 1rem;
+            width: 100%;
     
-        // @include body_text
+            @include desktop {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        &-dropdown {
+            @include dropdown;
+        }
+        
     }
+ 
     &_question-text-area {
         margin: .5rem;
         @include form-field;
     }
-    &_dropdown {
-        @include dropdown;
-    }
+
     
     .next-button {
         @include button;
