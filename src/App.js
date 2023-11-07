@@ -48,6 +48,8 @@ function App() {
             <Results
               strengths={strengths}
               setStrengths={setStrengths}
+              user={user}
+              setUser={setUser}
             />
           }
         /> 

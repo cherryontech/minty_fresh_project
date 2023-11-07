@@ -5,7 +5,7 @@ import './Results.scss';
 
 // import InterviewPrep from "../InterviewPrep/InterviewPrep";
 
-const Results = ({strengths, setStrengths}) => {
+const Results = ({strengths, setStrengths, user, setUser}) => {
     const [page, setPage] = useState('persona'); // Set the initial page to 'persona'
 
     const handlePageChange = (newPage) => {
@@ -19,6 +19,8 @@ const Results = ({strengths, setStrengths}) => {
                 return <Persona 
                             strengths={strengths} 
                             setStrengths={setStrengths}
+                            user={user}
+                            setUser={setUser}
                         />;
             case 'gremlin':
                 return <Gremlin />;
@@ -28,6 +30,8 @@ const Results = ({strengths, setStrengths}) => {
                 return <Persona 
                             strengths={strengths} 
                             setStrengths={setStrengths}
+                            user={user}
+                            setUser={setUser}
                         />;;
         }
     };

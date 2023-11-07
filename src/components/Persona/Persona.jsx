@@ -1,14 +1,14 @@
 import './Persona.scss';
 
 
-const Persona = ({strengths, setStrengths}) => {
+const Persona = ({strengths, setStrengths, user, setUser}) => {
 
     const { compliments, activities, methodologies } = strengths 
 
     return (
         <div className='persona'>
             <div className='persona__card'>
-                    <p className="persona__name">username</p>
+                    <p className="persona__name">{user}</p>
                     <p className="persona__job">jr front end dev</p>
                 <div className='persona__avatar'></div>
                 <div className='persona__content'>
