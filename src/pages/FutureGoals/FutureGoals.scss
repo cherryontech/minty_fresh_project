@@ -1,70 +1,17 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+textarea{
+    @include form-field;
+    margin-top: .5rem;
 }
 
 
 //TODO: cleanup styling, fix header, and make it work better
-.future-goals {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    padding: 1rem .5rem;
-
-    @include tablet {
-
-    }
-
-    @include desktop {
-
-    }
-
-    &_header-container {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        padding-top: 1rem;
-
-        .title{
-            @include headline_text;
-        }
-    }
-    &__form {
-
-        &-question {
-
-            padding: 1rem;
-            width: 100%;
-    
-            @include desktop {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        &-dropdown {
-            @include dropdown;
-        }
-        
-    }
- 
-    &_question-text-area {
-        margin: .5rem;
-        @include form-field;
-    }
-
-    
-    .next-button {
-        @include button;
-    }
-}
-
-.future{
+.future {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__header{
         display: flex;
         justify-content: space-around;
@@ -107,4 +54,71 @@
                 @include label_text;
             }
         }
+
+
+    &__title{
+            @include headline_text;
+            text-align: center;
+            width: 81%;
+            padding-bottom: .5rem;
+            padding-top: .5rem;
+            letter-spacing: .07rem;
+            font-weight: normal;
+
+            @include desktop {
+                text-align: start;
+            }
+        }
+
+    &__step-text{
+            @include label_text;
+            text-align: center;
+        }
+
+    &__form {
+        width: 100%;
+        padding: 0rem .5rem;
+        padding-top: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-question {
+            @include title_text;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0.5rem 0rem;
+            margin: 0.5rem;
+            font-size: .9rem;
+            letter-spacing: 0.02rem;
+            width: 100%;
+            @include desktop{
+                padding-right: 60rem;
+                padding-left: 8rem;
+                
+            }
+        }
+
+        &-dropdown {
+            @include dropdown;
+
+            @include desktop {
+                width: 70%
+            }
+        }
+
+        
+    }
+    footer{
+        position: relative;
+    }
+    .next-button {
+        @include button;
+    }
+    
+
 }
+
+
+
