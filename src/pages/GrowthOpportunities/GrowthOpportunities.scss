@@ -1,13 +1,13 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+// *{
+//     background-color: $light-yellow;
+//     background-size: cover 
+// }
+textarea {
+    @include form-field;
 }
-
 .growth {
     display: flex;
     flex-direction: column;
@@ -57,39 +57,62 @@
             }
         }
 
-    &_header-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1rem;
+    &__title{
+        @include headline_text;
+        text-align: center;
+        width: 81%;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+        letter-spacing: .07rem;
+        font-weight: normal;
 
-        .title{
-            @include headline_text
+        @include desktop {
+            text-align: start;
         }
     }
-    &_form {
+
+    &__step-text{
+            @include label_text;
+            text-align: center;
+        }
+
+    &__form {
+        width: 100%;
+        padding: 0rem .5rem;
+        padding-top: .5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    &_question {
+    &__question {
+        @include title_text;
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        align-items: center;
+        padding: 0.5rem 0rem;
+        margin: 0.5rem;
+        font-size: .9rem;
+        letter-spacing: 0.02rem;
         width: 100%;
-        justify-content: space-between;
-    
-        // @include body_text
+        @include desktop{
+            @include title_text;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0.5rem 0rem;
+            margin: 0.5rem;
+            font-size: .9rem;
+            letter-spacing: 0.02rem;
+            width: 100%;
+        }
     }
-    &_question-text-area {
-        margin: .5rem;
-        @include form-field;
-    }
-    &_checkbox-label {
-        justify-content: space-between;
-    }
-    
-    .submit-button {
+
+    .button__submit {
         @include button;
     }
+
+    footer{
+        margin-bottom: 1rem;
+    }
 }
+
