@@ -111,14 +111,11 @@ textarea{
         
     }
     footer{
-        position: relative;
+        // position: relative;
+        margin-bottom: 1rem;
+
     }
-    .next-button {
+    .button__next {
         @include button;
     }
-    
-
 }
-
-
-

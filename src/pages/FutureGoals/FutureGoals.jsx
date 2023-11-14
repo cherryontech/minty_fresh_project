@@ -94,7 +94,7 @@ const FutureGoals = () => {
             </form>
 
             <footer>
-            <button className="next-button"
+            <button className="button__next"
                     onClick={(e) => {
                         e.preventDefault();
                         navigate('/growth');
