@@ -20,13 +20,15 @@ input{
         width: 100%;
         padding-bottom: 1rem;
         padding-top: 1rem;
-        padding-right: 5rem;
+        padding-right: 5.6rem;
+        align-items: center;
         &-back{
-            height: 1rem;
-            width: 1rem;
             background-image: url('../../assets/icons/icon.png');
+            height: 1.5rem;
+            width: 1.5rem;
             background-color: transparent;
             border: none;
+            background-size: cover;
         }
         &-title{
             @include body_text;

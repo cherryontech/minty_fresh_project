@@ -29,8 +29,13 @@ const FutureGoals = () => {
     return (
         <div className="future">
             <div className="future__header">
-                    <div className="future__header-back">
-                    </div>
+                <button className="future__header-back"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/strengths')
+                }}>
+                    <image src='../../assets/icons/icon.png'></image>
+                </button>
                     <div className='future__header-title'>
                         <p>Unleash your best self</p>
                     </div>
@@ -38,7 +43,7 @@ const FutureGoals = () => {
                 <div className="future__progress"> 
                     <div className="future__progress-bar"></div>
                 </div>
-            <p className="future__step-text">Step 4</p>
+            <p className='future__progress-number'>4/5</p>
             <h2 className="future__title">Let's picture where you want to go</h2>
 
             <form className="future__form">

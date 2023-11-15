@@ -19,8 +19,13 @@ const Strengths = ({strengths, setStrengths}) => {
     return (
         <div className='strengths'>
             <div className="strengths__header">
-                <div className="strengths__header-back">
-                </div>
+                    <button className="strengths__header-back"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/personaname')
+                        }}>
+                        <image src='../../assets/icons/icon.png'></image>
+                    </button>
                 <div className='strengths__header-title'>
                     <p>Unleash your best self</p>
                 </div>
@@ -28,7 +33,7 @@ const Strengths = ({strengths, setStrengths}) => {
             <div className="strengths__progress"> 
                 <div className="strengths__progress-bar"></div>
             </div>
-            <p className="step__text"> Step 2 </p>
+            <p className="step__text">2/5</p>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">
                     <label className="strengths__form-content">
@@ -42,7 +47,7 @@ const Strengths = ({strengths, setStrengths}) => {
                         />
                     </label>
                     <label className="strengths__form-content">
-                        What activities do you enjoy and have a lot of practice doing?
+                        What activities do you enjoy practicing?
                         <textarea 
                             type="text"
                             required

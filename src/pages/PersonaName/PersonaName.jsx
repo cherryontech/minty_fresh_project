@@ -5,6 +5,7 @@ const PersonaName = ({user, setUser}) => {
 
     const navigate = useNavigate();
     const handleChange = (e) => {
+        console.log('This is name')
         setUser(val => ({...val, [e.target.name]: e.target.value}
         )) 
     };
@@ -12,8 +13,13 @@ const PersonaName = ({user, setUser}) => {
     return (
         <div className='persona__container'>
             <div className="persona__header">
-                <div className="persona__header-back">
-                </div>
+                <button className="persona__header-back"
+                onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/personaname')
+                }}>
+                    <image src='../../assets/icons/icon.png'></image>
+                </button>
                 <div className='persona__header-title'>
                     <p>Unleash your best self</p>
                 </div>
