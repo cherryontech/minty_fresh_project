@@ -5,6 +5,7 @@ const PersonaName = ({user, setUser}) => {
 
     const navigate = useNavigate();
     const handleChange = (e) => {
+        console.log('This is name')
         setUser(val => ({...val, [e.target.name]: e.target.value}
         )) 
     };
