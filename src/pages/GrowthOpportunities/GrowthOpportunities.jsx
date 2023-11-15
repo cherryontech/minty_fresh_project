@@ -1,22 +1,22 @@
 
 //MF1-13
 import "./GrowthOpportunities.scss"
-import React, {useState} from "react";
+// import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 
 //TODO: finish the dropdown and add styling
 const GrowthOpportunites = () => {
-    const [isChecked, setIsChecked] = useState(false);
+    // const [isChecked, setIsChecked] = useState(false);
 
     //array to work on checkbox functionality later
 
     const navigate = useNavigate();
 
     //sets the selected option from the dropdowns
-    const handleCheckboxChange = () => {
+    // const handleCheckboxChange = () => {
         
-        setIsChecked(!isChecked);
-    };
+    //     setIsChecked(!isChecked);
+    // };
 
 //TODO: fix checkboxes and do final styling
     return (
@@ -37,23 +37,24 @@ const GrowthOpportunites = () => {
                 <div className="growth__progress-bar"></div>
             </div>
             <p className='growth__progress-number'>5/5</p>
-            <div className="growth_header-container">
-                <h1 className="title">Let's explore your opportunites for growth</h1>
-            </div>
-            <form method="post" onSubmit={""}>
-                <div className="growth_form">
-                
-                    <label className="growth_question">
-                        <p>What's your gremlin name?</p>
-                        <textarea className="growth_question-text-area"
-                        required
-                        name="gremlin-name"
-                        placeholder="Ex. Debbie Downer"/>
+                <p className="growth__step-text">Step 4</p>
+                <h1 className="growth__title">Let's explore your opportunites for growth</h1>
+            <form className="growth__form">
+                    <label className="growth__question">
+                        <p>
+                            What's your gremlin name?
+                        </p>
+                        <textarea 
+                            type="text"
+                            required
+                            name="gremlin-name"
+                            placeholder="Ex. Debbie Downer"
+                        />
                     </label>
-                    <label className="growth_question">
+                    <label className="growth__question">
                     What are some things you're working to improve on?<br/>
-
-                            <label classname="growth_checkbox-label">Communication
+                        <p>THIS WILL BE A COMPONENT</p>
+                            {/* <label classname="growth_checkbox-label">Communication
                                 <input type="checkbox" 
                                 className="growth_checkbox"
                                 id="communication"
@@ -111,26 +112,27 @@ const GrowthOpportunites = () => {
                                 value="other"
                                 checked={isChecked}
                                 onChange={setIsChecked}/>
-                            </label>
+                            </label> */}
 
                     </label>
-                    <label className="growth_question">
+                    <label className="growth__question">
                         <p>How does your imposter syndrome show up for you?</p>
-                        <textarea className="growth_question-text-area"
-                        required
-                        name="why-this-role"
-                        placeholder="Ex. It ususally shows up when others finish work tasks faster than I do because I end up questioning if I'm good enough to do the job."/>
+                        <textarea 
+                            type="text"
+                            required
+                            name="why-this-role"
+                            placeholder="Ex. It ususally shows up when others finish work tasks faster than I do because I end up questioning if I'm good enough to do the job."
+                        />
                     </label>
-
-                </div>
-            
             </form>
-            {/* set to persona page at the moment */}
-            <button className="submit-button"
-            onClick={(e) => {
-                e.preventDefault();
-                navigate('/results');
-            }}>Submit</button>
+            <footer>
+                <button className="button__submit"
+                onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/results');
+                }}>Submit</button>
+
+            </footer>
         </div>
     )
 }

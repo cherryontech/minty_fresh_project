@@ -1,3 +1,4 @@
+import './PastAcc.scss';
 import { useNavigate } from "react-router-dom";
 
 const PastAccomplishments = () => {

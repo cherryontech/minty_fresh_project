@@ -27,7 +27,7 @@ const FutureGoals = () => {
     };
 
     return (
-        <div className="future-goals">
+        <div className="future">
             <div className="future__header">
                 <button className="future__header-back"
                     onClick={(e) => {
@@ -44,60 +44,68 @@ const FutureGoals = () => {
                     <div className="future__progress-bar"></div>
                 </div>
             <p className='future__progress-number'>4/5</p>
-            <div className="future-goals_header-container">
-                <h2 className="title">Let's see where you see yourself going</h2>
-            </div>
-            <form method="post" onSubmit={""}>
-                <div className="future-goals_form">
-                
-                    <label className="future-goals_question">
+            <h2 className="future__title">Let's picture where you want to go</h2>
+
+            <form className="future__form">
+                    <label className="future__form-question">
                         <p>What job or role are you hoping to land?</p>
-                        <textarea className="future-goals_question-text-area"
+                        <textarea
+                        type="text"
                         required
                         name="role-wanted"
                         placeholder="Ex. I'm actively looking to land a Game Illustrator position in a big corporation"/>
                     </label>
-                    <label className="future-goals_question">
+                    <label className="future__form-question">
                         <p>Why do you want this job or role?</p>
-                        <textarea className="future-goals_question-text-area"
+                        <textarea 
+                        type="text"
                         required
                         name="why-this-role"
                         placeholder="Ex. This role would give me the oppotunity to reach many with my art and collaborate with other artists"/>
                     </label>
-                    <label className="future-goals_question"> 
+                    <label className="future__form-question"> 
                         <p>What are the top 3 industries you see yourself working in?</p>
-                        <select className="future-goals_dropdown" 
+                        <select className="future__form-dropdown" 
                         name="choice-1" 
                         value={selectedOption1} 
                         onChange={handleSelectChange1}>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
+                            <option value="" disabled selected>Select Industry</option>
+                            <option value="">Software Engineer</option>
+                            <option value="">Designer</option>
+                            <option value="">Product Manager</option>
                         </select>
-                        <select className="future-goals_dropdown" 
+                        <select className="future__form-dropdown" 
                         name="choice-2" 
                         value={selectedOption2} 
                         onChange={handleSelectChange2}>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
+                            <option value="" disabled selected>Select Industry</option>
+                            <option value="">Software Engineer</option>
+                            <option value="">Designer</option>
+                            <option value="">Product Manager</option>
                         </select>
-                        <select className="future-goals_dropdown" 
+                        <select className="future__form-dropdown" 
                         name="choice-3" 
                         value={selectedOption3} 
                         onChange={handleSelectChange3}>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
+                            <option value="" disabled selected>Select Industry</option>
+                            <option value="">Software Engineer</option>
+                            <option value="">Designer</option>
+                            <option value="">Product Manager</option>
                         </select>
                     </label>
-                </div>
+            
+
+
             </form>
-            <button className="next-button"
-            onClick={(e) => {
-                e.preventDefault();
-                navigate('/growth');
-            }}>Next</button>
+
+            <footer>
+            <button className="button__next"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/growth');
+                    }}>Next</button>
+            </footer>
+
         </div>
     )
 }
