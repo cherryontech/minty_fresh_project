@@ -22,8 +22,13 @@ const GrowthOpportunites = () => {
     return (
         <div className="growth">
             <div className="growth__header">
-                <div className="growth__header-back">
-                </div>
+                <button className="growth__header-back"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/futuregoals')
+                }}>
+                    <image src='../../assets/icons/icon.png'></image>
+                </button>
                 <div className='growth__header-title'>
                     <p>Externalize your impostor</p>
                 </div>
@@ -31,8 +36,8 @@ const GrowthOpportunites = () => {
             <div className="growth__progress"> 
                 <div className="growth__progress-bar"></div>
             </div>
+            <p className='growth__progress-number'>5/5</p>
             <div className="growth_header-container">
-                <p className="step-text">Step 4</p>
                 <h1 className="title">Let's explore your opportunites for growth</h1>
             </div>
             <form method="post" onSubmit={""}>

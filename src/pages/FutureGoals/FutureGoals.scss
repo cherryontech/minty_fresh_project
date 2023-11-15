@@ -59,40 +59,33 @@
         width: 100%;
         padding-bottom: 1rem;
         padding-top: 1rem;
-        padding-right: 5rem;
+        padding-right: 5.6rem;
+        align-items: center;
         &-back{
-            height: 1rem;
-            width: 1rem;
             background-image: url('../../assets/icons/icon.png');
+            height: 1.5rem;
+            width: 1.5rem;
             background-color: transparent;
             border: none;
+            background-size: cover;
         }
         &-title{
             @include body_text;
-        }
-        &-progress {
-            height: 0.5rem;
-            width: 100%;
-            background-color: #D0D0D0;
-            &-bar{
-                height: 100%;
-                width: 20%;
-                background-color: #F5AB4B;
-            }
         }
     }
     &__progress {
         height: 0.4rem;
         width: 100%;
         background-color: #D0D0D0;
-            &-bar {
-                height: 100%;
-                width: 20%;
-                background-color: #F5AB4B;
-            }
-            &-number{
-                padding-top: .5rem;
-                @include label_text;
-            }
+        &-bar {
+            height: 100%;
+            width: 20%;
+            margin-left: 40%;
+            background-color: #F5AB4B;
         }
+        &-number{
+            padding-top: .5rem;
+            @include label_text;
+        }
+    }
 }

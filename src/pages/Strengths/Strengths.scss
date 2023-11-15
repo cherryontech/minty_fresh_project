@@ -2,8 +2,15 @@
 @use '../../styles/partials/variables' as *;
 
 textarea{
-    @include form-field;
-    margin-top: .5rem;
+    border-radius: 10px;
+    color: #515151;
+    padding: 1rem;
+    border: none;
+    height: 6rem;
+    background-color: #E5D5D1;
+    width: -webkit-fill-available;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 
@@ -18,18 +25,22 @@ textarea{
         width: 100%;
         padding-bottom: 1rem;
         padding-top: 1rem;
-        padding-right: 5rem;
+        padding-right: 5.6rem;
+        align-items: center;
+
+        
         @include desktop{
             justify-content: space-between;
             padding-right: 4rem;
             padding-left: 2rem;
         }
         &-back{
-            height: 1rem;
-            width: 1rem;
             background-image: url('../../assets/icons/icon.png');
+            height: 1.5rem;
+            width: 1.5rem;
             background-color: transparent;
             border: none;
+            background-size: cover;
             @include desktop{
                 background-size: cover;
                 height: 2rem;
@@ -52,10 +63,12 @@ textarea{
         }
             &-bar {
                 height: 100%;
-                width: 20%;
                 background-color: #F5AB4B;
+                width: 20%;
+                margin-left: 20%;
                 @include desktop{
                     border-radius: 5rem;
+                    
                 }
             }
             &-number{
