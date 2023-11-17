@@ -3,6 +3,7 @@
 import "./GrowthOpportunities.scss"
 // import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import Skills from '../../components/Skills/Skills'
 
 //TODO: finish the dropdown and add styling
 const GrowthOpportunites = () => {
@@ -48,6 +49,10 @@ const GrowthOpportunites = () => {
                     <label className="growth__question">
                     What are some things you're working to improve on?<br/>
                         <p>THIS WILL BE A COMPONENT</p>
+                        <div>
+                            <Skills />
+                        </div>
+
                             {/* <label classname="growth_checkbox-label">Communication
                                 <input type="checkbox" 
                                 className="growth_checkbox"
