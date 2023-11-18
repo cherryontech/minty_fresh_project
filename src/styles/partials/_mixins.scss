@@ -158,6 +158,15 @@
     @include body_text;
 }
 
+@mixin level_dropdown {
+    border-radius: 10px;
+    color: #515151;
+    padding: .9rem;
+    border: none;
+    background-color: #E5D5D1;
+    @include body_text;
+}
+
 
 //////////// PADDING FOR PAGES ////////
 

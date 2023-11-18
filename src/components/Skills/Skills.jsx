@@ -1,6 +1,7 @@
 import './Skills.scss';
 
-const Skills = (props) => {
+
+const Skills = () => {
     
 
     return (
@@ -8,17 +9,15 @@ const Skills = (props) => {
             <form className="skills__form">
                 <input 
                 type='text'
-                className='skills__input'
+                className='text_input'
                 ></input>
-
-                <select>
+                <select className="dropdown">
                     <option>Option 1</option>
                 </select>
-
+                <button>delete</button>
             </form>
-
-                
         </div>
+
     )
 };
 

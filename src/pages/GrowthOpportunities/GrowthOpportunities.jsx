@@ -1,9 +1,9 @@
-
 //MF1-13
-import "./GrowthOpportunities.scss"
+import "./GrowthOpportunities.scss";
 // import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import Skills from '../../components/Skills/Skills'
+import Skills from '../../components/Skills/Skills';
+import SkillsLabel from '../../components/SkillsLabel/SkillsLabel';
 
 //TODO: finish the dropdown and add styling
 const GrowthOpportunites = () => {
@@ -50,6 +50,11 @@ const GrowthOpportunites = () => {
                     What are some things you're working to improve on?<br/>
                         <p>THIS WILL BE A COMPONENT</p>
                         <div>
+                            <SkillsLabel 
+                            text_input="Skill" 
+                            level="Skill Level"
+                            />
+                            <Skills />
                             <Skills />
                         </div>
 
