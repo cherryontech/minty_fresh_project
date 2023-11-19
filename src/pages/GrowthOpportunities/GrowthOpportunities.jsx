@@ -49,12 +49,13 @@ const GrowthOpportunites = () => {
                     </label>
                     <label className="growth__question">
                     What are some things you're working to improve on?<br/>
-                        <p>THIS WILL BE A COMPONENT</p>
-                        <div>
-                            <SkillsLabel 
-                            text_input="Skill" 
-                            level="Skill Level"
-                            />
+                        <div className="skills-component">
+                            <div className="skills-label">
+                                <SkillsLabel 
+                                text_input="Skill" 
+                                level="Skill Level"
+                                />
+                            </div>
                             <Skills />
                             <Skills />
                             <AddRowButton />

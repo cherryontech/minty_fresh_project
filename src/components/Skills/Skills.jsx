@@ -1,4 +1,5 @@
 import './Skills.scss';
+import deleteIcon from '../../assets/icons/Delete.png'
 
 
 const Skills = () => {
@@ -18,7 +19,11 @@ const Skills = () => {
                     <option>Proficient</option>
                     <option>Expert</option>
                 </select>
-                <button>delete</button>
+                <button>
+                    <img className='delete-icon' 
+                    src={deleteIcon} 
+                    alt='Delete'/>
+                </button>
             </form>
         </div>
 
