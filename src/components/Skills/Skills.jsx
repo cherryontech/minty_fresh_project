@@ -10,9 +10,13 @@ const Skills = () => {
                 <input 
                 type='text'
                 className='text_input'
+                placeholder='Ex. Java'
                 ></input>
                 <select className="dropdown">
-                    <option>Option 1</option>
+                    <option>Beginner</option>
+                    <option>Junior</option>
+                    <option>Proficient</option>
+                    <option>Expert</option>
                 </select>
                 <button>delete</button>
             </form>

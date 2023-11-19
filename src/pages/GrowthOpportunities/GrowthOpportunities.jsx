@@ -4,6 +4,7 @@ import "./GrowthOpportunities.scss";
 import { useNavigate } from 'react-router-dom';
 import Skills from '../../components/Skills/Skills';
 import SkillsLabel from '../../components/SkillsLabel/SkillsLabel';
+import AddRowButton from '../../components/AddRowButton/AddRowButton';
 
 //TODO: finish the dropdown and add styling
 const GrowthOpportunites = () => {
@@ -56,6 +57,7 @@ const GrowthOpportunites = () => {
                             />
                             <Skills />
                             <Skills />
+                            <AddRowButton />
                         </div>
 
                             {/* <label classname="growth_checkbox-label">Communication
