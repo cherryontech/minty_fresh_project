@@ -14,10 +14,10 @@ const Skills = () => {
                 placeholder='Ex. Java'
                 ></input>
                 <select className="dropdown">
-                    <option>Beginner</option>
-                    <option>Junior</option>
-                    <option>Proficient</option>
-                    <option>Expert</option>
+                    <option value=''>Beginner</option>
+                    <option value=''>Junior</option>
+                    <option value=''>Proficient</option>
+                    <option value=''>Expert</option>
                 </select>
                 <button>
                     <img className='delete-icon' 
