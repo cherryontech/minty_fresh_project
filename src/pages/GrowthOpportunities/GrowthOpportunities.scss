@@ -102,9 +102,20 @@ textarea {
         }
     }
 
+    .skills-label{
+        margin-bottom: .5rem;
+        margin-left: 0.5rem;
+    }
+
+    .skills-component {
+        margin-top: 1rem;
+
+    }
+
     .button__submit {
         @include button;
     }
+
 
     footer{
         margin-bottom: 1rem;

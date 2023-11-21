@@ -1,8 +1,10 @@
-
 //MF1-13
-import "./GrowthOpportunities.scss"
+import "./GrowthOpportunities.scss";
 // import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import Skills from '../../components/Skills/Skills';
+import SkillsLabel from '../../components/SkillsLabel/SkillsLabel';
+import AddRowButton from '../../components/AddRowButton/AddRowButton';
 
 //TODO: finish the dropdown and add styling
 const GrowthOpportunites = () => {
@@ -53,7 +55,18 @@ const GrowthOpportunites = () => {
                     </label>
                     <label className="growth__question">
                     What are some things you're working to improve on?<br/>
-                        <p>THIS WILL BE A COMPONENT</p>
+                        <div className="skills-component">
+                            <div className="skills-label">
+                                <SkillsLabel 
+                                text_input="Skill" 
+                                level="Skill Level"
+                                />
+                            </div>
+                            <Skills />
+                            <Skills />
+                            <AddRowButton />
+                        </div>
+
                             {/* <label classname="growth_checkbox-label">Communication
                                 <input type="checkbox" 
                                 className="growth_checkbox"
