@@ -14,6 +14,8 @@ const GrowthOpportunites = () => {
 
     const navigate = useNavigate();
 
+    // const [data, setData]
+
     //sets the selected option from the dropdowns
     // const handleCheckboxChange = () => {
         
@@ -65,6 +67,12 @@ const GrowthOpportunites = () => {
                             <Skills />
                             <Skills />
                             <AddRowButton />
+
+                            
+                        </div>
+
+                        <div>
+
                         </div>
 
                             {/* <label classname="growth_checkbox-label">Communication
