@@ -1,28 +1,43 @@
 //MF1-13
 import "./GrowthOpportunities.scss";
-// import React, {useState} from "react";
+import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import Skills from '../../components/Skills/Skills';
-import SkillsLabel from '../../components/SkillsLabel/SkillsLabel';
-import AddRowButton from '../../components/AddRowButton/AddRowButton';
+import deleteIcon from '../../assets/icons/delete.png'
+import backButton from '../../assets/icons/icon.png'
 
-//TODO: finish the dropdown and add styling
+
+//Had to comment out the "required" for the text fields outside of the component
+//Changed the <image> tag in the header because I was getting an error in inspect
+
+//TODO: pass text field info, fix the delete to only delete the one selected
 const GrowthOpportunites = () => {
-    // const [isChecked, setIsChecked] = useState(false);
 
-    //array to work on checkbox functionality later
+    //growth skills to pass onto profile
+    const [skillsList, setSkillsList] = useState([{skills: "", level: ""}]);
 
     const navigate = useNavigate();
 
-    // const [data, setData]
+    //adds row when add row button selected
+    const handleSkillsAdd = () => {
+        setSkillsList([...skillsList, {skills: "", level: ""}]);
+    };
+    
+    //removes the row when delete selected
+    const handleSkillsRemove = (index) => {
+        var list = [...skillsList];
+        list.splice(index, 1);
+        setSkillsList(list);
+    }
 
-    //sets the selected option from the dropdowns
-    // const handleCheckboxChange = () => {
-        
-    //     setIsChecked(!isChecked);
-    // };
+    //updates array with inputs
+    const handleSkillChange = (e, index) => {
+        const {name, value} = e.target;
+        const list = [...skillsList];
+        list[index][name] = value;
+        setSkillsList(list);
+    }
 
-//TODO: fix checkboxes and do final styling
+
     return (
         <div className="growth">
             <div className="growth__header">
@@ -31,7 +46,7 @@ const GrowthOpportunites = () => {
                         e.preventDefault();
                         navigate('/futuregoals')
                 }}>
-                    <image src='../../assets/icons/icon.png'></image>
+                    <img src={backButton} alt="back button"/>
                 </button>
                 <div className='growth__header-title'>
                     <p>Externalize your impostor</p>
@@ -41,106 +56,95 @@ const GrowthOpportunites = () => {
                 <div className="growth__progress-bar"></div>
             </div>
             <p className='growth__progress-number'>5/5</p>
-                <p className="growth__step-text">Step 4</p>
                 <h1 className="growth__title">Let's explore your opportunites for growth</h1>
             <form className="growth__form">
                     <label className="growth__question">
                         <p>
-                            What's your gremlin name?
+                            How does your impostor syndrome show up?
                         </p>
+                        <h6>IF YOU HAVE MORE THAN ONE RESPONE, PLEASE SEPARATE WITH COMMAS</h6>
                         <textarea 
                             type="text"
-                            required
-                            name="gremlin-name"
-                            placeholder="Ex. Debbie Downer"
+                            // required
+                            name="impostor-symptom"
+                            placeholder="Ex. I question if I`m actually qualified to do the job, I compare myself to others when they get tasks done faster than I do."
                         />
                     </label>
                     <label className="growth__question">
                     What are some things you're working to improve on?<br/>
+                    <h6>PLEASE LIMIT YOUR RESPONSE TO 5 GROWTH AREAS</h6>
                         <div className="skills-component">
                             <div className="skills-label">
-                                <SkillsLabel 
-                                text_input="Skill" 
-                                level="Skill Level"
-                                />
+                                <label className="text-label">
+                                    Growth Area
+                                </label>
+                                <label className="dropdown-label">
+                                    Skills Level
+                                </label>
                             </div>
-                            <Skills />
-                            <Skills />
-                            <AddRowButton />
+                
+                {skillsList.map((singleSkill, index) => (
+                <div key={index} className='skills-array'>
 
-                            
+                    <div className='skills__input'>
+
+                        <input 
+                            type='text'
+                            className='text_input'
+                            name='skills'
+                            id='skills'
+                            placeholder='Ex. Java'
+                            value={singleSkill.skills}
+                            onChange={(e) => handleSkillChange(e, index)}
+                            ></input>
+                            <select className="dropdown"
+                                id='level'
+                                name='level'
+                                value={singleSkill.level}
+                                onChange={(e) => handleSkillChange(e, index)}>
+                                <option value="">
+                                    Select an Option:
+                                </option>
+                                <option value="Beginner">
+                                    Beginner
+                                </option>
+                                <option value="Proficient">
+                                    Proficient
+                                </option>
+                                <option value="Expert">
+                                    Expert
+                                </option>
+                            </select>
+                            {skillsList.length > 1 && (
+                                <button>
+                                    <img className='delete-icon' 
+                                    src={deleteIcon} 
+                                    alt='Delete'
+                                    onClick = {() => handleSkillsRemove(index)}/>
+                                </button>
+                            )}
+                        </div>
+            
+                            {skillsList.length - 1 === index && skillsList.length < 5 && (
+                                <div className="add-row">
+                                    <button type="button" className=".button__add-row"
+                                    onClick={handleSkillsAdd}>+ Add Row</button>
+                                </div>
+                                )}
+                </div>
+
+           ))}             
+
                         </div>
 
-                        <div>
-
-                        </div>
-
-                            {/* <label classname="growth_checkbox-label">Communication
-                                <input type="checkbox" 
-                                className="growth_checkbox"
-                                id="communication"
-                                name="growth"
-                                value="communication"
-                                checked={isChecked}
-                                onChange={handleCheckboxChange}/>
-                            </label>
-                        
-                            <label classname="growth_checkbox-label">Self-perception
-                                <input type="checkbox" 
-                                className="growth_checkbox"
-                                id="self-perception"
-                                name="growth"
-                                value="self-perception"
-                                checked={isChecked}
-                                onChange={setIsChecked}/>
-                            </label>
-                            
-                            <label classname="growth_checkbox-label">Confidence
-                                <input type="checkbox" 
-                                className="growth_checkbox"
-                                id="confidence"
-                                name="growth"
-                                value="confidence"
-                                checked={isChecked}
-                                onChange={setIsChecked}/>
-                            </label>
-                            
-                            <label classname="growth_checkbox-label">Preparing for an interview
-                                <input type="checkbox" 
-                                className="growth_checkbox"
-                                id="interview-preparation"
-                                name="growth"
-                                value="interview-preparation"
-                                checked={isChecked}
-                                onChange={setIsChecked}/>
-                            </label>
-                            
-                            <label classname="growth_checkbox-label">Technical Skills
-                                <input type="checkbox" 
-                                className="growth_checkbox"
-                                id="technical-skills"
-                                name="growth"
-                                value="technical-skils"
-                                checked={isChecked}
-                                onChange={setIsChecked}/>
-                            </label>
-                            
-                            <label classname="growth_checkbox-label">Other
-                                <input type="checkbox" 
-                                className="growth_checkbox"
-                                id="other"
-                                name="growth"
-                                value="other"
-                                checked={isChecked}
-                                onChange={setIsChecked}/>
-                            </label> */}
 
                     </label>
                     <label className="growth__question">
-                        <p>How does your imposter syndrome show up for you?</p>
+                        <p>What feelings arise when your gremlin starts getting to you?</p>
+                        <h6>PLEASE LIMIT YOUR RESPONSE TO 5 FEELINGS</h6>
                         <textarea 
                             type="text"
-                            required
+                            // required
                             name="why-this-role"
                             placeholder="Ex. It ususally shows up when others finish work tasks faster than I do because I end up questioning if I'm good enough to do the job."
                         />
