@@ -2,8 +2,8 @@
 import "./GrowthOpportunities.scss";
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import deleteIcon from '../../assets/icons/delete.png'
-import backButton from '../../assets/icons/icon.png'
+import deleteIcon from '../../assets/icons/delete.png';
+import backButton from '../../assets/icons/icon.png';
 
 
 //Had to comment out the "required" for the text fields outside of the component
