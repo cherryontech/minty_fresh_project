@@ -14,22 +14,28 @@ const GrowthOpportunites = () => {
 
     //growth skills to pass onto profile
     const [skillsList, setSkillsList] = useState([{skills: "", level: ""}]);
+    const [skillsText, setSkillsText] = useState({name: ""});
+
 
     const navigate = useNavigate();
 
-    //adds row when add row button selected
+    const handleTextChange = (e) => {
+        setSkillsText(input => ({...input, [e.target.name]: [e.target.value]}))
+    };
+
+    //adds row when add row button selected in the skills array
     const handleSkillsAdd = () => {
         setSkillsList([...skillsList, {skills: "", level: ""}]);
     };
     
-    //removes the row when delete selected
+    //removes the row when delete selected in the skills array
     const handleSkillsRemove = (index) => {
         const copy = [...skillsList];
         copy.splice(index, 1);
         setSkillsList(copy);
     }
 
-    //updates array with inputs
+    //updates array with inputs in the skills array
     const handleSkillChange = (e, index) => {
         const {name, value} = e.target;
         const list = [...skillsList];
@@ -68,6 +74,7 @@ const GrowthOpportunites = () => {
                             // required
                             name="impostor-symptom"
                             placeholder="Ex. I question if I`m actually qualified to do the job, I compare myself to others when they get tasks done faster than I do."
+                            onChange={handleTextChange}
                         />
                     </label>
                     <label className="growth__question">
@@ -148,6 +155,7 @@ const GrowthOpportunites = () => {
                             // required
                             name="why-this-role"
                             placeholder="Ex. It ususally shows up when others finish work tasks faster than I do because I end up questioning if I'm good enough to do the job."
+                            onChange={handleTextChange}
                         />
                     </label>
             </form>
