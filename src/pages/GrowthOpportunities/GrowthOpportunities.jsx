@@ -9,7 +9,7 @@ import backButton from '../../assets/icons/icon.png'
 //Had to comment out the "required" for the text fields outside of the component
 //Changed the <image> tag in the header because I was getting an error in inspect
 
-//TODO: pass text field info, fix the delete to only delete the one selected
+//TODO: pass text field info
 const GrowthOpportunites = () => {
 
     //growth skills to pass onto profile
@@ -24,9 +24,9 @@ const GrowthOpportunites = () => {
     
     //removes the row when delete selected
     const handleSkillsRemove = (index) => {
-        var list = [...skillsList];
-        list.splice(index, 1);
-        setSkillsList(list);
+        const copy = [...skillsList];
+        copy.splice(index, 1);
+        setSkillsList(copy);
     }
 
     //updates array with inputs
@@ -75,10 +75,14 @@ const GrowthOpportunites = () => {
                     <h6>PLEASE LIMIT YOUR RESPONSE TO 5 GROWTH AREAS</h6>
                         <div className="skills-component">
                             <div className="skills-label">
-                                <label className="text-label">
+                                <label className="text-label"
+                                // for='skills'
+                                >
                                     Growth Area
                                 </label>
-                                <label className="dropdown-label">
+                                <label className="dropdown-label"
+                                // for="level"
+                                >
                                     Skills Level
                                 </label>
                             </div>
@@ -87,43 +91,44 @@ const GrowthOpportunites = () => {
                 <div key={index} className='skills-array'>
 
                     <div className='skills__input'>
-
-                        <input 
-                            type='text'
-                            className='text_input'
-                            name='skills'
-                            id='skills'
-                            placeholder='Ex. Java'
-                            value={singleSkill.skills}
-                            onChange={(e) => handleSkillChange(e, index)}
-                            ></input>
-                            <select className="dropdown"
-                                id='level'
-                                name='level'
-                                value={singleSkill.level}
-                                onChange={(e) => handleSkillChange(e, index)}>
-                                <option value="">
-                                    Select an Option:
-                                </option>
-                                <option value="Beginner">
-                                    Beginner
-                                </option>
-                                <option value="Proficient">
-                                    Proficient
-                                </option>
-                                <option value="Expert">
-                                    Expert
-                                </option>
-                            </select>
+                        <div className="inputs-only">
+                            <input 
+                                type='text'
+                                className='text_input'
+                                name='skills'
+                                id='skills'
+                                placeholder='Ex. Java'
+                                value={singleSkill.skills}
+                                onChange={(e) => handleSkillChange(e, index)}
+                                ></input>
+                                <select className="dropdown"
+                                    id='level'
+                                    name='level'
+                                    value={singleSkill.level}
+                                    onChange={(e) => handleSkillChange(e, index)}>
+                                    <option value="">
+                                        Select an Option:
+                                    </option>
+                                    <option value="Beginner">
+                                        Beginner
+                                    </option>
+                                    <option value="Proficient">
+                                        Proficient
+                                    </option>
+                                    <option value="Expert">
+                                        Expert
+                                    </option>
+                                </select>
+                            </div>
                             {skillsList.length > 1 && (
-                                <button>
+                                <button type="button" className=".button__delete">
                                     <img className='delete-icon' 
                                     src={deleteIcon} 
                                     alt='Delete'
                                     onClick = {() => handleSkillsRemove(index)}/>
                                 </button>
                             )}
-                        </div>
+                         </div>
             
                             {skillsList.length - 1 === index && skillsList.length < 5 && (
                                 <div className="add-row">
@@ -132,12 +137,8 @@ const GrowthOpportunites = () => {
                                 </div>
                                 )}
                 </div>
-
            ))}             
-
                         </div>
-
-
                     </label>
                     <label className="growth__question">
                         <p>What feelings arise when your gremlin starts getting to you?</p>
