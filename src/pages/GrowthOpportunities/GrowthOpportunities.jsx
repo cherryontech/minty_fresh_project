@@ -10,11 +10,11 @@ import backButton from '../../assets/icons/icon.png';
 //Changed the <image> tag in the header because I was getting an error in inspect
 
 //TODO: pass text field info
-const GrowthOpportunites = () => {
+const GrowthOpportunites = ({skillsText, setSkillsText}) => {
 
     //growth skills to pass onto profile
     const [skillsList, setSkillsList] = useState([{skills: "", level: ""}]);
-    const [skillsText, setSkillsText] = useState({name: ""});
+    // const [skillsText, setSkillsText] = useState({name: ""});
 
 
     const navigate = useNavigate();
