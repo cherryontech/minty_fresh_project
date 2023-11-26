@@ -2,7 +2,7 @@
 import "./GrowthOpportunities.scss";
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import deleteIcon from '../../assets/icons/delete.png';
+import deleteIcon from '../../assets/icons/delete-icon.png';
 import backButton from '../../assets/icons/icon.png';
 
 
