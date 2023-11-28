@@ -12,6 +12,7 @@ import PastAcc from './pages/PastAcc/PastAcc';
 import AboutYourself from './pages/AboutYourself/AboutYourself';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
+import SendEmail from './pages/SendEmail/SendEmail'
 
 function App() {
 
@@ -85,6 +86,10 @@ function App() {
         <Route
         path="/insertnamepage"
         element={<InsertNamePage/>}
+        />
+        <Route
+        path="/email"
+        element={<SendEmail/>}
         />
       </Routes>
 
