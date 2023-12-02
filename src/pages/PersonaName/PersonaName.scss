@@ -52,11 +52,53 @@ input{
         letter-spacing: .07rem;
         font-weight: normal;
         padding-top: 2.5rem;
+
+        @include desktop {
+            text-align:start;
+            // margin-left: 8rem;
+        }
+    }
+    
+    &__desktop-image {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+
+        @include desktop {
+            // display: flex;
+            flex-direction: row;
+
+        }
+
+
+        .name-tag {
+            display: none;
+
+            @include desktop {
+                display:block;
+                // padding-right: 20rem;
+                width: 30rem;
+                height: 30rem;
+                margin-top: 12rem;
+            }
+        }
+    }
+
+    &__form-inputs {
+
+
+        @include desktop {
+            padding-right: 28rem;
+            padding-left: 8rem;
+
+        }
     }
 
     &__form{
         width: 100%;
-        padding: 0rem 0.5rem;       
+        padding: 0rem 0.5rem;   
+        
+
         &-content{
             @include title_text;
             display: flex;
@@ -66,6 +108,15 @@ input{
             margin: 0.5rem;
             font-size: .9rem;
             letter-spacing: 0.02rem;
+
+        }
+
+        &-dropdown{
+            @include dropdown;
+
+            @include desktop {
+                width: 70%
+            }
         }
     }
     &__progress {
@@ -81,5 +132,9 @@ input{
             padding-top: .5rem;
             @include label_text;
         }
+    }
+
+    .button__next {
+        @include button;
     }
 }
