@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import "./PersonaName.scss";
 import nameTag from '../../assets/desktop/2_illustration_name.png';
 

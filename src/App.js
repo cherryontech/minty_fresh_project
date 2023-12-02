@@ -2,7 +2,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Strengths from './pages/Strengths/Strengths';
 import Homepage from './pages/HomePage/HomePage';
-import FutureGoals from './pages/FutureGoals/FutureGoals';
 import './App.scss';
 import { useState } from 'react';
 import Results from './pages/Results/Results';
@@ -75,10 +74,6 @@ function App() {
           path="/aboutyourself"
           element={<AboutYourself/>}
           />
-        <Route
-            path="/futuregoals"
-            element={<FutureGoals/>}
-        />
         <Route
           path="/letsgetstarted"
           element={<LetsGetStarted/>}
