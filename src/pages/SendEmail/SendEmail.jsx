@@ -1,17 +1,22 @@
 import './SendEmail.scss'
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import envelopeImage from '../../assets/images/illustration_email.png';
 
 
 /*TODO: 
     -setup page nav 
     -add email functionality to pass from the first page and into the text field
-    -validation for the consent
     -send email*/
 
 const SendEmail = () => {
-
+    const [ isChecked, setIsChecked ] = useState(false);
     const navigate = useNavigate();
+
+    //used to enable/diable button for consent if the button is checked or unchecked
+    const handleOnChecked = () => {
+        setIsChecked(!isChecked);
+    }
 
     return (
         <div className='email'>
@@ -26,7 +31,11 @@ const SendEmail = () => {
                     </div>
                     <form className='email__form'>
                         <label className='email__consent'> 
-                            <input type='checkbox' className='checkbox'/>
+                            <input 
+                                type='checkbox' 
+                                className='checkbox'
+                                checked={isChecked}
+                                onChange={handleOnChecked}/>
                             <span>
 
                                 I consent to Untether sending my profile and gremlin information to the email address below.
@@ -47,9 +56,11 @@ const SendEmail = () => {
 
             <footer>
                 <button className="button__submit"
+                    disabled={!isChecked}
                     onClick={(e) => {
                         e.preventDefault();
                         navigate('');
+                        console.log("button clicked enabled")
                     }}>Send Email</button>
             </footer>
 
