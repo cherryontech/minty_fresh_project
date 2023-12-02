@@ -1,2 +1,101 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+
+
+.email {
+
+    &__with-image {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
+
+        .envelope {
+            display: none;
+
+            @include desktop {
+                display:block;
+                padding-right: 20rem;
+            }
+        }
+    
+
+    }
+
+    
+    &__form-container {
+
+        @include desktop {
+            padding-right: 28rem;
+            padding-left: 8rem;
+
+        }
+    }
+    &__text {
+        margin: 0.5rem;
+            
+
+        h2 {
+            @include headline_text;
+
+            // @include desktop {
+            //     padding-right: 48rem;
+            //     padding-left: 8rem;
+            // }
+        }
+        p {
+            margin-top: 0.5rem;
+            // @include desktop {
+            //     padding-right: 48rem;
+            //     padding-left: 8rem;
+            // }
+        }
+
+        
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__consent {
+        display: flex;
+        // flex-direction: row;
+        align-items: flex-start;
+
+
+        .checkbox {
+            margin-right: .5rem;
+            margin-left: .5rem;
+            width: fit-content;
+            box-shadow:  0px 0px 0px 1px rgba(0,0,0,1);
+            
+        }
+        span{
+            // vertical-align: middle;
+            margin: .5rem;
+        }
+
+    }
+
+    &__text-field {
+        @include form-field;
+        margin-top: 4rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        @include desktop{
+            width: 20rem;
+        }
+
+    }
+
+    .button__submit {
+        @include button;
+        margin-top: 5rem;
+    }
+
+}
