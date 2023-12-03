@@ -7,7 +7,7 @@
 - A career transitioner struggling with impostor syndrome needs to translate their skills and develop stories for interviews so they can feel more adequate and better advocate for themself during the job hunt.
 
 ***Try it out here!***
-https://mintyfreshempower.netlify.app/futuregoals
+https://mintyfreshempower.netlify.app/
 
 **Developers**
 - Savannah Yost
