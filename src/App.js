@@ -2,7 +2,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Strengths from './pages/Strengths/Strengths';
 import Homepage from './pages/HomePage/HomePage';
-import FutureGoals from './pages/FutureGoals/FutureGoals';
 import './App.scss';
 import { useState } from 'react';
 import Results from './pages/Results/Results';
@@ -12,6 +11,7 @@ import PastAcc from './pages/PastAcc/PastAcc';
 import AboutYourself from './pages/AboutYourself/AboutYourself';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
+import SendEmail from './pages/SendEmail/SendEmail'
 
 function App() {
 
@@ -75,16 +75,16 @@ function App() {
           element={<AboutYourself/>}
           />
         <Route
-            path="/futuregoals"
-            element={<FutureGoals/>}
-        />
-        <Route
           path="/letsgetstarted"
           element={<LetsGetStarted/>}
           />
         <Route
         path="/insertnamepage"
         element={<InsertNamePage/>}
+        />
+        <Route
+        path="/email"
+        element={<SendEmail/>}
         />
       </Routes>
 
