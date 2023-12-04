@@ -77,7 +77,7 @@ const PersonaName = ({user, setUser}) => {
                                 required
                                 name="pronouns" 
                                 placeholder="Ex. They/Them"
-                                // onChange={handleChange}
+                                onChange={handleChange}
                             />
                         </label>
                         <label className="persona__form-content">
@@ -87,13 +87,15 @@ const PersonaName = ({user, setUser}) => {
                                     required
                                     name="email" 
                                     placeholder="Ex. iamawesome@email.com"
-                                    // onChange={handleChange}
+                                    onChange={handleChange}
                                 />
                         </label>
                         <label className="persona__form-content">
                             What job or role are you hoping to land?
 
-                            <select className="persona__form-dropdown">
+                            <select className="persona__form-dropdown"
+                            name="role"
+                            onChange={handleChange}>
                                 <option value="" disabled selected>Select Industry</option>
                                 <option>Software Engineer</option>
                                 <option>Customer Success</option>
@@ -113,25 +115,49 @@ const PersonaName = ({user, setUser}) => {
                         <label className="persona__form-content"> 
                             <p>What are the top 3 industries you see yourself working in?</p>
                             <select className="persona__form-dropdown" 
-                            name="choice-1" >
-                                <option value="" disabled selected>Select Industry</option>
-                                <option value="">Fintech</option>
-                                <option value="">Entertainment</option>
-                                <option value="">Aerospace</option>
+                            name="industry1" 
+                            onChange={handleChange}>
+                                <option disabled selected>Select Industry</option>
+                                <option>Civic/Government Systems</option>
+                                <option>Finance</option>
+                                <option>Gaming</option>
+                                <option>Sales and Marketing</option>
+                                <option>Blockchain and Cryptocurrency</option>
+                                <option>Cloud Computing</option>
+                                <option>Cybersecurity</option>
+                                <option>Analytics</option>
+                                <option>Customer Support and Success</option>
+                                <option>Human Resources (HR)</option>
                             </select>
                             <select className="persona__form-dropdown" 
-                            name="choice-2" >
-                                <option value="" disabled selected>Select Industry</option>
-                                <option value="">Fintech</option>
-                                <option value="">Entertainment</option>
-                                <option value="">Aerospace</option>
+                            name="industry2" 
+                            onChange={handleChange}>
+                                <option disabled selected>Select Industry</option>
+                                <option>Civic/Government Systems</option>
+                                <option>Finance</option>
+                                <option>Gaming</option>
+                                <option>Sales and Marketing</option>
+                                <option>Blockchain and Cryptocurrency</option>
+                                <option>Cloud Computing</option>
+                                <option>Cybersecurity</option>
+                                <option>Analytics</option>
+                                <option>Customer Support and Success</option>
+                                <option>Human Resources (HR)</option>
                             </select>
                             <select className="persona__form-dropdown" 
-                            name="choice-3" >
-                                <option value="" disabled selected>Select Industry</option>
-                                <option value="">Fintech</option>
-                                <option value="">Entertainment</option>
-                                <option value="">Aerospace</option>
+                            name="industry3" 
+                            onChange={handleChange}>
+                                <option disabled selected>Select Industry</option>
+                                <option>Civic/Government Systems</option>
+                                <option>Finance</option>
+                                <option>Gaming</option>
+                                <option>Sales and Marketing</option>
+                                <option>Blockchain and Cryptocurrency</option>
+                                <option>Cloud Computing</option>
+                                <option>Cybersecurity</option>
+                                <option>Analytics</option>
+                                <option>Customer Support and Success</option>
+                                <option>Human Resources (HR)</option>
                             </select>
                         </label>
                     </form>
@@ -144,6 +170,7 @@ const PersonaName = ({user, setUser}) => {
                         e.preventDefault();
                         navigate('/strengths');
                     }}>Next</button>
+
             </footer>
         </div>
     )
