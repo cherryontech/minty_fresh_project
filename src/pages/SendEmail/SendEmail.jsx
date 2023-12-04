@@ -5,13 +5,16 @@ import envelopeImage from '../../assets/images/illustration_email.png';
 
 
 /*TODO: 
-    -setup page nav 
-    -add email functionality to pass from the first page and into the text field
-    -send email*/
+    -send email
+    -navigate to congrats page
+    */
 
-const SendEmail = () => {
+const SendEmail = ({user, setUser}) => {
     const [ isChecked, setIsChecked ] = useState(false);
     const navigate = useNavigate();
+
+
+    
 
     //used to enable/diable button for consent if the button is checked or unchecked
     const handleOnChecked = () => {
@@ -46,7 +49,7 @@ const SendEmail = () => {
                             type='text' 
                             className='email__text-field' 
                             name='email'
-                            placeholder='Ex. iamawesome@mail.com'
+                            placeholder={user.email}
                         />
                     </form>
 

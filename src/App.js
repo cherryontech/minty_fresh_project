@@ -11,13 +11,20 @@ import PastAcc from './pages/PastAcc/PastAcc';
 import AboutYourself from './pages/AboutYourself/AboutYourself';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
-import SendEmail from './pages/SendEmail/SendEmail'
+import SendEmail from './pages/SendEmail/SendEmail';
+import DummyPage from './pages/DummyPage';
 
 function App() {
 
   const [user, setUser] = useState({
-    name: ''
-  })
+    name: '', 
+    pronouns: '',
+    email: '',
+    role: '',
+    industry1: '',
+    industry2: '',
+    industry3: ''
+  });
 
 
   // This is where the info from the strengths form will be stored (it is starting as empty strings and will be passed into different pages through props)
@@ -26,6 +33,12 @@ function App() {
     activities:'',
     methodologies: ''
   });
+
+
+  const [growth, setGrowth] = useState({
+    impostorSymptom: '',
+    whyThisRole: ''
+  })
 
   return (
     <div className="app">
@@ -55,7 +68,11 @@ function App() {
         /> 
         <Route
             path="/growth"
-            element={<GrowthOpportunites/>}
+            element={<GrowthOpportunites
+              // skillsList={skillsList}
+              growth={growth}
+              setGrowth={setGrowth}
+            />}
           />
           <Route
             path="/personaname"
@@ -84,7 +101,19 @@ function App() {
         />
         <Route
         path="/email"
-        element={<SendEmail/>}
+        element={<SendEmail
+          user={user}
+          setUser={setUser}
+          />}
+        />
+        <Route
+        path="/dummy"
+        element={<DummyPage
+          user={user}
+          setUser={setUser}
+          growth={growth}
+          setGrowth={setGrowth}
+        />}
         />
       </Routes>
 
