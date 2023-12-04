@@ -53,28 +53,98 @@ textarea{
         
     }
     &__progress {
-        height: 0.4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
         width: 100%;
-        background-color: #D0D0D0;
+        // align-self: center;
+        // height: 0.4rem;
+        // background-color: #D0D0D0;
         @include desktop{
             height: 0.8rem;
             border-radius: 5rem;
             width: 85%;
         }
-            &-bar {
-                height: 100%;
-                background-color: #F5AB4B;
-                width: 20%;
-                margin-left: 20%;
-                @include desktop{
-                    border-radius: 5rem;
+            // &-bar {
+            //     height: 100%;
+            //     background-color: #F5AB4B;
+            //     width: 20%;
+            //     margin-left: 20%;
+            //     @include desktop{
+            //         border-radius: 5rem;
                     
-                }
-            }
+            //     }
+            // }
             &-number{
                 padding-top: .5rem;
                 @include label_text;
             }
+            &-position-1{
+                background: orange;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+                &b{
+                    background: lightcyan;
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    border-radius: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &c{
+                    background: lightcyan;
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    border-radius: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &-position-2{
+                background: lightcyan;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-position-3{
+                background: lightcyan;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-position-4{
+                background: lightcyan;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-position-5{
+                background: lightcyan;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+
+
         }
 
     &__title{
