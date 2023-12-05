@@ -13,6 +13,7 @@ import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
 import SendEmail from './pages/SendEmail/SendEmail';
 import DummyPage from './pages/DummyPage';
+import Walkthrough from './pages/Index/Index';
 
 function App() {
 
@@ -46,6 +47,12 @@ function App() {
         <Route
           path="/"
           element={<Homepage/>}
+        />
+        <Route
+          path="/index"
+          element={
+            <Walkthrough/>
+          }
         />
         <Route
             path="/strengths"

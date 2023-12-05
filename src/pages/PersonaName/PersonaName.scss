@@ -137,4 +137,89 @@ input{
     .button__next {
         @include button;
     }
+
+
+    // &__progress{
+    //     width: -webkit-fill-available;
+    //     position: relative;
+
+    //     &-bar{
+    //         height: .5rem;
+    //         background-color: #E6E0E9;
+    //         z-index: 0;
+    //         position: relative;
+    //         top: 1rem;
+    //     }
+    //     &-position{
+    //         display: flex;
+    //         justify-content: space-evenly;
+    //         align-items: center;
+    //         z-index: 1;
+    //         position: relative;
+
+    //         &-position1{
+    //             background: #F5AB4B;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         &b{
+    //             background: #CFCEFF;
+    //             width: .8rem;
+    //             height: .8rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         &c{
+    //             background: #CFCEFF;
+    //             width: .8rem;
+    //             height: .8rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         }
+    //         &-position2{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         &-position-3{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         &-position-4{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         &-position-5{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //     }
+    // }
 }

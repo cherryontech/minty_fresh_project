@@ -26,7 +26,7 @@ const Homepage = () => {
                 <button className="get-started-btn" 
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/personaname')
+                        navigate('/index')
                     }}>Get Started</button>
             
             </div>
