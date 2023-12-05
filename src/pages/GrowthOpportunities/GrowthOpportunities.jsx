@@ -23,7 +23,11 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
     const navigate = useNavigate();
 
     const handleTextChange = (e) => {
-        setGrowth(input => ({...input, [e.target.name]: [e.target.value]}))
+        // const copy = [...skillsList];
+
+        
+
+        setGrowth(input => ({...input, [e.target.name]: [e.target.value]}));
     };
 
     //adds row when add row button selected in the skills array
@@ -38,12 +42,18 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
         setSkillsList(copy);
     }
 
-    //updates array with inputs in the skills array
+    // updates array with inputs in the skills array
     const handleSkillChange = (e, index) => {
         const {name, value} = e.target;
         const list = [...skillsList];
         list[index][name] = value;
+        console.log("handleSkillChange")
+        
+        console.log(list, "This is list");
+
         setSkillsList(list);
+
+
     }
 
 
@@ -170,17 +180,17 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                 <img className="weak-image" src={weakImage} alt=""/>
             </div>
             <footer>
-                <button className="button__submit"
+                {/* <button className="button__submit"
                 onClick={(e) => {
                     e.preventDefault();
                     navigate('/results');
-                }}>Submit</button>
+                }}>Submit</button> */}
 
-        {/* <button className="button__next" type='button' 
+        <button className="button__next" type='button' 
                     onClick={(e) => {
                         e.preventDefault();
                         navigate('/dummy');
-                    }}>Next</button> */}
+                    }}>Next</button>
 
             </footer>
         </div>

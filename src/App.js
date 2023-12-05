@@ -40,6 +40,11 @@ function App() {
     whyThisRole: ''
   })
 
+  const [skillsList, setSkillsList] = useState({
+    skills: '',
+    level: ''
+  })
+
   return (
     <div className="app">
       <Routes>
@@ -69,7 +74,8 @@ function App() {
         <Route
             path="/growth"
             element={<GrowthOpportunites
-              // skillsList={skillsList}
+              skillsList={skillsList}
+              setSkillsList={setSkillsList}
               growth={growth}
               setGrowth={setGrowth}
             />}
@@ -109,8 +115,8 @@ function App() {
         <Route
         path="/dummy"
         element={<DummyPage
-          user={user}
-          setUser={setUser}
+          skillsList={skillsList}
+          setSkillsList={setSkillsList}
           growth={growth}
           setGrowth={setGrowth}
         />}
