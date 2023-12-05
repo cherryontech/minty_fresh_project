@@ -27,31 +27,31 @@ const Strengths = ({strengths, setStrengths}) => {
                         <image src='../../assets/icons/icon.png'></image>
                     </button>
                 <div className='strengths__header-title'>
-                    <p>Unleash your best self</p>
+                    <p>CREATE A PROFILE</p>
                 </div>
             </div>
-            {/* <div className='strengths__progress'>
+            <div className='strengths__progress'>
                 <div className="strengths__progress-bar"></div>
-                <div classNae="strengths__progress-position"> 
-                    <div className='strengths__progress-position1'>
-                            <p>1</p>
-                        </div>
-                        <div className='strengths__progress-position1b'></div>
-                        <div className='strengths__progress-position1c'></div>
-                        <div className='strengths__progress-position2'>
-                            <p>2</p>
-                        </div>
-                        <div className='strengths__progress-position3'>
-                            <p>3</p>
-                        </div>
-                        <div className='strengths__progress-position4'>
-                            <p>4</p>
-                        </div>
-                        <div className='strengths__progress-position5'>
-                            <p>5</p>
-                        </div>
+                <div className="strengths__progress-position"> 
+                    <div className='strengths__progress-position-1'>
+                        <p>1</p>
+                    </div>
+                    <div className='strengths__progress-position-1-b'></div>
+                    <div className='strengths__progress-position-1-c'></div>
+                    <div className='strengths__progress-position-2'>
+                        <p>2</p>
+                    </div>
+                    <div className='strengths__progress-position-3'>
+                        <p>3</p>
+                    </div>
+                    <div className='strengths__progress-position-4'>
+                        <p>4</p>
+                    </div>
+                    <div className='strengths__progress-position-5'>
+                        <p>5</p>
+                    </div>
                 </div>
-            </div> */}
+            </div>
             <p className="step__text">2/5</p>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">

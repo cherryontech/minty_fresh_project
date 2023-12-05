@@ -37,45 +37,42 @@ const PersonaName = ({user, setUser}) => {
     // };
 
     return (
-        <div className='persona__container'>
+        <div className='persona'>
             <div className="persona__header">
                 <button className="persona__header-back"
                 onClick={(e) => {
                     e.preventDefault();
-                    navigate('/personaname')
+                    navigate('/index')
                 }}>
                     <image src='../../assets/icons/icon.png'></image>
                 </button>
-                {/* <div className='persona__progress'>
-                    <div className="persona__progress-bar"></div>
-                    <div classNae="persona__progress-position"> 
-                        <div className='persona__progress-position1'>
-                                <p>1</p>
-                            </div>
-                            <div className='persona__progress-position1b'></div>
-                            <div className='persona__progress-position1c'></div>
-                            <div className='persona__progress-position2'>
-                                <p>2</p>
-                            </div>
-                            <div className='persona__progress-position3'>
-                                <p>3</p>
-                            </div>
-                            <div className='persona__progress-position4'>
-                                <p>4</p>
-                            </div>
-                            <div className='persona__progress-position5'>
-                                <p>5</p>
-                            </div>
-                    </div>
-                </div> */}
+                
                 <div className='persona__header-title'>
-                    <p>Unleash your best self</p>
+                    <p>CREATE A PROFILE</p>
                 </div>
             </div>
-            <div className="persona__progress"> 
+            <div className='persona__progress'>
                 <div className="persona__progress-bar"></div>
+                <div className="persona__progress-position"> 
+                    <div className='persona__progress-position-1'>
+                            <p>1</p>
+                    </div>
+                    <div className='persona__progress-position-1-b'></div>
+                    <div className='persona__progress-position-1-c'></div>
+                    <div className='persona__progress-position-2'>
+                        <p>2</p>
+                    </div>
+                    <div className='persona__progress-position-3'>
+                        <p>3</p>
+                    </div>
+                    <div className='persona__progress-position-4'>
+                        <p>4</p>
+                    </div>
+                    <div className='persona__progress-position-5'>
+                        <p>5</p>
+                    </div>
+                </div>
             </div>
-            <p className='persona__progress-number'>1/5</p>
             <div className='persona__desktop-image'>
 
                 <div className="persona__form-inputs">
@@ -190,7 +187,7 @@ const PersonaName = ({user, setUser}) => {
                 <button className="button__next" type='button' 
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/persona');
+                        navigate('/strengths');
                     }}>Next</button>
 
             </footer>
