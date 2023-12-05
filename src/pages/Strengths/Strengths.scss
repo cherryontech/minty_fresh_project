@@ -27,8 +27,6 @@ textarea{
         padding-top: 1rem;
         padding-right: 5.6rem;
         align-items: center;
-
-        
         @include desktop{
             justify-content: space-between;
             padding-right: 4rem;
@@ -50,102 +48,208 @@ textarea{
         &-title{
             @include body_text;
         }
-        
     }
-    &__progress {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        // align-self: center;
-        // height: 0.4rem;
-        // background-color: #D0D0D0;
-        @include desktop{
-            height: 0.8rem;
-            border-radius: 5rem;
-            width: 85%;
+
+    &__progress{
+        width: -webkit-fill-available;
+        position: relative;
+
+        &-bar{
+            height: .5rem;
+            background-color: #E6E0E9;
+            z-index: 0;
+            position: relative;
+            top: 1rem;
         }
-            // &-bar {
-            //     height: 100%;
-            //     background-color: #F5AB4B;
-            //     width: 20%;
-            //     margin-left: 20%;
-            //     @include desktop{
-            //         border-radius: 5rem;
-                    
-            //     }
-            // }
-            &-number{
-                padding-top: .5rem;
-                @include label_text;
-            }
-            &-position-1{
-                background: orange;
-                width: 2rem;
-                height: 2rem;
+        &-position{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+
+            &-position1{
+                background: #F5AB4B;
+                width: 1.5rem;
+                height: 1.5rem;
                 display: flex;
                 border-radius: 1rem;
                 align-items: center;
                 justify-content: center;
-                &b{
-                    background: lightcyan;
-                    width: 1rem;
-                    height: 1rem;
-                    display: flex;
-                    border-radius: 1rem;
-                    align-items: center;
-                    justify-content: center;
-                }
-                &c{
-                    background: lightcyan;
-                    width: 1rem;
-                    height: 1rem;
-                    display: flex;
-                    border-radius: 1rem;
-                    align-items: center;
-                    justify-content: center;
-                }
+            &b{
+                background: #CFCEFF;
+                width: .8rem;
+                height: .8rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
             }
-            &-position-2{
-                background: lightcyan;
-                width: 2rem;
-                height: 2rem;
+            &c{
+                background: #CFCEFF;
+                width: .8rem;
+                height: .8rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            }
+            &-position2{
+                background: #CFCEFF;
+                width: 1.5rem;
+                height: 1.5rem;
                 display: flex;
                 border-radius: 1rem;
                 align-items: center;
                 justify-content: center;
             }
             &-position-3{
-                background: lightcyan;
-                width: 2rem;
-                height: 2rem;
+                background: #CFCEFF;
+                width: 1.5rem;
+                height: 1.5rem;
                 display: flex;
                 border-radius: 1rem;
                 align-items: center;
                 justify-content: center;
             }
             &-position-4{
-                background: lightcyan;
-                width: 2rem;
-                height: 2rem;
+                background: #CFCEFF;
+                width: 1.5rem;
+                height: 1.5rem;
                 display: flex;
                 border-radius: 1rem;
                 align-items: center;
                 justify-content: center;
             }
             &-position-5{
-                background: lightcyan;
-                width: 2rem;
-                height: 2rem;
+                background: #CFCEFF;
+                width: 1.5rem;
+                height: 1.5rem;
                 display: flex;
                 border-radius: 1rem;
                 align-items: center;
                 justify-content: center;
             }
-
-
         }
+    }
+
+
+
+    // <div classNae="strengths__progress-position"> 
+    //     <div className='strengths__progress-position-1'>
+    //             <p>1</p>
+    //         </div>
+    //         <div className='strengths__progress-position-1b'></div>
+    //         <div className='strengths__progress-position-1c'></div>
+    //         <div className='strengths__progress-position-2'>
+    //             <p>2</p>
+    //         </div>
+    //         <div className='strengths__progress-position-3'>
+    //             <p>3</p>
+    //         </div>
+    //         <div className='strengths__progress-position-4'>
+    //             <p>4</p>
+    //         </div>
+    //         <div className='strengths__progress-position-5'>
+    //             <p>5</p>
+    //         </div>
+    // </div>
+    // &__progress{
+    //     background-color: aqua;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-evenly;
+    //     align-items: center;
+    //     width: 100%;
+    //     font-size: xx-small;
+    //     @include desktop{
+    //         height: 0.8rem;
+    //         border-radius: 5rem;
+    //         width: 85%;
+    //     }
+    //     &-container{
+    //         width: -webkit-fill-available;
+    //         background-color: pink;
+    //         }
+    //         // &-bar {
+    //         //     height: 100%;
+    //         //     background-color: #F5AB4B;
+    //         //     width: 20%;
+    //         //     margin-left: 20%;
+    //         //     @include desktop{
+    //         //         border-radius: 5rem;
+                    
+    //         //     }
+    //         // }
+    //         &-number{
+    //             padding-top: .5rem;
+    //             @include label_text;
+    //         }
+    //         &-position-1{
+    //             background: #F5AB4B;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //             &b{
+    //                 background: #CFCEFF;
+    //                 width: .8rem;
+    //                 height: .8rem;
+    //                 display: flex;
+    //                 border-radius: 1rem;
+    //                 align-items: center;
+    //                 justify-content: center;
+    //             }
+    //             &c{
+    //                 background: #CFCEFF;
+    //                 width: .8rem;
+    //                 height: .8rem;
+    //                 display: flex;
+    //                 border-radius: 1rem;
+    //                 align-items: center;
+    //                 justify-content: center;
+    //             }
+    //         }
+    //         &-position-2{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         &-position-3{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         &-position-4{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //         &-position-5{
+    //             background: #CFCEFF;
+    //             width: 1.5rem;
+    //             height: 1.5rem;
+    //             display: flex;
+    //             border-radius: 1rem;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+        // }
 
     &__title{
         @include headline_text;
