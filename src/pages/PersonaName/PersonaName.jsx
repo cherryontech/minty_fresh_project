@@ -46,6 +46,28 @@ const PersonaName = ({user, setUser}) => {
                 }}>
                     <image src='../../assets/icons/icon.png'></image>
                 </button>
+                {/* <div className='persona__progress'>
+                    <div className="persona__progress-bar"></div>
+                    <div classNae="persona__progress-position"> 
+                        <div className='persona__progress-position1'>
+                                <p>1</p>
+                            </div>
+                            <div className='persona__progress-position1b'></div>
+                            <div className='persona__progress-position1c'></div>
+                            <div className='persona__progress-position2'>
+                                <p>2</p>
+                            </div>
+                            <div className='persona__progress-position3'>
+                                <p>3</p>
+                            </div>
+                            <div className='persona__progress-position4'>
+                                <p>4</p>
+                            </div>
+                            <div className='persona__progress-position5'>
+                                <p>5</p>
+                            </div>
+                    </div>
+                </div> */}
                 <div className='persona__header-title'>
                     <p>Unleash your best self</p>
                 </div>
@@ -168,7 +190,7 @@ const PersonaName = ({user, setUser}) => {
                 <button className="button__next" type='button' 
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/strengths');
+                        navigate('/persona');
                     }}>Next</button>
 
             </footer>
