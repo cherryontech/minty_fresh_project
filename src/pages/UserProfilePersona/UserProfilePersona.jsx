@@ -16,7 +16,7 @@ return (
         <li>Bullet point</li>
     </ul>
 
-<hr></hr>
+
 <h2 className="user_header">Strengths</h2>
     <ul>
         <li className="skill_li">Strength</li>
