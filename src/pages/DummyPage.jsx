@@ -1,7 +1,7 @@
 import React from 'react';
 // import ArrayDisplay from './ArrayDisplay';
 
-const DummyPage = ({skillsList, setSkillsList, growth, setGrowth}) => {
+const DummyPage = ({growth, setGrowth}) => {
 
 
 

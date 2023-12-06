@@ -37,13 +37,15 @@ function App() {
 
   const [growth, setGrowth] = useState({
     impostorSymptom: '',
-    whyThisRole: ''
+    whyThisRole: '',
+    skills: [],
+    level: []
   })
 
-  const [skillsList, setSkillsList] = useState({
-    skills: '',
-    level: ''
-  })
+  // const [skillsList, setSkillsList] = useState({
+  //   skills: '',
+  //   level: ''
+  // })
 
   return (
     <div className="app">
@@ -74,8 +76,8 @@ function App() {
         <Route
             path="/growth"
             element={<GrowthOpportunites
-              skillsList={skillsList}
-              setSkillsList={setSkillsList}
+              // skillsList={skillsList}
+              // setSkillsList={setSkillsList}
               growth={growth}
               setGrowth={setGrowth}
             />}
@@ -115,8 +117,8 @@ function App() {
         <Route
         path="/dummy"
         element={<DummyPage
-          skillsList={skillsList}
-          setSkillsList={setSkillsList}
+          // skillsList={skillsList}
+          // setSkillsList={setSkillsList}
           growth={growth}
           setGrowth={setGrowth}
         />}

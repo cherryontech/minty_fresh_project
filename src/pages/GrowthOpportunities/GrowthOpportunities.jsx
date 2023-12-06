@@ -16,7 +16,7 @@ import weakImage from '../../assets/desktop/7_illustration_weak.png'
 const GrowthOpportunites = ({growth, setGrowth}) => {
 
     //growth skills to pass onto profile
-    const [skillsList, setSkillsList] = useState([{skills: "", level: ""}]);
+    // const [skillsList, setSkillsList] = useState([{skills: "", level: ""}]);
     // const [skillsText, setSkillsText] = useState({name: ""});
 
 
@@ -31,27 +31,34 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
     };
 
     //adds row when add row button selected in the skills array
-    const handleSkillsAdd = () => {
-        setSkillsList([...skillsList, {skills: "", level: ""}]);
+    const handleSkillsAdd = (f) => {
+        console.log("name:", f.target.name, ": value", f.target.value)
+        setGrowth(input => ({...input, [f.target.name]: [f.target.value]}));
     };
+
+    // const handleLevelAdd = (f) => {
+    //     console.log("name:", f.target.name, ": value", f.target.value)
+    //     setGrowth(input => ({...input, [f.target.name]: [f.target.value]}));
+    // };
     
     //removes the row when delete selected in the skills array
-    const handleSkillsRemove = (index) => {
-        const copy = [...skillsList];
-        copy.splice(index, 1);
-        setSkillsList(copy);
-    }
+    //2 copies and do all the fun things
+    // const handleSkillsRemove = (index) => {
+    //     const copy = [...skillsList];
+    //     copy.splice(index, 1);
+    //     setSkillsList(copy);
+    // }
 
-    // updates array with inputs in the skills array
+    // // updates array with inputs in the skills array
     const handleSkillChange = (e, index) => {
         const {name, value} = e.target;
-        const list = [...skillsList];
-        list[index][name] = value;
-        console.log("handleSkillChange")
+        const list = [...growth.skills];
+        list[index] = value;
+    //     console.log("handleSkillChange")
         
-        console.log(list, "This is list");
+    //     console.log(list, "This is list");
 
-        setSkillsList(list);
+    //     setSkillsList(list);
 
 
     }
@@ -111,25 +118,31 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                         </label>
                                     </div>
                         
-                        {skillsList.map((singleSkill, index) => (
-                        <div key={index} className='skills-array'>
+                        {/* {growth.map((singleSkill, index) => ( */}
+                        <div  className='skills-array'>
 
                             <div className='skills__input'>
+
+                                {/* setup a map here with an index */}
                                 <div className="inputs-only">
                                     <input 
-                                        type='text'
+                                        // type='text'
                                         className='text_input'
                                         name='skills'
                                         id='skills'
                                         placeholder='Ex. Java'
-                                        value={singleSkill.skills}
-                                        onChange={(e) => handleSkillChange(e, index)}
+                                        // value={singleSkill.skills}
+                                        onChange={handleSkillsAdd}
                                         ></input>
+
+                                        {/* setup another map here with index */}
                                         <select className="dropdown"
                                             id='level'
                                             name='level'
-                                            value={singleSkill.level}
-                                            onChange={(e) => handleSkillChange(e, index)}>
+                                            // value={singleSkill.level}
+                                            onChange={handleSkillsAdd}
+                                            // onChange={(e) => handleSkillChange(e, index)}
+                                            >
                                             <option value="">
                                                 Select an Option:
                                             </option>
@@ -144,24 +157,24 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                             </option>
                                         </select>
                                     </div>
-                                    {skillsList.length > 1 && (
+                                    {/* {skillsList.length > 1 && (
                                         <button type="button" className=".button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
                                             onClick = {() => handleSkillsRemove(index)}/>
                                         </button>
-                                    )}
+                                    )} */}
                                 </div>
                     
-                                    {skillsList.length - 1 === index && skillsList.length < 5 && (
+                                    {/* {skillsList.length - 1 === index && skillsList.length < 5 && (
                                         <div className="add-row">
                                             <button type="button" className=".button__add-row"
                                             onClick={handleSkillsAdd}>+ Add Row</button>
                                         </div>
-                                        )}
+                                        )} */}
                         </div>
-                ))}             
+                {/* ))}              */}
                                 </div>
                             </label>
                             <label className="growth__question">
