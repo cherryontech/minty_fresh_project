@@ -1,5 +1,6 @@
 import './Profile.scss';
-
+import Gremlin from '../../components/Gremlin/Gremlin';
+import Persona from '../../components/Persona/Persona';
 
 const Profile = () => {
     return(
@@ -24,6 +25,12 @@ const Profile = () => {
                     <div className='profile__progress-position-5'>
                         <p>5</p>
                     </div>
+                </div>
+                <div>
+                    <Persona/>
+                </div>
+                <div>
+                    <Gremlin/>
                 </div>
             </div>
         </div>
