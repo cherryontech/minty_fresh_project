@@ -46,7 +46,9 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Homepage/>}
+          element={
+            <Homepage/>
+          }
         />
         <Route
           path="/index"
@@ -55,12 +57,27 @@ function App() {
           }
         />
         <Route
-            path="/strengths"
-            element={
-              <Strengths 
-                strengths={strengths}
-                setStrengths={setStrengths}
-              />}
+          path="/personaname"
+          element={
+            <PersonaName
+              user={user}
+              setUser={setUser}
+            />
+          }
+        />
+        <Route
+          path="/strengths"
+          element={
+            <Strengths 
+              strengths={strengths}
+              setStrengths={setStrengths}
+            />}
+        />
+        <Route 
+          path="/pastacc"
+          element={
+            <PastAcc/>
+          }
         />
         <Route
           path="/results"
@@ -74,57 +91,54 @@ function App() {
           }
         /> 
         <Route
-            path="/growth"
-            element={<GrowthOpportunites
-              // skillsList={skillsList}
+          path="/growth"
+          element={
+            <GrowthOpportunites
+            // skillsList={skillsList}
               growth={growth}
               setGrowth={setGrowth}
-            />}
-          />
-          <Route
-            path="/personaname"
-            element={<PersonaName
-              user={user}
-              setUser={setUser}
-            />}
-          />
-
-          <Route 
-          path="/pastacc"
-          element={<PastAcc/>}
-          />
-
-          <Route 
+            />
+          }
+        />
+        <Route 
           path="/aboutyourself"
-          element={<AboutYourself/>}
-          />
+          element={
+            <AboutYourself/>
+          }
+        />
         <Route
           path="/letsgetstarted"
-          element={<LetsGetStarted/>}
-          />
-        <Route
-        path="/insertnamepage"
-        element={<InsertNamePage/>}
+          element={
+            <LetsGetStarted/>
+          }
         />
         <Route
-        path="/email"
-        element={<SendEmail
-          user={user}
-          setUser={setUser}
-          />}
+          path="/insertnamepage"
+          element={
+            <InsertNamePage/>
+          }
         />
         <Route
-        path="/dummy"
-        element={<DummyPage
-          user={user}
-          setUser={setUser}
-          growth={growth}
-          setGrowth={setGrowth}
-        />}
+          path="/email"
+          element={
+            <SendEmail
+              user={user}
+              setUser={setUser}
+            />
+          }
+        />
+        <Route
+          path="/dummy"
+          element={
+            <DummyPage
+              user={user}
+              setUser={setUser}
+              growth={growth}
+              setGrowth={setGrowth}
+            />
+          }
         />
       </Routes>
-
-
     </div>
   );
 }
