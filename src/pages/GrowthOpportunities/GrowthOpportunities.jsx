@@ -58,7 +58,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                     <img src={backButton} alt="back button"/>
                 </button>
                 <div className='growth__header-title'>
-                    <p>Externalize your impostor</p>
+                    <p>CREATE A GREMLIN</p>
                 </div>
             </div>
             <div className='growth__progress'>
