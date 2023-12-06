@@ -11,7 +11,7 @@ import PastAcc from './pages/PastAcc/PastAcc';
 import AboutYourself from './pages/AboutYourself/AboutYourself';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
-import UserProfilePersona from './pages/UserProfilePersona/UserProfilePersona';
+import Profile from './pages/Profile/Profile';
 import Congrats from './pages/Congrats/Congrats';
 import SendEmail from './pages/SendEmail/SendEmail';
 import DummyPage from './pages/DummyPage';
@@ -121,8 +121,8 @@ function App() {
           }
         />
         <Route 
-        path="/userprofilepersona"
-        element={<UserProfilePersona/>}
+        path="/profile"
+        element={<Profile/>}
         />
         <Route 
        path="/congrats"
