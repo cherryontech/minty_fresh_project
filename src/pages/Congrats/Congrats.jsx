@@ -1,8 +1,7 @@
 //MF1-269
 //import scss file
 import "./Congrats.scss"
-import React, {useState} from "react";
-import { useNavigate } from 'react-router-dom';
+import React from "react";
 
 //import React
 
