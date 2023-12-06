@@ -52,11 +52,11 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
     // // updates array with inputs in the skills array
     const handleSkillChange = (e, index) => {
         const {name, value} = e.target;
-        const list = [...growth.skills];
-        list[index] = value;
-    //     console.log("handleSkillChange")
+        const skillsList = [...growth.skills];
+        skillsList[index] = value;
+        console.log("handleSkillChange")
         
-    //     console.log(list, "This is list");
+        console.log(skillsList, "This is list");
 
     //     setSkillsList(list);
 
@@ -124,7 +124,10 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                             <div className='skills__input'>
 
                                 {/* setup a map here with an index */}
-                                <div className="inputs-only">
+                                    
+                                        
+                                        <div className="inputs-only">
+                                {growth.skills.map((singleSkill, skillIndex) => (
                                     <input 
                                         // type='text'
                                         className='text_input'
@@ -134,15 +137,18 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                         // value={singleSkill.skills}
                                         onChange={handleSkillsAdd}
                                         ></input>
+                                ))}
 
                                         {/* setup another map here with index */}
+                                    {growth.level.map((singleLevel, levelIndex) => (
+
                                         <select className="dropdown"
-                                            id='level'
-                                            name='level'
-                                            // value={singleSkill.level}
-                                            onChange={handleSkillsAdd}
-                                            // onChange={(e) => handleSkillChange(e, index)}
-                                            >
+                                        id='level'
+                                        name='level'
+                                        // value={singleSkill.level}
+                                        onChange={handleSkillsAdd}
+                                        // onChange={(e) => handleSkillChange(e, index)}
+                                        >
                                             <option value="">
                                                 Select an Option:
                                             </option>
@@ -156,6 +162,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                                 Expert
                                             </option>
                                         </select>
+                                    ))}    
                                     </div>
                                     {/* {skillsList.length > 1 && (
                                         <button type="button" className=".button__delete">
