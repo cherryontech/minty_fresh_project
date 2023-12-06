@@ -1,0 +1,27 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.congrats {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    width: 650px;
+    /*margin: 0rem 1rem;*/
+    padding: 100px; /*1.5rem 1rem;*/
+}
+
+button {
+    background-color: #FFE0B8;
+    border-radius: 5%;
+}
+
+.parent, .parent-2 {
+    display: flex;
+    width: 350px;
+    padding-bottom: 2rem;
+}
+
+.text-box-child,.child-2 {
+    text-align: center;
+}
+
