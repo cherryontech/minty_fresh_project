@@ -12,6 +12,8 @@ import PastAcc from './pages/PastAcc/PastAcc';
 import AboutYourself from './pages/AboutYourself/AboutYourself';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
+import UserProfilePersona from './pages/UserProfilePersona/UserProfilePersona';
+import Congrats from './pages/Congrats/Congrats';
 
 function App() {
 
@@ -84,8 +86,16 @@ function App() {
         path="/insertnamepage"
         element={<InsertNamePage/>}
         />
+        <Route 
+        path="/userprofilepersona"
+        element={<UserProfilePersona/>}
+        />
+        <Route 
+       path="/congrats"
+       element={<Congrats/>}
+       />
       </Routes>
-
+       
 
     </div>
   );
