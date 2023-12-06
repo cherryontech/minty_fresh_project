@@ -125,9 +125,9 @@ function App() {
         element={<UserProfilePersona/>}
         />
         <Route 
-       path="/congrats"
-       element={<Congrats/>}
-       />
+          path="/congrats"
+          element={<Congrats/>}
+        />
         <Route
           path="/email"
           element={

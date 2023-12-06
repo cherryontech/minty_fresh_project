@@ -47,7 +47,7 @@ const PastAccomplishments = () => {
 
             <button type='button' onClick={(e) => {
                     e.preventDefault();
-                    navigate('/strengths');
+                    navigate('/growth');
                 }}>Next</button>
         </div>
     )

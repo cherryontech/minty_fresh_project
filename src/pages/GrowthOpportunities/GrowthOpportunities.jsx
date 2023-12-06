@@ -190,7 +190,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                 <button className="button__submit"
                 onClick={(e) => {
                     e.preventDefault();
-                    navigate('/results');
+                    navigate('/profile');
                 }}>Submit</button>
 
         {/* <button className="button__next" type='button' 
