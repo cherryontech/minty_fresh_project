@@ -1,0 +1,12 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.skills_label {
+    display: flex;
+    flex-direction: row;
+    @include body_text;
+}
+
+.level {
+    margin-left: 13rem;
+}

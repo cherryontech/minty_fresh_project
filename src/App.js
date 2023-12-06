@@ -2,7 +2,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Strengths from './pages/Strengths/Strengths';
 import Homepage from './pages/HomePage/HomePage';
-import FutureGoals from './pages/FutureGoals/FutureGoals';
 import './App.scss';
 import { useState } from 'react';
 import Results from './pages/Results/Results';
@@ -14,12 +13,21 @@ import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
 import UserProfilePersona from './pages/UserProfilePersona/UserProfilePersona';
 import Congrats from './pages/Congrats/Congrats';
+import SendEmail from './pages/SendEmail/SendEmail';
+import DummyPage from './pages/DummyPage';
+import Walkthrough from './pages/Index/Index';
 
 function App() {
 
   const [user, setUser] = useState({
-    name: ''
-  })
+    name: '', 
+    pronouns: '',
+    email: '',
+    role: '',
+    industry1: '',
+    industry2: '',
+    industry3: ''
+  });
 
 
   // This is where the info from the strengths form will be stored (it is starting as empty strings and will be passed into different pages through props)
@@ -29,12 +37,24 @@ function App() {
     methodologies: ''
   });
 
+
+  const [growth, setGrowth] = useState({
+    impostorSymptom: '',
+    whyThisRole: ''
+  })
+
   return (
     <div className="app">
       <Routes>
         <Route
           path="/"
           element={<Homepage/>}
+        />
+        <Route
+          path="/index"
+          element={
+            <Walkthrough/>
+          }
         />
         <Route
             path="/strengths"
@@ -50,12 +70,18 @@ function App() {
             <Results
               strengths={strengths}
               setStrengths={setStrengths}
+              user={user}
+              setUser={setUser}
             />
           }
         /> 
         <Route
             path="/growth"
-            element={<GrowthOpportunites/>}
+            element={<GrowthOpportunites
+              // skillsList={skillsList}
+              growth={growth}
+              setGrowth={setGrowth}
+            />}
           />
           <Route
             path="/personaname"
@@ -75,10 +101,6 @@ function App() {
           element={<AboutYourself/>}
           />
         <Route
-            path="/futuregoals"
-            element={<FutureGoals/>}
-        />
-        <Route
           path="/letsgetstarted"
           element={<LetsGetStarted/>}
           />
@@ -94,6 +116,22 @@ function App() {
        path="/congrats"
        element={<Congrats/>}
        />
+        <Route
+        path="/email"
+        element={<SendEmail
+          user={user}
+          setUser={setUser}
+          />}
+        />
+        <Route
+        path="/dummy"
+        element={<DummyPage
+          user={user}
+          setUser={setUser}
+          growth={growth}
+          setGrowth={setGrowth}
+        />}
+        />
       </Routes>
        
 

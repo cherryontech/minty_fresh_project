@@ -1,0 +1,40 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.skills {
+    padding: .25rem;
+    &__input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        border: solid 2px lightgrey;
+        border-radius: .5rem;
+
+
+
+        .text_input {
+            margin: .25rem;
+        }
+
+        .dropdown {
+            @include level_dropdown;
+            
+        }
+        
+    }
+
+    button {
+        border-color: transparent;
+        background-color: transparent;
+    }
+    .delete-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0rem;
+        border-color: transparent;
+        background-color: transparent;
+        margin: .25rem;
+    }
+
+}

@@ -1,0 +1,68 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.index {
+    padding-bottom: 1rem;
+
+    &__header {
+        padding: 1.5rem 1rem;
+    }
+
+    &__back {
+        background-image: url('../../assets/icons/icon.png');
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: transparent;
+        border: none;
+        background-size: cover;
+        @include desktop{
+            background-size: cover;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: normal;
+        padding: 0rem 1rem;
+    }
+    &__intro{
+        font-size: 16px;
+        padding: 0rem 1rem;
+
+    }
+    &__step {
+    display: flex;
+    flex-direction: column;
+    }
+    &__box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0rem .5rem;
+        margin: 0.5rem 0rem;
+    }
+    &__image {
+        height: 2rem;
+        width: 2rem;
+        background-color: black;
+        margin: 1rem;
+    }
+    &__number{
+        color: #6361CE;
+        margin: 1rem;
+        font-size: 43.36px;
+        font-weight: lighter;
+    }
+    &__box-sub {
+        margin-left: 1rem;
+    }
+    &__box-title {
+        font-size: 19px;
+    }
+    &__box-content {
+        font-size: 13px;
+        font-weight: normal;
+    }
+}

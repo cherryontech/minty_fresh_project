@@ -19,16 +19,40 @@ const Strengths = ({strengths, setStrengths}) => {
     return (
         <div className='strengths'>
             <div className="strengths__header">
-                <div className="strengths__header-back">
-                </div>
+                    <button className="strengths__header-back"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/personaname')
+                        }}>
+                        <image src='../../assets/icons/icon.png'></image>
+                    </button>
                 <div className='strengths__header-title'>
-                    <p>Unleash your best self</p>
+                    <p>CREATE A PROFILE</p>
                 </div>
             </div>
-            <div className="strengths__progress"> 
+            <div className='strengths__progress'>
                 <div className="strengths__progress-bar"></div>
+                <div className="strengths__progress-position"> 
+                    <div className='strengths__progress-position-1'>
+                        <p>1</p>
+                    </div>
+                    <div className='strengths__progress-position-1-b'></div>
+                    <div className='strengths__progress-position-1-c'></div>
+                    <div className='strengths__progress-position-2'>
+                        <p>2</p>
+                    </div>
+                    <div className='strengths__progress-position-3'>
+                        <p>3</p>
+                    </div>
+                    <div className='strengths__progress-position-4'>
+                        <p>4</p>
+                    </div>
+                    <div className='strengths__progress-position-5'>
+                        <p>5</p>
+                    </div>
+                </div>
             </div>
-            <p className="step__text"> Step 2 </p>
+            <p className="step__text">2/5</p>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">
                     <label className="strengths__form-content">
@@ -42,7 +66,7 @@ const Strengths = ({strengths, setStrengths}) => {
                         />
                     </label>
                     <label className="strengths__form-content">
-                        What activities do you enjoy and have a lot of practice doing?
+                        What activities do you enjoy practicing?
                         <textarea 
                             type="text"
                             required
@@ -66,7 +90,7 @@ const Strengths = ({strengths, setStrengths}) => {
                             className="button__next" 
                             onClick={(e) => {
                                 e.preventDefault();
-                                navigate('/futuregoals');
+                                navigate('/pastacc');
                             }}
                             > Next
                         </button>
