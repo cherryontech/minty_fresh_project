@@ -61,11 +61,28 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                     <p>Externalize your impostor</p>
                 </div>
             </div>
-            <div className="growth__progress"> 
+            <div className='growth__progress'>
                 <div className="growth__progress-bar"></div>
+                <div className="growth__progress-position"> 
+                    <div className='growth__progress-position-1'>
+                            <p>1</p>
+                    </div>
+                    <div className='growth__progress-position-1-b'></div>
+                    <div className='growth__progress-position-1-c'></div>
+                    <div className='growth__progress-position-2'>
+                        <p>2</p>
+                    </div>
+                    <div className='growth__progress-position-3'>
+                        <p>3</p>
+                    </div>
+                    <div className='growth__progress-position-4'>
+                        <p>4</p>
+                    </div>
+                    <div className='growth__progress-position-5'>
+                        <p>5</p>
+                    </div>
+                </div>
             </div>
-            <p className='growth__progress-number'>5/5</p>
-
             <div className="growth__desktop-image">
                 <div className="growth__form-inputs">
 
