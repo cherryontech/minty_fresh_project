@@ -1,6 +1,6 @@
 import './Gremlin.scss';
 import gremlin from '../../assets/images/gremlin.jpg';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Gremlin = () => {
