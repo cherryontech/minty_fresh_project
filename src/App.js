@@ -33,8 +33,8 @@ function App() {
   // This is where the info from the strengths form will be stored (it is starting as empty strings and will be passed into different pages through props)
   const [strengths, setStrengths] = useState({
     compliments: '',
-    activities:'',
-    methodologies: ''
+    tools:[{ tools:"", level:""}],
+    softSkills:[{ skills:"", level:""}]
   });
 
 
@@ -152,6 +152,8 @@ function App() {
               // setSkillsList={setSkillsList}
               growth={growth}
               setGrowth={setGrowth}
+              strengths={strengths}
+              setStrengths={setStrengths}
             />
           }
         />
