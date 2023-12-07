@@ -95,7 +95,7 @@ const Index = () => {
                     </div>
                     <div className='index__box-sub'>
                         <div className='index__box-title'>
-                            <p>Send ana email</p>
+                            <p>Send an email</p>
                         </div>
                         <div className='index__content'>
                             <p>Finally, we'll send you an email with all your hard work so you can empower yourself in the future!</p>
