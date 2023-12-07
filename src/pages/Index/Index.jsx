@@ -1,5 +1,10 @@
 import './Index.scss';
 import { useNavigate } from 'react-router-dom';
+import communicate from '../../assets/icons/communicate.png'
+import geremlinicon from '../../assets/icons/gremlinyellow.png'
+import badgeicon  from '../../assets/icons/badgeyellow.png'
+import ideaicon from '../../assets/icons/ideayellow.png'
+import blastofficon from '../../assets/icons/blastoffyellow.png'
 
 const Index = () => {
 
@@ -19,7 +24,9 @@ const Index = () => {
             <p className='index__intro'> Here are Untether's steps for building your confidence:</p>
             <div className='index__step'> 
                 <div className='index__box'>
-                    <div className='index__image'></div>
+                    <div>
+                        <img className='index__image' src={communicate} alt='create_profile_img'></img>
+                    </div>
                     <div className='index__number'>
                         <p>1</p>
                     </div>
@@ -33,7 +40,9 @@ const Index = () => {
                     </div>
                 </div>
                 <div className='index__box'>
-                    <div className='index__image'></div>
+                    <div>
+                        <img className='index__image' src={geremlinicon} alt='create_profile_img'></img>
+                    </div>
                     <div className='index__number'>
                         <p>2</p>
                     </div>
@@ -47,8 +56,10 @@ const Index = () => {
                     </div>
                 </div>
                 <div className='index__box'>
-                    <div className='index__image'></div>
-                    <div className='index__number'>
+                <div>
+                    <img className='index__image' src={badgeicon} alt='nadgeimg'></img>
+                </div>                    
+                <div className='index__number'>
                         <p>3</p>
                     </div>
                     <div className='index__box-sub'>
@@ -61,7 +72,9 @@ const Index = () => {
                     </div>
                 </div>
                 <div className='index__box'>
-                    <div className='index__image'></div>
+                <div>
+                    <img className='index__image' src={ideaicon} alt='create_profile_img'></img>
+                </div>
                     <div className='index__number'>
                         <p>4</p>
                     </div>
@@ -75,8 +88,9 @@ const Index = () => {
                     </div>
                 </div>
                 <div className='index__box'>
-                    <div className='index__image'></div>
-                    <div className='index__number'>
+                <div>
+                    <img className='index__image' src={blastofficon} alt='create_profile_img'></img>
+                </div>                    <div className='index__number'>
                         <p>5</p>
                     </div>
                     <div className='index__box-sub'>
@@ -89,9 +103,9 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='index__button-container'>
                 <button 
-                    className="button__next" 
+                    className="index__button-next" 
                     onClick={(e) => {
                         e.preventDefault();
                         navigate('/personaname');

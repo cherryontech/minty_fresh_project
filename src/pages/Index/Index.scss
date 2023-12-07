@@ -44,10 +44,8 @@
         margin: 0.5rem 0rem;
     }
     &__image {
-        height: 2rem;
-        width: 2rem;
-        background-color: black;
-        margin: 1rem;
+        height: 4rem;
+        width: 4rem;
     }
     &__number{
         color: #6361CE;
@@ -64,5 +62,13 @@
     &__box-content {
         font-size: 13px;
         font-weight: normal;
+    }
+    &__button-container{
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0rem;
+    }
+    &__button-next{
+        @include button;
     }
 }
