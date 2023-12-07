@@ -138,16 +138,6 @@ const Strengths = ({strengths, setStrengths}) => {
                             onChange={handleChange}
                         />
                     </label>
-                    {/* <label className="strengths__form-content">
-                        What activities do you enjoy practicing?
-                        <textarea 
-                            type="text"
-                            required
-                            name="activities" 
-                            placeholder="Ex. I love to doodle and create graphics for my social media. I enjoy teaching beginners how to paint and I've been doing it for 3 years." 
-                            onChange={handleChange}
-                        />
-                    </label> */}
             <label className="strengths__form-content">
                 What tools or methodologies are you most comfortable working with?
                 <br/>
@@ -215,16 +205,6 @@ const Strengths = ({strengths, setStrengths}) => {
                     ))}               
                 </div>
             </label>
-                    {/* <label className="strengths__form-content">
-                        <p>What tools or methodologies are you most comfortable working with?</p>
-                        <textarea 
-                            type="text" 
-                            required
-                            name="methodologies" 
-                            placeholder="Ex. I'm most comfortable with using Figma, Adobe, and Canva. I follow atomic design principles when creating my designs."
-                            onChange={handleChange}
-                        />
-                    </label> */}
              <label className="strengths__form-content">
                 What intrapersonal skills do you have that can be applied to any role?
                 <br/>
