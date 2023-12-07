@@ -1,5 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
+import deleteIcon from '../../assets/icons/delete-icon.png';
+
 
 
 const Plan = () => {
@@ -10,6 +12,45 @@ const Plan = () => {
     //     reframe(val => ({...val, [e.target.name]: e.target.value}
     //     )) 
     // };
+
+// updates array with inputs in the reframe array
+//needs the "prop" name updated
+// const handleReframeChange = (f, index) => {
+//     const {name, value} = f.target;
+//     const improveList = {...prop};
+//     improveList.reframe[index] = {
+//         ...improveList.reframe[index],
+//         [name]: value,
+//     };
+
+//     console.log(index);
+    
+//     console.log(improveList.reframe, "This is list");
+
+//     setprop(input => ({...input, [f.target.name]: [f.target.value]}));
+//     setprop(improveList);
+// };
+
+
+// //removes the row when delete selected in the improvement array
+// //needs the "prop" name updated
+// const handleReframeRemove = (index) => {
+//     const copy = {...prop};
+//     copy.reframe.splice(index, 1);
+
+//     console.log(copy);
+//     setprop(copy);
+// }
+
+
+// //adds row when add row button selected in the reframe array
+// //needs the "prop" name updated
+// const handleReframeAdd = () => {
+//     const improveList = {...prop};
+//     improveList.reframe.push({reframe: ''});
+//     setprop(improveList);
+// };
+
     return(
         <div className="plan">
             <div className='plan__progress'>
@@ -133,6 +174,40 @@ const Plan = () => {
                                     placeholder="This will be changed to what sav made"
                                     // onChange={handleChange}
                                 />
+                                {/* need to put in the prop name before "reframe" */}
+                                {/* {prop.reframe.map((singleImprovement, index) => (
+                                    <div key={index} className='reframe-array'>
+
+                                        <div className='reframe__input'>
+                                                
+                                            <div className="inputs-only">
+                                                <input 
+                                                className='text_input'
+                                                name='tools'
+                                                id='tools'
+                                                placeholder='Ex. JIRA'
+                                                onChange={(e) => handleReframeChange(e, index)}
+                                                ></input>
+                                                
+                                            </div>
+                                            {prop.reframe.length > 1 && (
+                                                <button type="button" className=".button__delete">
+                                                    <img className='delete-icon' 
+                                                    src={deleteIcon} 
+                                                    alt='Delete'
+                                                    onClick = {() => handleReframeRemove(index)}/>
+                                                </button>
+                                            )}
+                                        </div>
+                            
+                                        {prop.reframe.length - 1 === index && prop.reframe.length < 3 && (
+                                            <div className="add-row">
+                                                <button type="button" className=".button__add-row"
+                                                onClick={handleReframeAdd}>+ Add Row</button>
+                                            </div>
+                                        )}
+                                </div>
+                            ))} */}
                             </label>
                         </form>
                     </div>
