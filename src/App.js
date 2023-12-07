@@ -38,8 +38,7 @@ function App() {
   const [growth, setGrowth] = useState({
     impostorSymptom: '',
     whyThisRole: '',
-    skills: [],
-    level: []
+    skillSet: [{ skills:"", level:""}]
   })
 
   // const [skillsList, setSkillsList] = useState({

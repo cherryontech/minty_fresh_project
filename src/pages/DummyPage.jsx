@@ -3,7 +3,7 @@ import React from 'react';
 
 const DummyPage = ({growth, setGrowth}) => {
 
-
+    
 
 
     return (
@@ -11,27 +11,16 @@ const DummyPage = ({growth, setGrowth}) => {
 
             <p>impostorSymptom {growth.impostorSymptom}</p>
             <p>whyThisRole {growth.whyThisRole}</p>
+            {/* <p>skills {growth.skillSet}</p> */}
             
-            {/* <ul>
-                {skillsList.map((item) => (
+            <ul>
+                {growth.skillSet.map((item) => (
                     <li key={item.index}>
                         Skills: {item.skills}, Level: {item.level}
                     </li>
-                ))};
-            </ul> */}
+                ))}
+            </ul>
 
-            {/* <ArrayDisplay {...growth.skillsArray} /> */}
-
-
-            
-
-            {/* <p>name {user.name}</p>
-            <p>pronoun {user.pronouns}</p>
-            <p>email {user.email}</p>
-            <p>role {user.role}</p>
-            <p>industry1 {user.industry1}</p>
-            <p>industry2 {user.industry2}</p>
-            <p>industry3 {user.industry3}</p> */}
         </div>
     )
 }

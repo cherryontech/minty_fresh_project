@@ -1,6 +1,5 @@
 //MF1-13
 import "./GrowthOpportunities.scss";
-import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import deleteIcon from '../../assets/icons/delete-icon.png';
 import backButton from '../../assets/icons/icon.png';
@@ -15,54 +14,48 @@ import weakImage from '../../assets/desktop/7_illustration_weak.png'
 */
 const GrowthOpportunites = ({growth, setGrowth}) => {
 
-    //growth skills to pass onto profile
-    // const [skillsList, setSkillsList] = useState([{skills: "", level: ""}]);
-    // const [skillsText, setSkillsText] = useState({name: ""});
-
-
     const navigate = useNavigate();
 
+    //onChange for the text areas to record their name and value
     const handleTextChange = (e) => {
-        // const copy = [...skillsList];
-
-        
-
         setGrowth(input => ({...input, [e.target.name]: [e.target.value]}));
     };
 
-    //adds row when add row button selected in the skills array
-    const handleSkillsAdd = (f) => {
-        console.log("name:", f.target.name, ": value", f.target.value)
+
+    // updates array with inputs in the skills array
+    const handleSkillsChange = (f, index) => {
+        const {name, value} = f.target;
+        const skillsList = {...growth};
+        skillsList.skillSet[index] = {
+            ...skillsList.skillSet[index],
+            [name]: value,
+        };
+
+        console.log(index);
+        
+        console.log(skillsList.skillSet, "This is list");
+
         setGrowth(input => ({...input, [f.target.name]: [f.target.value]}));
+        setGrowth(skillsList);
     };
 
-    // const handleLevelAdd = (f) => {
-    //     console.log("name:", f.target.name, ": value", f.target.value)
-    //     setGrowth(input => ({...input, [f.target.name]: [f.target.value]}));
-    // };
     
     //removes the row when delete selected in the skills array
-    //2 copies and do all the fun things
-    // const handleSkillsRemove = (index) => {
-    //     const copy = [...skillsList];
-    //     copy.splice(index, 1);
-    //     setSkillsList(copy);
-    // }
+    const handleSkillsRemove = (index) => {
+        const copy = {...growth};
+        copy.skillSet.splice(index, 1);
 
-    // // updates array with inputs in the skills array
-    const handleSkillChange = (e, index) => {
-        const {name, value} = e.target;
-        const skillsList = [...growth.skills];
-        skillsList[index] = value;
-        console.log("handleSkillChange")
-        
-        console.log(skillsList, "This is list");
-
-    //     setSkillsList(list);
-
-
+        console.log(copy);
+        setGrowth(copy);
     }
 
+
+    //adds row when add row button selected in the skills array
+    const handleSkillsAdd = () => {
+        const skillList = {...growth};
+        skillList.skillSet.push({ skills: '', level: ''});
+        setGrowth(skillList);
+    };
 
     return (
         <div className="growth">
@@ -118,36 +111,27 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                         </label>
                                     </div>
                         
-                        {/* {growth.map((singleSkill, index) => ( */}
-                        <div  className='skills-array'>
+                        {growth.skillSet.map((singleSkill, index) => (
+                        <div key={index} className='skills-array'>
 
                             <div className='skills__input'>
-
-                                {/* setup a map here with an index */}
-                                    
                                         
-                                        <div className="inputs-only">
-                                {growth.skills.map((singleSkill, skillIndex) => (
+                                <div className="inputs-only">
                                     <input 
+                                    
                                         // type='text'
                                         className='text_input'
                                         name='skills'
                                         id='skills'
                                         placeholder='Ex. Java'
                                         // value={singleSkill.skills}
-                                        onChange={handleSkillsAdd}
+                                        onChange={(e) => handleSkillsChange(e, index)}
                                         ></input>
-                                ))}
-
-                                        {/* setup another map here with index */}
-                                    {growth.level.map((singleLevel, levelIndex) => (
-
                                         <select className="dropdown"
                                         id='level'
                                         name='level'
                                         // value={singleSkill.level}
-                                        onChange={handleSkillsAdd}
-                                        // onChange={(e) => handleSkillChange(e, index)}
+                                        onChange={(e) => handleSkillsChange(e, index)}
                                         >
                                             <option value="">
                                                 Select an Option:
@@ -162,26 +146,26 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                                 Expert
                                             </option>
                                         </select>
-                                    ))}    
+                        
                                     </div>
-                                    {/* {skillsList.length > 1 && (
+                                    {growth.skillSet.length > 1 && (
                                         <button type="button" className=".button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
                                             onClick = {() => handleSkillsRemove(index)}/>
                                         </button>
-                                    )} */}
+                                    )}
                                 </div>
                     
-                                    {/* {skillsList.length - 1 === index && skillsList.length < 5 && (
+                                    {growth.skillSet.length - 1 === index && growth.skillSet.length < 5 && (
                                         <div className="add-row">
                                             <button type="button" className=".button__add-row"
                                             onClick={handleSkillsAdd}>+ Add Row</button>
                                         </div>
-                                        )} */}
+                                        )}
                         </div>
-                {/* ))}              */}
+                    ))}               
                                 </div>
                             </label>
                             <label className="growth__question">
