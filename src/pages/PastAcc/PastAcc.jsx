@@ -6,7 +6,29 @@ const PastAccomplishments = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className='accomplishments'>
+            <div className='accomplishments__progress'>
+                <div className="accomplishments__progress-bar"></div>
+                <div className="accomplishments__progress-position"> 
+                    <div className='accomplishments__progress-position-1'>
+                            <p>1</p>
+                    </div>
+                    <div className='accomplishments__progress-position-1-b'></div>
+                    <div className='accomplishments__progress-position-1-c'></div>
+                    <div className='accomplishments__progress-position-2'>
+                        <p>2</p>
+                    </div>
+                    <div className='accomplishments__progress-position-3'>
+                        <p>3</p>
+                    </div>
+                    <div className='accomplishments__progress-position-4'>
+                        <p>4</p>
+                    </div>
+                    <div className='accomplishments__progress-position-5'>
+                        <p>5</p>
+                    </div>
+                </div>
+            </div>
             <h1>Let's talk about your past accomplishments</h1>
 
             <p>What's your career backstory?</p>

@@ -46,18 +46,89 @@ textarea {
         }
     }
     &__progress {
-        height: 0.4rem;
-        width: 100%;
-        background-color: #D0D0D0;
+        width: -webkit-fill-available;
+        position: relative;
+        font-size: 12px;
+
         &-bar {
-            height: 100%;
-            width: 20%;
-            margin-left: 80%;
-            background-color: #F5AB4B;
+            height: 0.3rem;
+            background-color: #E6E0E9;
+            z-index: 0;
+            position: relative;
+            top: 0.8rem;
         }
-        &-number{
-            padding-top: .5rem;
-            @include label_text;
+        &-position {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+
+            &-1 {
+                background-color: #6361CE;
+                color: white;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+
+                &-b {
+                    background-color: #6361CE;
+                    width: .8rem;
+                    height: .8rem;
+                    display: flex;
+                    border-radius: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &-c {
+                    background-color: #6361CE;
+                    width: .8rem;
+                    height: .8rem;
+                    display: flex;
+                    border-radius: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &-2 {
+                background: #F5AB4B;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-3 {
+                background: #CFCEFF;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-4 {
+                background: #CFCEFF;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-5 {
+                background: #CFCEFF;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 

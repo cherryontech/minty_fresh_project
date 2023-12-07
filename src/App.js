@@ -11,8 +11,11 @@ import PastAcc from './pages/PastAcc/PastAcc';
 import AboutYourself from './pages/AboutYourself/AboutYourself';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
+import Profile from './pages/Profile/Profile';
+import Congrats from './pages/Congrats/Congrats';
 import SendEmail from './pages/SendEmail/SendEmail';
 import DummyPage from './pages/DummyPage';
+import Walkthrough from './pages/Index/Index';
 
 function App() {
 
@@ -51,15 +54,38 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Homepage/>}
+          element={
+            <Homepage/>
+          }
         />
         <Route
-            path="/strengths"
-            element={
-              <Strengths 
-                strengths={strengths}
-                setStrengths={setStrengths}
-              />}
+          path="/index"
+          element={
+            <Walkthrough/>
+          }
+        />
+        <Route
+          path="/personaname"
+          element={
+            <PersonaName
+              user={user}
+              setUser={setUser}
+            />
+          }
+        />
+        <Route
+          path="/strengths"
+          element={
+            <Strengths 
+              strengths={strengths}
+              setStrengths={setStrengths}
+            />}
+        />
+        <Route 
+          path="/pastacc"
+          element={
+            <PastAcc/>
+          }
         />
         <Route
           path="/results"
@@ -73,58 +99,63 @@ function App() {
           }
         /> 
         <Route
-            path="/growth"
-            element={<GrowthOpportunites
+          path="/growth"
+          element={
+            <GrowthOpportunites
+            // skillsList={skillsList}
+            // setSkillsList={setSkillsList}
+              growth={growth}
+              setGrowth={setGrowth}
+            />
+          }
+        />
+        <Route 
+          path="/aboutyourself"
+          element={
+            <AboutYourself/>
+          }
+        />
+        <Route
+          path="/letsgetstarted"
+          element={
+            <LetsGetStarted/>
+          }
+        />
+        <Route
+          path="/insertnamepage"
+          element={
+            <InsertNamePage/>
+          }
+        />
+        <Route 
+        path="/profile"
+        element={<Profile/>}
+        />
+        <Route 
+       path="/congrats"
+       element={<Congrats/>}
+       />
+        <Route
+          path="/email"
+          element={
+            <SendEmail
+              user={user}
+              setUser={setUser}
+            />
+          }
+        />
+        <Route
+          path="/dummy"
+            element={
+              <DummyPage
               // skillsList={skillsList}
               // setSkillsList={setSkillsList}
               growth={growth}
               setGrowth={setGrowth}
-            />}
-          />
-          <Route
-            path="/personaname"
-            element={<PersonaName
-              user={user}
-              setUser={setUser}
-            />}
-          />
-
-          <Route 
-          path="/pastacc"
-          element={<PastAcc/>}
-          />
-
-          <Route 
-          path="/aboutyourself"
-          element={<AboutYourself/>}
-          />
-        <Route
-          path="/letsgetstarted"
-          element={<LetsGetStarted/>}
-          />
-        <Route
-        path="/insertnamepage"
-        element={<InsertNamePage/>}
-        />
-        <Route
-        path="/email"
-        element={<SendEmail
-          user={user}
-          setUser={setUser}
-          />}
-        />
-        <Route
-        path="/dummy"
-        element={<DummyPage
-          // skillsList={skillsList}
-          // setSkillsList={setSkillsList}
-          growth={growth}
-          setGrowth={setGrowth}
-        />}
+            />
+          }
         />
       </Routes>
-
-
     </div>
   );
 }

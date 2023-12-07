@@ -7,12 +7,9 @@ input{
 }
 
 .persona{
-
-    &__container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__header{
         display: flex;
@@ -119,22 +116,95 @@ input{
             }
         }
     }
-    &__progress {
-    height: 0.4rem;
-    width: 100%;
-    background-color: #D0D0D0;
-        &-bar {
-            height: 100%;
-            width: 20%;
-            background-color: #F5AB4B;
-        }
-        &-number{
-            padding-top: .5rem;
-            @include label_text;
-        }
-    }
 
     .button__next {
         @include button;
+    }
+
+
+    &__progress {
+        width: -webkit-fill-available;
+        position: relative;
+        font-size: 12px;
+
+        &-bar {
+            height: 0.3rem;
+            background-color: #E6E0E9;
+            z-index: 0;
+            position: relative;
+            top: 0.8rem;
+        }
+        &-position {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+
+            &-1 {
+                background: #F5AB4B;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+
+                &-b {
+                    background: #CFCEFF;
+                    width: .8rem;
+                    height: .8rem;
+                    display: flex;
+                    border-radius: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &-c {
+                    background: #CFCEFF;
+                    width: .8rem;
+                    height: .8rem;
+                    display: flex;
+                    border-radius: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &-2 {
+                background: #CFCEFF;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-3{
+                background: #CFCEFF;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-4{
+                background: #CFCEFF;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &-5{
+                background: #CFCEFF;
+                width: 1.3rem;
+                height: 1.3rem;
+                display: flex;
+                border-radius: 1rem;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 }
