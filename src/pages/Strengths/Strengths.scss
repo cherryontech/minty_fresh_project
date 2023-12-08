@@ -286,6 +286,111 @@ textarea{
             }
         }
     }
+    .tools-label{
+        margin-top: .5rem;
+        margin-left: 0.5rem;
+        @include body_text;
+
+
+        .text-label {
+            width: 100%;
+        }
+        .dropdown-label {
+            margin-left: 3.5rem;
+            @include tablet {
+                margin-left: 2.5rem;
+            }
+            @include desktop {
+                margin-left: 2.5rem;
+            }
+        }
+    }
+
+    .tools-array {
+        padding: .25rem;
+    }
+
+    .tools__input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        border: solid 2px lightgrey;
+        border-radius: .5rem;
+
+        .text_input {
+            margin: .25rem;
+            width: 9rem;
+
+            @include desktop {
+
+                width: 10rem;
+            }
+        }
+
+        .dropdown {
+            @include level_dropdown;
+            margin-right: .25rem;
+            @include desktop {
+
+                width: 11rem;
+            }
+        }
+        
+    }
+
+    .skills-label{
+        margin-top: .5rem;
+        margin-left: 0.5rem;
+        @include body_text;
+
+
+        .text-label {
+            width: 100%;
+        }
+        .dropdown-label {
+            margin-left: 8.25rem;
+            @include tablet {
+                margin-left: 8rem;
+            }
+            @include desktop {
+                margin-left: 8.75rem;
+            }
+        }
+    }
+
+    .skills-array {
+        padding: .25rem;
+    }
+
+    .skills__input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        border: solid 2px lightgrey;
+        border-radius: .5rem;
+
+        .text_input {
+            margin: .25rem;
+            width: 9rem;
+
+            @include desktop {
+
+                width: 10rem;
+            }
+        }
+
+        .dropdown {
+            @include level_dropdown;
+            margin-right: .25rem;
+            @include desktop {
+
+                width: 11rem;
+            }
+        }
+        
+    }
 }
 
 .step__text{

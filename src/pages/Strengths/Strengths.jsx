@@ -1,5 +1,6 @@
 import './Strengths.scss';
 // import Header from '../../components/Header/Header';
+import deleteIcon from '../../assets/icons/delete-icon.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -13,6 +14,78 @@ const Strengths = ({strengths, setStrengths}) => {
     const handleChange = (e) => {
         setStrengths(val => ({...val, [e.target.name]: e.target.value}
         )) 
+    };
+
+
+
+        
+     //removes the row when delete selected in the skills array
+    const handleToolsRemove = (index) => {
+        const copy = {...strengths};
+        copy.tools.splice(index, 1);
+    
+        console.log(copy);
+        setStrengths(copy);
+    };
+    
+    
+    //adds row when add row button selected in the skills array
+    const handleToolsAdd = () => {
+        const toolList = {...strengths};
+        toolList.tools.push({ tools: '', level: ''});
+        setStrengths(toolList);
+    };
+
+    
+     // updates array with inputs in the skills array
+    const handleToolsChange = (f, index) => {
+        const {name, value} = f.target;
+        const toolsList = {...strengths};
+        toolsList.tools[index] = {
+            ...toolsList.tools[index],
+            [name]: value,
+        };
+
+        console.log(index);
+        
+        console.log(toolsList.tools, "This is list");
+
+        setStrengths(input => ({...input, [f.target.name]: [f.target.value]}));
+        setStrengths(toolsList);
+    };
+
+    // updates array with inputs in the skills array
+    const handleSkillsChange = (f, index) => {
+        const {name, value} = f.target;
+        const skillsList = {...strengths};
+        skillsList.softSkills[index] = {
+            ...skillsList.softSkills[index],
+            [name]: value,
+            };
+        
+        console.log(index);
+                
+        console.log(skillsList.softSkills, "This is list");
+        
+        setStrengths(input => ({...input, [f.target.name]: [f.target.value]}));
+                setStrengths(skillsList);
+    };
+        
+    //removes the row when delete selected in the skills array
+    const handleSkillsRemove = (index) => {
+        const copy = {...strengths};
+        copy.softSkills.splice(index, 1);
+
+        console.log(copy);
+        setStrengths(copy);
+    };
+
+
+    //adds row when add row button selected in the skills array
+    const handleSkillsAdd = () => {
+        const skillList = {...strengths};
+        skillList.softSkills.push({ skills: '', level: ''});
+        setStrengths(skillList);
     };
 
 
@@ -65,26 +138,140 @@ const Strengths = ({strengths, setStrengths}) => {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="strengths__form-content">
-                        What activities do you enjoy practicing?
-                        <textarea 
-                            type="text"
-                            required
-                            name="activities" 
-                            placeholder="Ex. I love to doodle and create graphics for my social media. I enjoy teaching beginners how to paint and I've been doing it for 3 years." 
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label className="strengths__form-content">
-                        <p>What tools or methodologies are you most comfortable working with?</p>
-                        <textarea 
-                            type="text" 
-                            required
-                            name="methodologies" 
-                            placeholder="Ex. I'm most comfortable with using Figma, Adobe, and Canva. I follow atomic design principles when creating my designs."
-                            onChange={handleChange}
-                        />
-                    </label>
+            <label className="strengths__form-content">
+                What tools or methodologies are you most comfortable working with?
+                <br/>
+                <h6>PLEASE LIMIT YOUR RESPONSE TO 5 TOOLS</h6>
+                    <div className="tools-component">
+                        <div className="tools-label">
+                            <label className="text-label">
+                                Tool/Methodology
+                            </label>
+                            <label className="dropdown-label">
+                                Skills Level
+                            </label>
+                        </div>
+                        
+                        {strengths.tools.map((singleTool, index) => (
+                            <div key={index} className='tools-array'>
+
+                                <div className='tools__input'>
+                                        
+                                    <div className="inputs-only">
+                                        <input 
+                                        className='text_input'
+                                        name='tools'
+                                        id='tools'
+                                        placeholder='Ex. JIRA'
+                                        onChange={(e) => handleToolsChange(e, index)}
+                                        ></input>
+                                        <select className="dropdown"
+                                        id='level'
+                                        name='level'
+                                        onChange={(e) => handleToolsChange(e, index)}
+                                        >
+                                            <option value="">
+                                                Select an Option:
+                                            </option>
+                                            <option value="Beginner">
+                                                Beginner
+                                            </option>
+                                            <option value="Proficient">
+                                                Proficient
+                                            </option>
+                                            <option value="Expert">
+                                                Expert
+                                            </option>
+                                        </select>
+                        
+                                    </div>
+                                    {strengths.tools.length > 1 && (
+                                        <button type="button" className=".button__delete">
+                                            <img className='delete-icon' 
+                                            src={deleteIcon} 
+                                            alt='Delete'
+                                            onClick = {() => handleToolsRemove(index)}/>
+                                        </button>
+                                    )}
+                                </div>
+                    
+                                {strengths.tools.length - 1 === index && strengths.tools.length < 5 && (
+                                    <div className="add-row">
+                                        <button type="button" className=".button__add-row"
+                                        onClick={handleToolsAdd}>+ Add Row</button>
+                                    </div>
+                                )}
+                        </div>
+                    ))}               
+                </div>
+            </label>
+             <label className="strengths__form-content">
+                What intrapersonal skills do you have that can be applied to any role?
+                <br/>
+                <h6>PLEASE LIMIT YOUR RESPONSE TO 5 SKILLS</h6>
+                    <div className="skills-component">
+                        <div className="skills-label">
+                            <label className="text-label">
+                                Skill
+                            </label>
+                            <label className="dropdown-label">
+                                Skills Level
+                            </label>
+                        </div>
+                        
+                        {strengths.softSkills.map((singleSkill, index) => (
+                            <div key={index} className='skills-array'>
+
+                                <div className='skills__input'>
+                                        
+                                    <div className="inputs-only">
+                                        <input 
+                                        className='text_input'
+                                        name='skills'
+                                        // id='skills'
+                                        placeholder='Ex. JIRA'
+                                        onChange={(e) => handleSkillsChange(e, index)}
+                                        ></input>
+                                        <select className="dropdown"
+                                        id='level'
+                                        name='level'
+                                        onChange={(e) => handleSkillsChange(e, index)}
+                                        >
+                                            <option value="">
+                                                Select an Option:
+                                            </option>
+                                            <option value="Beginner">
+                                                Beginner
+                                            </option>
+                                            <option value="Proficient">
+                                                Proficient
+                                            </option>
+                                            <option value="Expert">
+                                                Expert
+                                            </option>
+                                        </select>
+                        
+                                    </div>
+                                    {strengths.softSkills.length > 1 && (
+                                        <button type="button" className=".button__delete">
+                                            <img className='delete-icon' 
+                                            src={deleteIcon} 
+                                            alt='Delete'
+                                            onClick = {() => handleSkillsRemove(index)}/>
+                                        </button>
+                                    )}
+                                </div>
+                    
+                                {strengths.softSkills.length - 1 === index && strengths.softSkills.length < 5 && (
+                                    <div className="add-row">
+                                        <button type="button" className=".button__add-row"
+                                        onClick={handleSkillsAdd}>+ Add Row</button>
+                                    </div>
+                                )}
+                        </div>
+                    ))}               
+                </div>
+            </label>        
                     <footer>
                         <button 
                             className="button__next" 

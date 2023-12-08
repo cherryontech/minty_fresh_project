@@ -1,5 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
+import deleteIcon from '../../assets/icons/delete-icon.png';
+
 
 
 const Plan = () => {
@@ -7,9 +9,48 @@ const Plan = () => {
     const navigate = useNavigate();
 
     // const handleChange = (e) => {
-    //     reframe(val => ({...val, [e.target.name]: e.target.value}
+    //     growth1(val => ({...val, [e.target.name]: e.target.value}
     //     )) 
     // };
+
+// updates array with inputs in the growth1 array
+//needs the "prop" name updated
+// const handleGrowth1Change = (f, index) => {
+//     const {name, value} = f.target;
+//     const growth1List = {...prop};
+//     growth1List.growth1[index] = {
+//         ...growth1List.growth1[index],
+//         [name]: value,
+//     };
+
+//     console.log(index);
+    
+//     console.log(growth1List.growth1, "This is list");
+
+//     setprop(input => ({...input, [f.target.name]: [f.target.value]}));
+//     setprop(growth1List);
+// };
+
+
+// //removes the row when delete selected in the improvement array
+// //needs the "prop" name updated
+// const handleGrowth1Remove = (index) => {
+//     const copy = {...prop};
+//     copy.growth1.splice(index, 1);
+
+//     console.log(copy);
+//     setprop(copy);
+// }
+
+
+// //adds row when add row button selected in the growth1 array
+// //needs the "prop" name updated
+// const handleGrowth1Add = () => {
+//     const growth1List = {...prop};
+//     growth1List.growth1.push({growth1: ''});
+//     setprop(growth1List);
+// };
+
     return(
         <div className="plan">
             <div className='plan__progress'>
@@ -39,10 +80,10 @@ const Plan = () => {
             </div>
             <div>
                 <div>
-                    <p>First, let's address your gremlin symptoms. How can you reframe these gremlin symptoms in a more positive light?</p>
+                    <p>First, let's address your gremlin symptoms. How can you growth1 these gremlin symptoms in a more positive light?</p>
                 </div>
                 <div>
-                    <p> If you get stuck, here are some resources for how to reframe negative thoughts to boost confidence:</p>
+                    <p> If you get stuck, here are some resources for how to growth1 negative thoughts to boost confidence:</p>
                     <div className="plan__resources">
                         <ul>
                             {/* LINK THIS  */}
@@ -59,18 +100,18 @@ const Plan = () => {
                     <p>I'm a terribleinterviewer.</p>
                 </div>
                 <div>
-                    <p> Reframe:</p>
+                    <p> growth1:</p>
                     <p>Interviewing is just a conversation andI'm good at talking to people.</p>
                 </div>
             </div>
-            <div className="plan__symptom-reframe">
+            <div className="plan__symptom-refram">
                 {/* //MAP THIS */}
                 <h2> Now you try!</h2>
                 <p> Gremlin Symptom 1:</p>
                 <p> MAP SYMPTOM FROM BEFORE </p>
                 <form className="plan__symptom-reframe-form">
                     <label className="plan__form-content">
-                        Reframe:
+                        growth1:
                         <textarea 
                             type="text"
                             required
@@ -119,6 +160,7 @@ const Plan = () => {
                             <div>
                                 <p> Add row bellow </p>
                             </div>
+                            
                         </div>
                         <h3> Now you try!</h3>
                         <p> Area of growth 1: </p>
@@ -129,10 +171,44 @@ const Plan = () => {
                                 <textarea 
                                     type="text"
                                     required
-                                    name="symptom-reframe" 
+                                    name="symptom-growth1" 
                                     placeholder="This will be changed to what sav made"
                                     // onChange={handleChange}
                                 />
+                                {/* need to put in the prop name before "growth1" */}
+                                {/* {prop.growth1.map((singleImprovement, index) => (
+                                    <div key={index} className='growth1-array'>
+
+                                        <div className='growth1__input'>
+                                                
+                                            <div className="inputs-only">
+                                                <input 
+                                                className='text_input'
+                                                name='growth1'
+                                                id='growth1'
+                                                placeholder='Type Here'
+                                                onChange={(e) => handleGrowth1Change(e, index)}
+                                                ></input>
+                                                
+                                            </div>
+                                            {prop.growth1.length > 1 && (
+                                                <button type="button" className=".button__delete">
+                                                    <img className='delete-icon' 
+                                                    src={deleteIcon} 
+                                                    alt='Delete'
+                                                    onClick = {() => handleGrowth1Remove(index)}/>
+                                                </button>
+                                            )}
+                                        </div>
+                            
+                                        {prop.growth1.length - 1 === index && prop.growth1.length < 3 && (
+                                            <div className="add-row">
+                                                <button type="button" className=".button__add-row"
+                                                onClick={handleGrowth1Add}>+ Add Row</button>
+                                            </div>
+                                        )}
+                                </div>
+                            ))} */}
                             </label>
                         </form>
                     </div>
@@ -151,3 +227,80 @@ const Plan = () => {
 }
 
 export default Plan;
+
+    // const handleChange = (e) => {
+    //     growth1(val => ({...val, [e.target.name]: e.target.value}
+    //     )) 
+    // };
+
+// updates array with inputs in the growth2 array
+//needs the "prop" name updated
+// const handleGrowth2Change = (f, index) => {
+//     const {name, value} = f.target;
+//     const growth2List = {...prop};
+//     improveList.growth2[index] = {
+//         ...improveList.growth2[index],
+//         [name]: value,
+//     };
+
+//     console.log(index);
+    
+//     console.log(growth2List.growth2, "This is list");
+
+//     setprop(input => ({...input, [f.target.name]: [f.target.value]}));
+//     setprop(growth2List);
+// };
+
+
+// //removes the row when delete selected in the growth2 array
+// //needs the "prop" name updated
+// const handleGrowth2Remove = (index) => {
+//     const copy = {...prop};
+//     copy.growth2.splice(index, 1);
+
+//     console.log(copy);
+//     setprop(copy);
+// }
+
+
+// //adds row when add row button selected in the growth2 array
+// //needs the "prop" name updated
+// const handleGrowth2Add = () => {
+//     const growth2List = {...prop};
+//     growth2List.growth2.push({growth2: ''});
+//     setprop(growth2List);
+// };
+
+                            {/* {prop.growth2.map((singleImprovement, index) => (
+                                    <div key={index} className='growth2-array'>
+
+                                        <div className='growth2__input'>
+                                                
+                                            <div className="inputs-only">
+                                                <input 
+                                                className='text_input'
+                                                name='growth2'
+                                                id='growth2'
+                                                placeholder='Ex. Type Here'
+                                                onChange={(e) => handleGrowth2Change(e, index)}
+                                                ></input>
+                                                
+                                            </div>
+                                            {prop.growth2.length > 1 && (
+                                                <button type="button" className=".button__delete">
+                                                    <img className='delete-icon' 
+                                                    src={deleteIcon} 
+                                                    alt='Delete'
+                                                    onClick = {() => handleGrowth2Remove(index)}/>
+                                                </button>
+                                            )}
+                                        </div>
+                            
+                                        {prop.growth2.length - 1 === index && prop.growth2.length < 3 && (
+                                            <div className="add-row">
+                                                <button type="button" className=".button__add-row"
+                                                onClick={handleGrowth2Add}>+ Add Row</button>
+                                            </div>
+                                        )}
+                                </div>
+                            ))} */}
