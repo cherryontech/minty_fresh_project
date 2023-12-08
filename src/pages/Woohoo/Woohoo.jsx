@@ -1,13 +1,7 @@
 
-import "./Woohoo.scss"
+import "./Woohoo.scss";
 import React /*{useState}*/ from "react";
 /*import { useNavigate } from 'react-router-dom';*/
-
-//import React
-
-//Outline
-
-// write function
 const Woohoo = () => {
 
     return (
