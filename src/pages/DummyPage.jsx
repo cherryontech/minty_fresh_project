@@ -24,21 +24,21 @@ const DummyPage = ({strengths, setStrengths}) => {
     
         
          // updates array with inputs in the skills array
-        const handleToolsChange = (f, index) => {
-            const {name, value} = f.target;
-            const toolsList = {...strengths};
-            toolsList.tools[index] = {
-                ...toolsList.tools[index],
-                [name]: value,
-            };
+        // const handleToolsChange = (f, index) => {
+        //     const {name, value} = f.target;
+        //     const toolsList = {...strengths};
+        //     toolsList.tools[index] = {
+        //         ...toolsList.tools[index],
+        //         [name]: value,
+        //     };
     
-            console.log(index);
+        //     console.log(index);
             
-            console.log(toolsList.tools, "This is list");
+        //     console.log(toolsList.tools, "This is list");
     
-            setStrengths(input => ({...input, [f.target.name]: [f.target.value]}));
-            setStrengths(toolsList);
-        };
+        //     setStrengths(input => ({...input, [f.target.name]: [f.target.value]}));
+        //     setStrengths(toolsList);
+        // };
     
 
 
