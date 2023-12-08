@@ -25,10 +25,12 @@ return (
     <hr></hr>
 <div className="skills_container">
     <h2 className="user_header">Hard Skills</h2>
-<ul>
+
     <div>
+    <ul>
     <li className="skill_li_1">CSS</li>
     <li className="skill_li_1">Proficient</li>
+    </ul>
     </div>
     
     <div>
@@ -37,10 +39,12 @@ return (
     </div>
 
     <div>
+        <ul>
     <li className="skill_li_3">JavaScript</li>
     <li className="skill_li_3">Beginner</li>
+    </ul>
     </div>
-</ul>
+
 <hr></hr>
 <h2 className="user_header">Soft Skills</h2>
 <ul>

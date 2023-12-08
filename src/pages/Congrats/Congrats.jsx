@@ -1,15 +1,12 @@
 //MF1-269
 //import scss file
 import "./Congrats.scss"
-import React, {useState} from "react";
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import  {useNavigate} from 'react-router-dom'
 
-//import React
-
-//Outline
-
-// write function
 const Congrats = () => {
+
+    const navigate = useNavigate();
 
     return (
         <div className="congrats">
@@ -26,7 +23,11 @@ const Congrats = () => {
 
             
 
-            <a href="../HomePage.jsx"><button type="button">Return to home page</button></a>
+            <button className="get-started-btn" 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/')
+                    }}>Back to Homepage</button>
         </div>
 
 
