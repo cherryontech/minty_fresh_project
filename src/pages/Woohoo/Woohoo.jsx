@@ -12,7 +12,7 @@ const Woohoo = () => {
 
     return (
         <div className="woohoo">
-            <h1>Congratulations! You finished all the steps!</h1>
+            <h1>Woohoo! You finished all the steps!</h1>
             <div className="parent">
             <p className="text-child">The email was sent and you'll be on your way to taming your imposter syndrome by 
                 following your game plan. We hope we've made your empowerment journey easier.
