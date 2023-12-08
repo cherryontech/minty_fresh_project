@@ -13,7 +13,7 @@ const PersonaName = ({user, setUser}) => {
 
     const navigate = useNavigate();
     const handleChange = (e) => {
-        console.log('This is name')
+        console.log('This is name', user)
         setUser(val => ({...val, [e.target.name]: e.target.value}
         )) 
     };
@@ -183,14 +183,12 @@ const PersonaName = ({user, setUser}) => {
                 </div>
                 <img  className="name-tag" src={nameTag} alt=""/>
             </div>
-            <footer>
-                <button className="button__next" type='button' 
-                    onClick={(e) => {
-                        e.preventDefault();
-                        navigate('/strengths');
-                    }}>Next</button>
-
-            </footer>
+            <button className="button__next" type='button' 
+                onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/strengths');
+                }}>Next
+            </button>
         </div>
     )
 }

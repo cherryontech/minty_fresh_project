@@ -43,6 +43,10 @@ function App() {
     whyThisRole: ''
   })
 
+  const [accomplishments, setAccomplishments] = useState({
+    
+  })
+
   return (
     <div className="app">
       <Routes>
@@ -78,7 +82,10 @@ function App() {
         <Route 
           path="/pastacc"
           element={
-            <PastAcc/>
+            <PastAcc
+              accomplishments = {accomplishments}
+              setAccomplishments ={setAccomplishments}
+            />
           }
         />
         <Route

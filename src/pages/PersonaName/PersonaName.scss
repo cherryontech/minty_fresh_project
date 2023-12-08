@@ -30,21 +30,12 @@ input{
         &-title{
             @include body_text;
         }
-        &-progress {
-            height: 0.5rem;
-            width: 100%;
-            background-color: #D0D0D0;
-            &-bar{
-                height: 100%;
-                width: 20%;
-                background-color: #F5AB4B;
-            }
-        }
+
     }
     &__title{
         @include headline_text;
         text-align: center;
-        width: 81%;
+        width: 100%;
         padding-bottom: .5rem;
         letter-spacing: .07rem;
         font-weight: normal;

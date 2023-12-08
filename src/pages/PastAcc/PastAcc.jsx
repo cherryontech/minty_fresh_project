@@ -1,12 +1,31 @@
 import './PastAcc.scss';
 import { useNavigate } from "react-router-dom";
 
-const PastAccomplishments = () => {
+const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
 
     const navigate = useNavigate();
+    
+    const handleChange = (e) => {
+        console.log('This is accomplishments', accomplishments)
+        setAccomplishments(val => ({...val, [e.target.name]: e.target.value}
+        )) 
+    };
 
     return (
         <div className='accomplishments'>
+            <div className="accomplishments__header">
+                <button className="accomplishments__header-back"
+                onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/strengths')
+                }}>
+                    <image src='../../assets/icons/icon.png'></image>
+                </button>
+                
+                <div className='accomplishments__header-title'>
+                    <p>CREATE A PROFILE</p>
+                </div>
+            </div>
             <div className='accomplishments__progress'>
                 <div className="accomplishments__progress-bar"></div>
                 <div className="accomplishments__progress-position"> 
@@ -29,26 +48,43 @@ const PastAccomplishments = () => {
                     </div>
                 </div>
             </div>
-            <h1>Let's talk about your past accomplishments</h1>
-
-            <p>What's your career backstory?</p>
-
-            <input type='text' name='textbox' placeholder='Ex. For the past 6 years, I have been 
-            working in marketing. I have been teaching how to paint for the last 3 years.'></input>
-
-            <p>Can you describe moments in your career when you felt most proud of yourself?</p>
-
-            <input type='text' name='textbox' placeholder='Ex. One of my proudest moments was when I was offered
-            an art teaching opportunity after an exhibition.'></input>
-
-            <p>Do you have any notable certifications or awards you'd like to highlight?</p>
-            <input type='text' name='textbox' placeholder='Ex. I won a graphic design challenge posted by X 
-            company blah blah blah blah blah.'></input>
-
-            <button type='button' onClick={(e) => {
-                    e.preventDefault();
-                    navigate('/strengths');
-                }}>Next</button>
+            <h1 className='accomplishments__title'>Let's talk about your past & accomplishments</h1>
+            <div className='accomplishments__instructions'>
+                <p className='accomplishments__instructions-a'> How will you use the skills you previously listed in the role you're pursuing?</p>
+                <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
+                <p className='accomplishments__instructions-example'> Ex. I will use my Adobe suite skills to design pixel-perfect game graphics, I will use my communication skills to effectively
+                    collaborate with the game development team, I will use my presentation skills to discuss my work during art reviews and pitch 
+                    ideas during meetings.
+                </p>
+            </div>
+            <form className='accomplishments__form'>
+                <label>
+                <div className='accomplishments__instructions'>
+                    <p className='accomplishments__instructions-a'> Share moments in your career when you felt most proud of yourself.?</p>
+                    <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
+                </div>
+                <div className='accomplishments__form-input'>
+                    <textarea
+                        type="text"
+                        required
+                        name='accomplishments'
+                        placeholder='Ex. I was offered a teaching opportunity after an art exhibition, I helped a student build a portfolio that landed them a job.'
+                        onChange={handleChange}
+                    />
+                </div>
+                </label>
+            </form>
+            <div className='accomplishments__footer' >
+                <button 
+                    className='accomplishments__button' 
+                    type='button' 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/strengths');
+                    }}
+                > Next
+                </button>
+            </div>
         </div>
     )
 }
