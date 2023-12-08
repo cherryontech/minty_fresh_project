@@ -1,13 +1,33 @@
-
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 
 .accomplishments {
-
+/////////////////////////////////////////////////HEADER AND PROGRESS BAR///////////////////////////////////
+    &__header{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        padding-right: 5.6rem;
+        align-items: center;
+        &-back{
+            background-image: url('../../assets/icons/icon.png');
+            height: 1.5rem;
+            width: 1.5rem;
+            background-color: transparent;
+            border: none;
+            background-size: cover;
+        }
+        &-title{
+            @include body_text;
+        }
+    }
     &__progress {
         width: -webkit-fill-available;
         position: relative;
         font-size: 12px;
-
         &-bar {
             height: 0.3rem;
             background-color: #E6E0E9;
@@ -21,7 +41,6 @@
             align-items: center;
             z-index: 1;
             position: relative;
-
             &-1 {
                 background: #CFCEFF;
                 width: 1.3rem;
@@ -30,7 +49,6 @@
                 border-radius: 1rem;
                 align-items: center;
                 justify-content: center;
-
                 &-b {
                     background: #CFCEFF;
                     width: .8rem;
@@ -87,5 +105,51 @@
                 justify-content: center;
             }
         }
+    }
+    &__title{
+        font-size: 28px;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 300;
+    }
+    &__instructions{
+        padding: 0rem 1rem;
+
+        &-a{
+            padding: 0.5rem 0rem;
+            font-size: 1rem;
+            letter-spacing: .02rem;
+        }
+        &-b{
+            font-size: 0.65rem;
+            color: #515151;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            letter-spacing: 0.05rem;
+        }
+        &-example {
+            background: #E5D5D1;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            letter-spacing: 0.03rem;
+            margin-bottom: 2rem;        
+        }
+    }
+    &__form{
+        font-size: 16px;
+        &-input{
+            display: flex;
+            justify-content: center;
+            padding: 0rem 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    &__footer{
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0rem;
+    }
+    &__button{
+        @include button;
     }
 }
