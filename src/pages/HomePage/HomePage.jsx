@@ -14,14 +14,14 @@ const Homepage = () => {
     //TODO: add img to the lower section
     return (
         <div className="homepage">
-            <div className="homepage_get-started-container">
+            <div className="homepage__get-started-container">
                 <img className = "mobile-logo" 
                     src={mobileLogo} 
-                    alt = "Empower Logo. Person flexing."/>
+                    alt = "Untether Logo. Person flexing."/>
                 <img className = "desktop-logo" 
                     src={desktopLogo} 
-                    alt = "Empower Logo. Person flexing."/>
-                <h1>Welcome to Empower</h1>
+                    alt = "Untether Logo. Person flexing."/>
+                <h1>Welcome to Untether</h1>
                 <p>A way to tame your imposter syndrome while job hunting</p>
                 <button className="get-started-btn" 
                     onClick={(e) => {
@@ -30,16 +30,16 @@ const Homepage = () => {
                     }}>Get Started</button>
             
             </div>
-            <div className="homepage_onboarding-container">
+            <div className="homepage__onboarding-container">
 
                 <img className="top-stars"
                     src={topStars} 
-                    alt="Blue, white, and red stars on the upper right corner of Empower description"/>
+                    alt="Blue, white, and red stars on the upper right corner of Untether description"/>
                 <img className="bottom-stars" 
                     src={bottomStars} 
-                    alt="Blue, white, and red stars on the lower left corner of Empower description"/>
+                    alt="Blue, white, and red stars on the lower left corner of Untether description"/>
 
-                <p className="empower-yourself">How Empower boosts your confidence</p>
+                <p className="untether-yourself">How Untether boosts your confidence</p>
                 <h2>Unleash your best self</h2>
                 <p>We help you brainstorm about your best qualities to create a personal profile</p>
                 <h2>Externalize your imposter</h2>
