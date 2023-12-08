@@ -20,7 +20,7 @@
     @include desktop {
         flex-direction: row;
     }
-    &_get-started-container {
+    &__get-started-container {
         text-align: center;
         background-color: $light-grey;
         padding: 2rem;
@@ -54,9 +54,9 @@
             }
         }
     }
-    &_onboarding-container {
+    &__onboarding-container {
         align-items: center;
-        background-color: $light-yellow;
+        background-color: #CFCEFF;
         padding: 1.5rem;
 
         .empower-yourself {
@@ -111,7 +111,7 @@
         }
     }
 
-    &_get-started-containter, &_onboarding-container {
+    &__get-started-containter, &__onboarding-container {
         @include desktop {
             flex: 1;
         }

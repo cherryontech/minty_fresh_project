@@ -2,3 +2,69 @@
 @use '../../styles/partials/variables' as *;
 
 
+
+.growth1-array {
+    padding: .25rem;
+}
+
+.growth1__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    border: solid 2px lightgrey;
+    border-radius: .5rem;
+
+    .text_input {
+        margin: .25rem;
+        width: 9rem;
+
+        @include desktop {
+
+            width: 10rem;
+        }
+    }
+
+    .dropdown {
+        @include level_dropdown;
+        margin-right: .25rem;
+        @include desktop {
+
+            width: 11rem;
+        }
+    }
+    
+}
+
+.growth2-array {
+    padding: .25rem;
+}
+
+.growth2__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    border: solid 2px lightgrey;
+    border-radius: .5rem;
+
+    .text_input {
+        margin: .25rem;
+        width: 9rem;
+
+        @include desktop {
+
+            width: 10rem;
+        }
+    }
+
+    .dropdown {
+        @include level_dropdown;
+        margin-right: .25rem;
+        @include desktop {
+
+            width: 11rem;
+        }
+    }
+    
+}
