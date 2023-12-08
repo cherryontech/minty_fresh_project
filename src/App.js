@@ -14,6 +14,7 @@ import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import InsertNamePage from './pages/InsertNamePage/InsertNamePage';
 import UserProfilePersona from './pages/UserProfilePersona/UserProfilePersona';
 import Congrats from './pages/Congrats/Congrats';
+import Woohoo from './pages/Woohoo/Woohoo';
 
 function App() {
 
@@ -93,6 +94,10 @@ function App() {
         <Route 
        path="/congrats"
        element={<Congrats/>}
+       />
+       <Route
+       path="/woohoo"
+       element={<Woohoo/>}
        />
       </Routes>
        
