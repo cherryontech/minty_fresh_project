@@ -125,7 +125,6 @@ const Strengths = ({strengths, setStrengths}) => {
                     </div>
                 </div>
             </div>
-            <p className="step__text">2/5</p>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">
                     <label className="strengths__form-content">
