@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import deleteIcon from '../../assets/icons/delete-icon.png';
 import backButton from '../../assets/icons/icon.png';
 import weakImage from '../../assets/desktop/7_illustration_weak.png'
-
+import FeelingsPopup from '../../components/FeelingsPopup/FeelingsPopup'
+import { useState } from "react";
 
 //Had to comment out the "required" for the text fields outside of the component
 //Changed the <image> tag in the header because I was getting an error in inspect
@@ -19,6 +20,11 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
     //onChange for the text areas to record their name and value
     const handleTextChange = (e) => {
         setGrowth(input => ({...input, [e.target.name]: [e.target.value]}));
+    };
+    const [showFeelings, setshowFeelings] = useState(false);
+
+    const handelFeelingsModal = () => {
+        setshowFeelings(true);
     };
 
 
@@ -197,23 +203,34 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                 />
                             </label>
                     </form>
+                    <div className="growth__feelings"> 
+                        <div> 
+                            <p> How unsure are you feeling? </p>
+                        </div>
+                        <div>
+                            <button className="growth__feelings-modal"
+                                onClick={() => handelFeelingsModal()}>
+                                Feelings list
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <img className="weak-image" src={weakImage} alt=""/>
             </div>
             <footer>
-                {/* <button className="button__submit"
-                onClick={(e) => {
-                    e.preventDefault();
-                    navigate('/results');
-                }}>Submit</button> */}
-
         <button className="button__next" type='button' 
                     onClick={(e) => {
                         e.preventDefault();
                         navigate('/profile');
                     }}>Next</button>
-
             </footer>
+            <div>
+                {showFeelings && (
+                    <FeelingsPopup
+                    showFeelings = {showFeelings}
+                    setshowFeelings = {setshowFeelings}
+                    />)}
+            </div>
         </div>
     )
 }
