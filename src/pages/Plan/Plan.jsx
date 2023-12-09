@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import deleteIcon from '../../assets/icons/delete-icon.png';
+// import deleteIcon from '../../assets/icons/delete-icon.png';
 
 
 
@@ -218,7 +218,7 @@ const Plan = () => {
                 className="button__submit" 
                 onClick={(e) => {
                     e.preventDefault();
-                    navigate('/sendemail');
+                    navigate('/email');
                 }}
                 > Next
             </button>

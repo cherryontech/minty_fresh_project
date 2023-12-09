@@ -80,7 +80,7 @@ const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
                     type='button' 
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/strengths');
+                        navigate('/checkpoint');
                     }}
                 > Next
                 </button>

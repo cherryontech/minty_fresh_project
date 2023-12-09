@@ -210,7 +210,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
         <button className="button__next" type='button' 
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/dummy');
+                        navigate('/profile');
                     }}>Next</button>
 
             </footer>
