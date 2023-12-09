@@ -11,10 +11,10 @@ const Strengths = ({strengths, setStrengths}) => {
     const navigate = useNavigate();
 
     // This will save the information of the form to the set state
-    // const handleChange = (e) => {
-    //     setStrengths(val => ({...val, [e.target.name]: e.target.value}
-    //     )) 
-    // };
+    const handleChange = (e) => {
+        setStrengths(val => ({...val, [e.target.name]: e.target.value}
+        )) 
+    };
 
 
 
@@ -127,14 +127,22 @@ const Strengths = ({strengths, setStrengths}) => {
             </div>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">
-                    <div className="strengths__form-instructions">
-                        <p className="strengths__form-instructions-a">What's your most common compliment? </p>
-                        <h6 className='strengths__form-instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</h6>
-                        <p className='strengths__form-instructions-example'>
-                            Ex. I usually get compliments about my graphic illustrations, I'm 
-                            an effective communicator, I'm good at teaching beginners.
-                        </p>
-                    </div>
+                        <label>
+                            <div className='accomplishments__instructions'>
+                                <p className="strengths__form-instructions-a">What's your most common compliment? </p>
+                                <h6 className='strengths__form-instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</h6>
+                            </div>
+                            <div className='accomplishments__form-input'>
+                                <textarea className='strengths__form-instructions-example'
+                                    type="text"
+                                    required
+                                    name='strengths'
+                                    placeholder="Ex. I usually get compliments about my graphic illustrations, I'm 
+                                    an effective communicator, I'm good at teaching beginners."
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </label>
             <label className="strengths__form-content">
                 What tools or methodologies are you most comfortable working with?
                 <br/>

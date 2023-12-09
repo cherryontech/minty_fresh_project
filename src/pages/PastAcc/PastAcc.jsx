@@ -49,15 +49,24 @@ const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
                 </div>
             </div>
             <h1 className='accomplishments__title'>Let's talk about your past & accomplishments</h1>
-            <div className='accomplishments__instructions'>
-                <p className='accomplishments__instructions-a'> How will you use the skills you previously listed in the role you're pursuing?</p>
-                <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
-                <p className='accomplishments__instructions-example'> Ex. I will use my Adobe suite skills to design pixel-perfect game graphics, I will use my communication skills to effectively
-                    collaborate with the game development team, I will use my presentation skills to discuss my work during art reviews and pitch 
-                    ideas during meetings.
-                </p>
-            </div>
             <form className='accomplishments__form'>
+                <label>
+                <div className='accomplishments__instructions'>
+                    <p className='accomplishments__instructions-a'> How will you use the skills you previously listed in the role you're pursuing?</p>
+                    <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
+                </div>
+                <div className='accomplishments__form-input'>
+                    <textarea className='accomplishments__form-textarea'
+                        type="text"
+                        required
+                        name='accomplishments'
+                        placeholder='Ex. I will use my Adobe suite skills to design pixel-perfect game graphics, I will use my communication skills to effectively
+                        collaborate with the game development team, I will use my presentation skills to discuss my work during art reviews and pitch 
+                        ideas during meetings.'
+                        onChange={handleChange}
+                    />
+                </div>
+                </label>
                 <label>
                 <div className='accomplishments__instructions'>
                     <p className='accomplishments__instructions-a'> Share moments in your career when you felt most proud of yourself?</p>
