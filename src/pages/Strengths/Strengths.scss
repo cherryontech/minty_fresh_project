@@ -154,6 +154,32 @@ textarea{
         padding: 0rem .5rem;
         padding-top: .5rem;
 
+        &-instructions{
+            padding: 0rem 0.5rem;
+            &-a{
+                padding: 0.5rem 0rem;
+                font-size: 1rem;
+                letter-spacing: .02rem;
+            }
+            &-b{
+                font-size: 0.65rem;
+                color: #515151;
+                font-weight: 400;
+                padding-bottom: 0.5rem;
+                letter-spacing: 0.05rem;
+            }
+            &-example {
+                background: #E5D5D1;
+                padding: 1rem 1rem;
+                font-size: small;
+                border-radius: 0.5rem;
+                letter-spacing: 0.03rem;
+                line-height: 1.3rem;
+                margin-bottom: 2rem;
+                color: #515151;     
+            }
+        }
+
         &-content{
             @include title_text;
             display: flex;
