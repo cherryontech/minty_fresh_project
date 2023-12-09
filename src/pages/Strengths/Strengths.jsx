@@ -12,6 +12,7 @@ const Strengths = ({strengths, setStrengths}) => {
 
     // This will save the information of the form to the set state
     const handleChange = (e) => {
+        console.log("this is abilities", strengths)
         setStrengths(val => ({...val, [e.target.name]: e.target.value}
         )) 
     };
@@ -48,7 +49,7 @@ const Strengths = ({strengths, setStrengths}) => {
 
         console.log(index);
         
-        console.log(toolsList.tools, "This is list");
+        console.log("This is tools", toolsList.tools);
 
         setStrengths(input => ({...input, [f.target.name]: [f.target.value]}));
         setStrengths(toolsList);
@@ -65,7 +66,7 @@ const Strengths = ({strengths, setStrengths}) => {
         
         console.log(index);
                 
-        console.log(skillsList.softSkills, "This is list");
+        console.log("this is SOFT skills", skillsList.softSkills);
         
         setStrengths(input => ({...input, [f.target.name]: [f.target.value]}));
                 setStrengths(skillsList);
