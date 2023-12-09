@@ -16,6 +16,7 @@ import Congrats from './pages/Congrats/Congrats';
 import SendEmail from './pages/SendEmail/SendEmail';
 import DummyPage from './pages/DummyPage';
 import Walkthrough from './pages/Index/Index';
+import GremlinAbout from './pages/GremlinAbout/GremlinAbout';
 
 function App() {
 
@@ -140,6 +141,10 @@ function App() {
         <Route 
        path="/congrats"
        element={<Congrats/>}
+       />
+      <Route 
+       path="/gremlin"
+       element={<GremlinAbout/>}
        />
         <Route
           path="/email"

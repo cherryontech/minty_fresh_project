@@ -3,8 +3,7 @@
 
 
 *{
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
@@ -13,6 +12,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
     
     @include tablet {
         flex-direction: row;
@@ -24,13 +25,16 @@
         text-align: center;
         background-color: $light-grey;
         padding: 2rem;
+        align-items: center;
 
         .mobile-logo{
             padding: .5rem;
+            width: 30rem;
+            
+            @include desktop {
+                width: 30rem;
+            }
 
-        }
-        .desktop-logo {
-            display: none;
         }
         h1{
             font-weight: lighter;
@@ -44,26 +48,20 @@
         @include tablet {
             padding: 5rem;
         }
-        @include desktop {
-            // display: flex;
-            .mobile-logo {
-                display: none;
-            }
-            .desktop-logo {
-                display: block;
-            }
-        }
+
     }
-    &_onboarding-container {
+    &__onboarding-container {
         align-items: center;
-        background-color: $light-yellow;
+        justify-content: center;
+        background-color: #CFCEFF;
         padding: 1.5rem;
 
-        .gremlin-yourself {
-            text-align: center;
-        }
         h2{
             font-weight: lighter;
+        }
+        h2 img {
+            width: 2rem;
+            vertical-align: middle;
         }
         p {
             padding: .5rem 0rem 2rem;
@@ -111,7 +109,7 @@
         }
     }
 
-    &__gremlin-containter, &_onboarding-container {
+    &__gremlin-containter, &__onboarding-container {
         @include desktop {
             flex: 1;
         }
