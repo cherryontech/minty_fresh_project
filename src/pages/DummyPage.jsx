@@ -124,3 +124,7 @@ const DummyPage = ({strengths, setStrengths}) => {
 }
 
 export default DummyPage;
+
+// {inventories.map(inventory => (
+//     <InventoryItem key={inventory.id} inventories={inventories} inventory={inventory} setInventories={setInventories} />
+// ))}

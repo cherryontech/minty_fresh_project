@@ -6,11 +6,8 @@
     &__card{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        border-radius: 5%;
-        background-color: #FFE0B8;
-        margin: 0rem 1rem;
-        padding: 1.5rem 1rem;
+        align-items: center;
+        width: 100%;
     }
 
     &__name{
@@ -21,11 +18,10 @@
         font-size: .8rem;
     }
 
-    &__avatar{
-        background-image: url('../../assets/images/userimg.jpg');
-        padding: 6rem 9.3rem;
-        border-radius: 1.5rem;
-        background-size: cover;
+    &__photo{
+        height: 5rem;
+        width: 5rem;
+        border-radius: 5rem;
     }
 
     &__content{
@@ -36,6 +32,66 @@
         &-subhead{
             @include label_text;
         }
+    }
+    &__break{
+        height: 1px;
+        background-color: lightgray;
+        width: 95%;
+        margin: 0.5rem 0rem;
+    }
+
+    &__superpowers{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: flex-start;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__skill{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: .5rem;
+        align-items: flex-start;
+        align-content: space-between;
+        flex-wrap: wrap;
+        &-card{
+            background: #FFE0B8;
+            padding: 1.2rem 1rem;
+            width: 100%;
+            display: flex;
+            border-radius: 1rem;
+            justify-content: space-between;
+        }
+    }
+    &__translatingskill{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: flex-start;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__proud{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: flex-start;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__industry{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: flex-start;
+        align-content: space-between;
+        flex-wrap: wrap;
     }
 
 }

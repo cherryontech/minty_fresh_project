@@ -34,7 +34,7 @@ const GremlinAbout = () => {
                 <button className="continue-btn" 
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/index')
+                        navigate('/growth')
                     }}>Continue</button>
             
             </div>

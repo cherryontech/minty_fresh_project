@@ -125,19 +125,24 @@ const Strengths = ({strengths, setStrengths}) => {
                     </div>
                 </div>
             </div>
-            <p className="step__text">2/5</p>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">
-                    <label className="strengths__form-content">
-                        What's your most common compliment? 
-                        <textarea 
-                            type="text"
-                            required
-                            name="compliments" 
-                            placeholder="Ex. I usually get good compliments about my graphic illustrations and my verbal communication."
-                            onChange={handleChange}
-                        />
-                    </label>
+                        <label>
+                            <div className='accomplishments__instructions'>
+                                <p className="strengths__form-instructions-a">What's your most common compliment? </p>
+                                <h6 className='strengths__form-instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</h6>
+                            </div>
+                            <div className='accomplishments__form-input'>
+                                <textarea className='strengths__form-instructions-example'
+                                    type="text"
+                                    required
+                                    name='strengths'
+                                    placeholder="Ex. I usually get compliments about my graphic illustrations, I'm 
+                                    an effective communicator, I'm good at teaching beginners."
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </label>
             <label className="strengths__form-content">
                 What tools or methodologies are you most comfortable working with?
                 <br/>

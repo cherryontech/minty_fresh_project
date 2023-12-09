@@ -10,7 +10,9 @@ import envelopeImage from '../../assets/images/illustration_email.png';
     */
 
 const SendEmail = ({user, setUser}) => {
+    
     const [ isChecked, setIsChecked ] = useState(false);
+
     const navigate = useNavigate();
 
 
@@ -85,7 +87,7 @@ const SendEmail = ({user, setUser}) => {
                     disabled={!isChecked}
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('');
+                        navigate('/congrats');
                         console.log("button clicked enabled")
                     }}>Send Email</button>
             </footer>

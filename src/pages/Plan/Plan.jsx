@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import deleteIcon from '../../assets/icons/delete-icon.png';
+// import deleteIcon from '../../assets/icons/delete-icon.png';
 
 
 
@@ -218,7 +218,7 @@ const Plan = () => {
                 className="button__submit" 
                 onClick={(e) => {
                     e.preventDefault();
-                    navigate('/sendemail');
+                    navigate('/email');
                 }}
                 > Next
             </button>
@@ -227,80 +227,3 @@ const Plan = () => {
 }
 
 export default Plan;
-
-    // const handleChange = (e) => {
-    //     growth1(val => ({...val, [e.target.name]: e.target.value}
-    //     )) 
-    // };
-
-// updates array with inputs in the growth2 array
-//needs the "prop" name updated
-// const handleGrowth2Change = (f, index) => {
-//     const {name, value} = f.target;
-//     const growth2List = {...prop};
-//     improveList.growth2[index] = {
-//         ...improveList.growth2[index],
-//         [name]: value,
-//     };
-
-//     console.log(index);
-    
-//     console.log(growth2List.growth2, "This is list");
-
-//     setprop(input => ({...input, [f.target.name]: [f.target.value]}));
-//     setprop(growth2List);
-// };
-
-
-// //removes the row when delete selected in the growth2 array
-// //needs the "prop" name updated
-// const handleGrowth2Remove = (index) => {
-//     const copy = {...prop};
-//     copy.growth2.splice(index, 1);
-
-//     console.log(copy);
-//     setprop(copy);
-// }
-
-
-// //adds row when add row button selected in the growth2 array
-// //needs the "prop" name updated
-// const handleGrowth2Add = () => {
-//     const growth2List = {...prop};
-//     growth2List.growth2.push({growth2: ''});
-//     setprop(growth2List);
-// };
-
-                            {/* {prop.growth2.map((singleImprovement, index) => (
-                                    <div key={index} className='growth2-array'>
-
-                                        <div className='growth2__input'>
-                                                
-                                            <div className="inputs-only">
-                                                <input 
-                                                className='text_input'
-                                                name='growth2'
-                                                id='growth2'
-                                                placeholder='Ex. Type Here'
-                                                onChange={(e) => handleGrowth2Change(e, index)}
-                                                ></input>
-                                                
-                                            </div>
-                                            {prop.growth2.length > 1 && (
-                                                <button type="button" className=".button__delete">
-                                                    <img className='delete-icon' 
-                                                    src={deleteIcon} 
-                                                    alt='Delete'
-                                                    onClick = {() => handleGrowth2Remove(index)}/>
-                                                </button>
-                                            )}
-                                        </div>
-                            
-                                        {prop.growth2.length - 1 === index && prop.growth2.length < 3 && (
-                                            <div className="add-row">
-                                                <button type="button" className=".button__add-row"
-                                                onClick={handleGrowth2Add}>+ Add Row</button>
-                                            </div>
-                                        )}
-                                </div>
-                            ))} */}

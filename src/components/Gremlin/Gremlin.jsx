@@ -37,7 +37,7 @@ const Gremlin = () => {
             <button className="gremlin__button-submit"
                 onClick={(e) => {
                     e.preventDefault();
-                    navigate('/gameplan');
+                    navigate('/plan');
                 }}
             > 
                 make a gameplan
