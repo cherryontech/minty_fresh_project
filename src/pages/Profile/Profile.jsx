@@ -2,7 +2,8 @@ import './Profile.scss';
 import Gremlin from '../../components/Gremlin/Gremlin';
 import Persona from '../../components/Persona/Persona';
 
-const Profile = () => {
+const Profile = ({user, setUser}) => {
+    
     return(
         <div className='profile'>
             <div className='profile__progress'>

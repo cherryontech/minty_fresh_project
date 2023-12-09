@@ -150,7 +150,10 @@ function App() {
         />
         <Route 
         path="/profile"
-        element={<Profile/>}
+        element={<Profile
+          user={user}
+          setUser={setUser}
+        />}
         />
         <Route 
         path="/plan"

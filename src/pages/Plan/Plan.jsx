@@ -1,55 +1,13 @@
 
 import { useNavigate } from "react-router-dom";
 // import deleteIcon from '../../assets/icons/delete-icon.png';
-
+import './Plan.scss';
 
 
 const Plan = () => {
 
     const navigate = useNavigate();
 
-    // const handleChange = (e) => {
-    //     growth1(val => ({...val, [e.target.name]: e.target.value}
-    //     )) 
-    // };
-
-// updates array with inputs in the growth1 array
-//needs the "prop" name updated
-// const handleGrowth1Change = (f, index) => {
-//     const {name, value} = f.target;
-//     const growth1List = {...prop};
-//     growth1List.growth1[index] = {
-//         ...growth1List.growth1[index],
-//         [name]: value,
-//     };
-
-//     console.log(index);
-    
-//     console.log(growth1List.growth1, "This is list");
-
-//     setprop(input => ({...input, [f.target.name]: [f.target.value]}));
-//     setprop(growth1List);
-// };
-
-
-// //removes the row when delete selected in the improvement array
-// //needs the "prop" name updated
-// const handleGrowth1Remove = (index) => {
-//     const copy = {...prop};
-//     copy.growth1.splice(index, 1);
-
-//     console.log(copy);
-//     setprop(copy);
-// }
-
-
-// //adds row when add row button selected in the growth1 array
-// //needs the "prop" name updated
-// const handleGrowth1Add = () => {
-//     const growth1List = {...prop};
-//     growth1List.growth1.push({growth1: ''});
-//     setprop(growth1List);
-// };
 
     return(
         <div className="plan">
@@ -75,18 +33,17 @@ const Plan = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="plan__title">
                 <h2> Think Positive</h2>
             </div>
-            <div>
-                <div>
-                    <p>First, let's address your gremlin symptoms. How can you growth1 these gremlin symptoms in a more positive light?</p>
+            <div className="plan__instructions">
+                <div className="plan__instructions-a">
+                    <p>First, let's address your gremlin symptoms. How can you reframe these gremlin symptoms in a more positive light?</p>
                 </div>
-                <div>
+                <div className="plan__instructions-b">
                     <p> If you get stuck, here are some resources for how to growth1 negative thoughts to boost confidence:</p>
                     <div className="plan__resources">
                         <ul>
-                            {/* LINK THIS  */}
                             <li> Reframing negative thoughts</li>
                             <li> Positive thinking</li>
                         </ul>
@@ -95,7 +52,7 @@ const Plan = () => {
             </div>
             <div className="plan__example-reframe">
                 <p>Example</p>
-                <div>
+                <div >
                     <p>Gremlin Symptom:</p>
                     <p>I'm a terribleinterviewer.</p>
                 </div>

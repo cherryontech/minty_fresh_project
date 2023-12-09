@@ -10,6 +10,7 @@ import nameTag from '../../assets/desktop/2_illustration_name.png';
     -fix all values and handleChanges
 */
 const PersonaName = ({user, setUser}) => {
+    
 
     const navigate = useNavigate();
     const handleChange = (e) => {
@@ -18,23 +19,6 @@ const PersonaName = ({user, setUser}) => {
         )) 
     };
 
-    // const [selectedOption1, setSelectedOption1] = useState('');
-    // const [selectedOption2, setSelectedOption2] = useState('');
-    // const [selectedOption3, setSelectedOption3] = useState('');
-
-    // //sets the selected option from the dropdowns
-    // const handleSelectChange1 = (e) => {
-        
-    //     setSelectedOption1(e.target.value);
-    // };
-    // const handleSelectChange2 = (e) => {
-        
-    //     setSelectedOption2(e.target.value);
-    // };
-    // const handleSelectChange3 = (e) => {
-        
-    //     setSelectedOption3(e.target.value);
-    // };
 
     return (
         <div className='persona'>

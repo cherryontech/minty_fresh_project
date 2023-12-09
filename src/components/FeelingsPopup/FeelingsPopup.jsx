@@ -10,11 +10,11 @@ const FeelingsPopup = ( {showFeelings, setshowFeelings}) =>{
     return(
         <div className='feelings'>
             <div className='feelings__card'>
-            <div className='feelings__back'>
-                <p onClick={handelHideModal}>Back</p>
-            </div>
                 <div className='feelings__title'>
                     <h2>Feelings List</h2>
+                    <div className='feelings__back'>
+                        <p onClick={handelHideModal}>Back</p>
+                    </div>
                 </div>
                 <div className='feelings__emotions'>
                 <div className='feelings__emotions-row' >
