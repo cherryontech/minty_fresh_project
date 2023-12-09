@@ -4,6 +4,9 @@ import mobileLogo from '../../assets/images/1-LandingPage-illustration-main-Mobi
 import desktopLogo from '../../assets/images/1-LandingPage-illustration-main-desktop.png'
 import topStars from '../../assets/images/1-LandingPage-illustration-stars-top-desktop.png'
 import bottomStars from '../../assets/images/1-LandingPage-illustration-stars-bottom-desktop.png'
+import build from '../../assets/icons/icon_build.png';
+import iconEmpower from '../../assets/icons/icon_empowerment.png';
+import iconExternal from '../../assets/icons/icon_externalize.png';
 
 const Homepage = () => {
 
@@ -39,12 +42,21 @@ const Homepage = () => {
                     src={bottomStars} 
                     alt="Blue, white, and red stars on the lower left corner of Untether description"/>
 
-                <p className="untether-yourself">How Untether boosts your confidence</p>
-                <h2>Unleash your best self</h2>
+                <h2 className="untether-yourself">How Untether boosts your confidence</h2>
+                <h2>
+                    <br/>
+                    <img src={iconEmpower} alt=""/>
+                    Unleash your best self
+    
+                </h2>
                 <p>We help you brainstorm about your best qualities to create a personal profile</p>
-                <h2>Externalize your imposter</h2>
+                <h2>
+                <img src={iconExternal} alt=""/>
+                    Externalize your imposter</h2>
                 <p>We enable you to personify your insecurities into a gremlin you can tame</p>
-                <h2>Gear up for job interviews</h2>
+                <h2>
+                    <img src={build} alt=""/>
+                    Gear up for job interviews</h2>
                 <p>We create personalized interview answers as you shape your profile and gremlin</p>
             </div>
         </div>

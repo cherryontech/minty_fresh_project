@@ -160,6 +160,10 @@ function App() {
        path="/congrats"
        element={<Congrats/>}
        />
+      <Route 
+       path="/gremlin"
+       element={<GremlinAbout/>}
+       />
         <Route
           path="/email"
           element={
