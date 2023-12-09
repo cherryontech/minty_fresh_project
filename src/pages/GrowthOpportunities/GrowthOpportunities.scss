@@ -7,6 +7,8 @@
 // }
 textarea {
     @include form-field;
+    letter-spacing: 0.03rem;
+    line-height: 1.3rem;
 }
 .growth {
     display: flex;
@@ -135,7 +137,7 @@ textarea {
     &__title{
         @include headline_text;
         text-align: center;
-        width: 81%;
+        width: 100%;
         padding-bottom: .5rem;
         padding-top: .5rem;
         letter-spacing: .07rem;
@@ -251,6 +253,16 @@ textarea {
         
     }
 
+    &__feelings{
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 1rem;
+        padding-bottom: 1.6rem;
+        &-modal{
+            color:#6361CE;
+            background: transparent;
+        }
+    }
 
     footer{
         margin-bottom: 1rem;

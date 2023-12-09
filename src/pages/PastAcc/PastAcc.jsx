@@ -60,11 +60,11 @@ const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
             <form className='accomplishments__form'>
                 <label>
                 <div className='accomplishments__instructions'>
-                    <p className='accomplishments__instructions-a'> Share moments in your career when you felt most proud of yourself.?</p>
+                    <p className='accomplishments__instructions-a'> Share moments in your career when you felt most proud of yourself?</p>
                     <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
                 </div>
                 <div className='accomplishments__form-input'>
-                    <textarea
+                    <textarea className='accomplishments__form-textarea'
                         type="text"
                         required
                         name='accomplishments'
@@ -80,7 +80,7 @@ const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
                     type='button' 
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/strengths');
+                        navigate('/checkpoint');
                     }}
                 > Next
                 </button>

@@ -16,6 +16,9 @@ import Congrats from './pages/Congrats/Congrats';
 import SendEmail from './pages/SendEmail/SendEmail';
 import DummyPage from './pages/DummyPage';
 import Walkthrough from './pages/Index/Index';
+import GremlinAbout from './pages/GremlinAbout/GremlinAbout';
+import Checkpoint from './pages/Checkpoint/Checkpoint';
+import Plan from './pages/Plan/Plan';
 
 function App() {
 
@@ -93,6 +96,18 @@ function App() {
             />
           }
         />
+        <Route 
+          path="/checkpoint"
+          element={
+            <Checkpoint/>
+          }
+        />
+        <Route 
+          path="/gremlinabout"
+          element={
+            <GremlinAbout/>
+          }
+        />
         <Route
           path="/results"
           element={
@@ -136,6 +151,10 @@ function App() {
         <Route 
         path="/profile"
         element={<Profile/>}
+        />
+        <Route 
+        path="/plan"
+        element={<Plan/>}
         />
         <Route 
        path="/congrats"

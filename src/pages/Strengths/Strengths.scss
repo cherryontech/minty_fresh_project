@@ -136,129 +136,12 @@ textarea{
         }
     }
 
-
-
-    // <div classNae="strengths__progress-position"> 
-    //     <div className='strengths__progress-position-1'>
-    //             <p>1</p>
-    //         </div>
-    //         <div className='strengths__progress-position-1b'></div>
-    //         <div className='strengths__progress-position-1c'></div>
-    //         <div className='strengths__progress-position-2'>
-    //             <p>2</p>
-    //         </div>
-    //         <div className='strengths__progress-position-3'>
-    //             <p>3</p>
-    //         </div>
-    //         <div className='strengths__progress-position-4'>
-    //             <p>4</p>
-    //         </div>
-    //         <div className='strengths__progress-position-5'>
-    //             <p>5</p>
-    //         </div>
-    // </div>
-    // &__progress{
-    //     background-color: aqua;
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-evenly;
-    //     align-items: center;
-    //     width: 100%;
-    //     font-size: xx-small;
-    //     @include desktop{
-    //         height: 0.8rem;
-    //         border-radius: 5rem;
-    //         width: 85%;
-    //     }
-    //     &-container{
-    //         width: -webkit-fill-available;
-    //         background-color: pink;
-    //         }
-    //         // &-bar {
-    //         //     height: 100%;
-    //         //     background-color: #F5AB4B;
-    //         //     width: 20%;
-    //         //     margin-left: 20%;
-    //         //     @include desktop{
-    //         //         border-radius: 5rem;
-                    
-    //         //     }
-    //         // }
-    //         &-number{
-    //             padding-top: .5rem;
-    //             @include label_text;
-    //         }
-    //         &-position-1{
-    //             background: #F5AB4B;
-    //             width: 1.5rem;
-    //             height: 1.5rem;
-    //             display: flex;
-    //             border-radius: 1rem;
-    //             align-items: center;
-    //             justify-content: center;
-    //             &b{
-    //                 background: #CFCEFF;
-    //                 width: .8rem;
-    //                 height: .8rem;
-    //                 display: flex;
-    //                 border-radius: 1rem;
-    //                 align-items: center;
-    //                 justify-content: center;
-    //             }
-    //             &c{
-    //                 background: #CFCEFF;
-    //                 width: .8rem;
-    //                 height: .8rem;
-    //                 display: flex;
-    //                 border-radius: 1rem;
-    //                 align-items: center;
-    //                 justify-content: center;
-    //             }
-    //         }
-    //         &-position-2{
-    //             background: #CFCEFF;
-    //             width: 1.5rem;
-    //             height: 1.5rem;
-    //             display: flex;
-    //             border-radius: 1rem;
-    //             align-items: center;
-    //             justify-content: center;
-    //         }
-    //         &-position-3{
-    //             background: #CFCEFF;
-    //             width: 1.5rem;
-    //             height: 1.5rem;
-    //             display: flex;
-    //             border-radius: 1rem;
-    //             align-items: center;
-    //             justify-content: center;
-    //         }
-    //         &-position-4{
-    //             background: #CFCEFF;
-    //             width: 1.5rem;
-    //             height: 1.5rem;
-    //             display: flex;
-    //             border-radius: 1rem;
-    //             align-items: center;
-    //             justify-content: center;
-    //         }
-    //         &-position-5{
-    //             background: #CFCEFF;
-    //             width: 1.5rem;
-    //             height: 1.5rem;
-    //             display: flex;
-    //             border-radius: 1rem;
-    //             align-items: center;
-    //             justify-content: center;
-    //         }
-        // }
-
     &__title{
         @include headline_text;
         text-align: center;
         width: 81%;
         padding-bottom: .5rem;
-        padding-top: .5rem;
+        padding-top: 1rem;
         letter-spacing: .07rem;
         font-weight: normal;
         @include desktop{
@@ -270,6 +153,31 @@ textarea{
         width: 100%;
         padding: 0rem .5rem;
         padding-top: .5rem;
+
+        &-instructions{
+            padding: 0rem 0.5rem;
+            &-a{
+                padding: 0.5rem 0rem;
+                font-size: 1rem;
+                letter-spacing: .02rem;
+            }
+            &-b{
+                color: gray;
+                font-size: 12px;
+                padding-bottom: 0.5rem;
+                letter-spacing: 0.05rem;
+            }
+            &-example {
+                background: #E5D5D1;
+                padding: 1rem 1rem;
+                font-size: small;
+                border-radius: 0.5rem;
+                letter-spacing: 0.03rem;
+                line-height: 1.3rem;
+                margin-bottom: 2rem;
+                color: #515151;     
+            }
+        }
 
         &-content{
             @include title_text;
