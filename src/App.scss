@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Titillium Web', sans-serif;
+
 }
 
 
@@ -15,7 +16,10 @@
 
 .app {
     background-color: #FFF1ED;
-    height: max-content;
+    // height: max-content;
+    min-height: 100vh;
+    background-size: cover;
+    
     // @include tablet{
     //     background-size: cover;
     // }

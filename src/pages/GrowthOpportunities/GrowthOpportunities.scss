@@ -222,6 +222,9 @@ textarea {
 
     .skills-array {
         padding: .25rem;
+        
+        
+
     }
 
     .skills__input {
@@ -244,14 +247,54 @@ textarea {
 
         .dropdown {
             @include level_dropdown;
-            margin-right: .25rem;
+            // margin-right: .25rem;
             @include desktop {
 
                 width: 11rem;
             }
         }
+
+        .button__delete {
+            width: 3rem;
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .delete-icon {
+            height: 2.5rem;
+            width: 2.5rem;
+            // padding: 0rem;
+            border-color: transparent;
+            background-color: transparent;
+            // margin-right: 3rem;
+            align-items: center;
+        }
         
     }
+
+
+.add-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    border: dashed 2px lightgrey;
+    border-radius: .5rem;
+    margin: .2rem;
+    
+
+    // // padding-top: 5rem;
+    .button__add-row {
+        font-size: large;
+        text-align: center;
+        opacity: 0.75;
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-color: transparent;
+        background-color: transparent;
+    
+    }
+}
 
     &__feelings{
         display: flex;
@@ -269,44 +312,11 @@ textarea {
     }
 }
 
-button  {
-    border-color: transparent;
-    background-color: transparent;
-}
-.delete-icon {
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 0rem;
-    border-color: transparent;
-    background-color: transparent;
-    margin: .25rem;
-}
+
 .button__submit {
     @include button;
 }
 
-.add-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-sizing: border-box;
-    border: dashed 2px lightgrey;
-    border-radius: .5rem;
-    // vertical-align: middle;
-    margin: .2rem;
-    
-
-    // padding-top: 5rem;
-    button {
-        font-size: large;
-        text-align: center;
-        opacity: 0.75;
-        width: 100%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    
-    }
-}
 
 h6 {
     margin-top: .25rem;

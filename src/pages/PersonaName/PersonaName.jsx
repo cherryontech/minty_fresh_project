@@ -5,8 +5,7 @@ import nameTag from '../../assets/desktop/2_illustration_name.png';
 
 
 /*TODO:
-    -add in the dropdown passing information to the profile page
-    -setup the email to pass to SendEmail
+
     -fix all values and handleChanges
 */
 const PersonaName = ({user, setUser}) => {
@@ -167,12 +166,16 @@ const PersonaName = ({user, setUser}) => {
                 </div>
                 <img  className="name-tag" src={nameTag} alt=""/>
             </div>
-            <button className="button__next" type='button' 
-                onClick={(e) => {
-                    e.preventDefault();
-                    navigate('/strengths');
-                }}>Next
-            </button>
+
+            <footer>
+
+                <button className="button__next" type='button' 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/strengths');
+                    }}>Next
+                </button>
+            </footer>
         </div>
     )
 }

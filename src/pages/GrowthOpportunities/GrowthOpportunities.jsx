@@ -172,7 +172,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                         
                                     </div>
                                     {growth.skillSet.length > 1 && (
-                                        <button type="button" className=".button__delete">
+                                        <button type="button" className="button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
@@ -183,7 +183,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                     
                                     {growth.skillSet.length - 1 === index && growth.skillSet.length < 5 && (
                                         <div className="add-row">
-                                            <button type="button" className=".button__add-row"
+                                            <button type="button" className="button__add-row"
                                             onClick={handleSkillsAdd}>+ Add Row</button>
                                         </div>
                                         )}

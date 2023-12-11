@@ -128,12 +128,12 @@ const Strengths = ({strengths, setStrengths}) => {
             </div>
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">
-                        <label>
-                            <div className='accomplishments__instructions'>
+                        <label className='strengths__form-content'>
+                            <div className='strengths__instructions'>
                                 <p className="strengths__form-instructions-a">What's your most common compliment? </p>
                                 <h6 className='strengths__form-instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</h6>
                             </div>
-                            <div className='accomplishments__form-input'>
+                            <div className='strengths__form-input'>
                                 <textarea className='strengths__form-instructions-example'
                                     type="text"
                                     required
@@ -192,7 +192,7 @@ const Strengths = ({strengths, setStrengths}) => {
                         
                                     </div>
                                     {strengths.tools.length > 1 && (
-                                        <button type="button" className=".button__delete">
+                                        <button type="button" className="button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
@@ -203,7 +203,7 @@ const Strengths = ({strengths, setStrengths}) => {
                     
                                 {strengths.tools.length - 1 === index && strengths.tools.length < 5 && (
                                     <div className="add-row">
-                                        <button type="button" className=".button__add-row"
+                                        <button type="button" className="button__add-row"
                                         onClick={handleToolsAdd}>+ Add Row</button>
                                     </div>
                                 )}
@@ -259,7 +259,7 @@ const Strengths = ({strengths, setStrengths}) => {
                         
                                     </div>
                                     {strengths.softSkills.length > 1 && (
-                                        <button type="button" className=".button__delete">
+                                        <button type="button" className="button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
@@ -270,7 +270,7 @@ const Strengths = ({strengths, setStrengths}) => {
                     
                                 {strengths.softSkills.length - 1 === index && strengths.softSkills.length < 5 && (
                                     <div className="add-row">
-                                        <button type="button" className=".button__add-row"
+                                        <button type="button" className="button__add-row"
                                         onClick={handleSkillsAdd}>+ Add Row</button>
                                     </div>
                                 )}
