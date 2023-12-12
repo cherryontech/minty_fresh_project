@@ -153,6 +153,18 @@ textarea{
         width: 100%;
         padding: 0rem .5rem;
         padding-top: .5rem;
+        // display: flex;
+        // flex-direction: column;
+        
+    .with-image {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
 
         &-instructions{
             padding: 0rem 0.5rem;
@@ -189,8 +201,9 @@ textarea{
             font-size: .9rem;
             letter-spacing: 0.02rem;
             @include desktop{
-                padding-right: 48rem;
+                padding-right: 18rem;
                 padding-left: 8rem;
+                
             }
         }
 
@@ -206,11 +219,17 @@ textarea{
 
         .text-label {
             width: 100%;
+            padding: 0.5rem 0rem;
+            font-size: 12px;
+            letter-spacing: .02rem;
         }
         .dropdown-label {
-            margin-left: 3.5rem;
+            margin-left: 1.25rem;
+            padding: 0.5rem 0rem;
+            font-size: 12px;
+            letter-spacing: .02rem;
             @include tablet {
-                margin-left: 2.5rem;
+                margin-left: 1.5rem;
             }
             @include desktop {
                 margin-left: 2.5rem;
@@ -235,7 +254,9 @@ textarea{
         .text_input {
             margin: .25rem;
             width: 9rem;
-
+            background: #E5D5D1;
+            font-size: small;
+            color: #515151;   
             @include desktop {
 
                 width: 10rem;
@@ -301,11 +322,17 @@ textarea{
 
         .text-label {
             width: 100%;
+            padding: 0.5rem 0rem;
+            font-size: 12px;
+            letter-spacing: .02rem;
         }
         .dropdown-label {
-            margin-left: 8.25rem;
+            margin-left: 7.75rem;
+            padding: 0.5rem 0rem;
+            font-size: 12px;
+            letter-spacing: .02rem;
             @include tablet {
-                margin-left: 8rem;
+                margin-left: 7.75rem;
             }
             @include desktop {
                 margin-left: 8.75rem;
@@ -328,6 +355,9 @@ textarea{
         .text_input {
             margin: .25rem;
             width: 9rem;
+            background: #E5D5D1;
+            font-size: small;
+            color: #515151;   
 
             @include desktop {
 
@@ -346,8 +376,21 @@ textarea{
         
     }
 
+    .desktop-image {
+        display: none;
+
+        @include desktop {
+            display: block;
+            width: 20rem;
+            height: 20rem;
+            margin-right: 10rem;
+            margin-top: 12rem;
+        }
+    }
     
 }
+
+
 
 .step__text{
     @include label_text;

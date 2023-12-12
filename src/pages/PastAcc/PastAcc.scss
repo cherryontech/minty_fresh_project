@@ -106,19 +106,49 @@
             }
         }
     }
+    &__with-image {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
+
+        .desktop-image {
+            display: none;
+
+            @include desktop {
+                display: block;
+                width: 20rem;
+                height: 20rem;
+                margin-top: 5rem;
+            }
+        }
+    }
     &__title{
         font-size: 28px;
         padding: 1rem;
         text-align: center;
         font-weight: 300;
+        @include desktop {
+            padding-right: 18rem;
+            padding-left: 8rem;
+            text-align: left;
+        }
     }
     &__instructions{
         padding: 0rem 1rem;
+        @include desktop {
+            padding-right: 18rem;
+            padding-left: 8rem;
+
+        }
 
         &-a{
             padding: 0.5rem 0rem;
             font-size: 1rem;
             letter-spacing: .02rem;
+
         }
         &-b{
             font-size: 0.65rem;
@@ -137,6 +167,15 @@
             color: #515151;    
         }
     }
+
+    &__form-inputs {
+
+        @include desktop {
+            padding-right: 18rem;
+            padding-left: 8rem;
+
+        }
+    }
     &__form{
         font-size: 16px;
         &-input{
@@ -144,16 +183,24 @@
             justify-content: center;
             padding: 0rem 1rem;
             padding-bottom: 1rem;
+            @include desktop {
+                padding-right: 18rem;
+                padding-left: 8rem;
+    
+            }
         }
         &-textarea{
             letter-spacing: 0.03rem;
             line-height: 1.3rem;
+            
         }
     }
-    &__footer{
-        display: flex;
-        justify-content: center;
-        padding: 2rem 0rem;
+
+
+    
+    footer{
+        margin-top: 10rem;
+        margin-bottom: 1rem;
     }
     &__button{
         @include button;

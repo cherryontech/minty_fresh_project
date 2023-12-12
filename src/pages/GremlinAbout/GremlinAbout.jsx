@@ -50,12 +50,12 @@ const GremlinAbout = () => {
                 <h2 className="gremlin-yourself">How does the gremlin help?</h2>
                 <br/>
                 <h2>
-                    <img src={iconEmpower} alt=""/>
+                    <img className="icon-empower" src={iconEmpower} alt=""/>
                     Better self-reflection
                 </h2>
                 <p>Your Gremlin helps you see your insecurities outside of yourself so you can reflect on them from a different perspective</p>
                 <h2>
-                <img src={iconExternal} alt=""></img>Empowerment</h2>
+                <img className="icon-external" src={iconExternal} alt=""></img>Empowerment</h2>
                 <p>Externalizing your challenges helps you see them more clearly, making it easier to work on your confidence as you go through your career journey</p>
             </div>
         </div>
