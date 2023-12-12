@@ -5,8 +5,7 @@ import nameTag from '../../assets/desktop/2_illustration_name.png';
 
 
 /*TODO:
-    -add in the dropdown passing information to the profile page
-    -setup the email to pass to SendEmail
+
     -fix all values and handleChanges
 */
 const PersonaName = ({user, setUser}) => {
@@ -64,8 +63,9 @@ const PersonaName = ({user, setUser}) => {
 
                     <form className="persona__form">
                         <label className="persona__form-content">
-                            What's your name? 
+                            <p className='persona__form-instructions'>What's your name?</p>
                             <input 
+                                className='persona__form-instructions-example'
                                 type="text"
                                 required
                                 name="name" 
@@ -74,8 +74,9 @@ const PersonaName = ({user, setUser}) => {
                             />
                         </label>
                         <label className="persona__form-content">
-                            What are your pronouns?
+                        <p className='persona__form-instructions'>What are your pronouns?</p>
                             <input 
+                                className='persona__form-instructions-example'
                                 type="text"
                                 required
                                 name="pronouns" 
@@ -84,8 +85,9 @@ const PersonaName = ({user, setUser}) => {
                             />
                         </label>
                         <label className="persona__form-content">
-                            What's your email address?
+                        <p className='persona__form-instructions'>What's your email address?</p>
                             <input 
+                                    className='persona__form-instructions-example'
                                     type="email"
                                     required
                                     name="email" 
@@ -94,7 +96,7 @@ const PersonaName = ({user, setUser}) => {
                                 />
                         </label>
                         <label className="persona__form-content">
-                            What job or role are you hoping to land?
+                            <p className='persona__form-instructions'>What job or role are you hoping to land?</p>
 
                             <select className="persona__form-dropdown"
                             name="role"
@@ -116,7 +118,7 @@ const PersonaName = ({user, setUser}) => {
                         </label>
 
                         <label className="persona__form-content"> 
-                            <p>What are the top 3 industries you see yourself working in?</p>
+                            <p className='persona__form-instructions'>What are the top 3 industries you see yourself working in?</p>
                             <select className="persona__form-dropdown" 
                             name="industry1" 
                             onChange={handleChange}>
@@ -167,12 +169,16 @@ const PersonaName = ({user, setUser}) => {
                 </div>
                 <img  className="name-tag" src={nameTag} alt=""/>
             </div>
-            <button className="button__next" type='button' 
-                onClick={(e) => {
-                    e.preventDefault();
-                    navigate('/strengths');
-                }}>Next
-            </button>
+
+            <footer>
+
+                <button className="button__next" type='button' 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/strengths');
+                    }}>Next
+                </button>
+            </footer>
         </div>
     )
 }

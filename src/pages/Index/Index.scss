@@ -32,9 +32,24 @@
         padding: 0rem 1rem;
 
     }
+    &__intro-container {
+        display: flex;
+        flex-direction: column;
+        
+        @include desktop {
+
+            margin-left: 15rem;
+        }
+    }
     &__step {
     display: flex;
     flex-direction: column;
+
+    
+    @include desktop {
+        margin-left: 20rem;
+    }
+
     }
     &__box {
         display: flex;
@@ -42,6 +57,7 @@
         align-items: center;
         padding: 0rem .5rem;
         margin: 0.5rem 0rem;
+
     }
     &__image {
         height: 4rem;
@@ -69,6 +85,6 @@
         padding: 1rem 0rem;
     }
     &__button-next{
-        @include button;
+        @include congrats_button;
     }
 }

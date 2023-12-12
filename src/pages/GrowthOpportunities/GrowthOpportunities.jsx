@@ -105,11 +105,15 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                         <h1 className="growth__title">Let's explore your opportunites for growth</h1>
                     <form className="growth__form">
                             <label className="growth__question">
-                                <p>
+                                <div className='growth__form-instructions'>
+
+                                <p className='growth__form-instructions-a'>
                                     How does your impostor syndrome show up?
                                 </p>
-                                <h6>IF YOU HAVE MORE THAN ONE RESPONE, PLEASE SEPARATE WITH COMMAS</h6>
+                                <h6 className='growth__form-instructions-b'>IF YOU HAVE MORE THAN ONE RESPONE, PLEASE SEPARATE WITH COMMAS</h6>
+                                </div>
                                 <textarea 
+                                    className='strengths__form-instructions-example'
                                     type="text"
                                     // required
                                     name="impostorSymptom"
@@ -118,19 +122,22 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                 />
                             </label>
                             <label className="growth__question">
-                            What are some things you're working to improve on?<br/>
-                            <h6>PLEASE LIMIT YOUR RESPONSE TO 5 GROWTH AREAS</h6>
+                            <div className='growth__form-instructions'>
+                                <p className='growth__form-instructions-a'>What are some things you're working to improve on?
+                                </p>
+                                <h6 className='growth__form-instructions-b'>PLEASE LIMIT YOUR RESPONSE TO 5 GROWTH AREAS</h6>
+                            </div>
                                 <div className="skills-component">
                                     <div className="skills-label">
                                         <label className="text-label"
                                         // for='skills'
                                         >
-                                            Growth Area
+                                            GROWTH AREA
                                         </label>
                                         <label className="dropdown-label"
                                         // for="level"
                                         >
-                                            Skills Level
+                                            SKILLS LEVEL
                                         </label>
                                     </div>
                         
@@ -172,7 +179,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                         
                                     </div>
                                     {growth.skillSet.length > 1 && (
-                                        <button type="button" className=".button__delete">
+                                        <button type="button" className="button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
@@ -183,7 +190,7 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                     
                                     {growth.skillSet.length - 1 === index && growth.skillSet.length < 5 && (
                                         <div className="add-row">
-                                            <button type="button" className=".button__add-row"
+                                            <button type="button" className="button__add-row"
                                             onClick={handleSkillsAdd}>+ Add Row</button>
                                         </div>
                                         )}
@@ -192,9 +199,14 @@ const GrowthOpportunites = ({growth, setGrowth}) => {
                                 </div>
                             </label>
                             <label className="growth__question">
-                                <p>What feelings arise when your gremlin starts getting to you?</p>
-                                <h6>PLEASE LIMIT YOUR RESPONSE TO 5 FEELINGS</h6>
+                                <div className='growth__form-instructions'>
+
+                                    <p className='growth__form-instructions-a'>What feelings arise when your gremlin starts getting to you?</p>
+                                    <h6 className='growth__form-instructions-b'>PLEASE LIMIT YOUR RESPONSE TO 5 FEELINGS</h6>
+                                </div>
+                                
                                 <textarea 
+                                    className='strengths__form-instructions-example'
                                     type="text"
                                     // required
                                     name="whyThisRole"

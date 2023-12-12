@@ -2,6 +2,7 @@ import './Strengths.scss';
 // import Header from '../../components/Header/Header';
 import deleteIcon from '../../assets/icons/delete-icon.png';
 import { useNavigate } from 'react-router-dom';
+import desktopImage from '../../assets/desktop/3_illustration_ss.png';
 
 
 // So here in the {} I am bringing in where I will store the input form informaiton
@@ -126,14 +127,21 @@ const Strengths = ({strengths, setStrengths}) => {
                     </div>
                 </div>
             </div>
+            
+
+        
             <h2 className="strengths__title">Let's highlight your strengths & skills</h2>
             <form className="strengths__form">
-                        <label>
-                            <div className='accomplishments__instructions'>
+        <div className='with-image'>
+            <div className='input-only'>
+
+            
+                        <label className='strengths__form-content'>
+                            <div className='strengths__instructions'>
                                 <p className="strengths__form-instructions-a">What's your most common compliment? </p>
                                 <h6 className='strengths__form-instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</h6>
                             </div>
-                            <div className='accomplishments__form-input'>
+                            <div className='strengths__form-input'>
                                 <textarea className='strengths__form-instructions-example'
                                     type="text"
                                     required
@@ -141,20 +149,19 @@ const Strengths = ({strengths, setStrengths}) => {
                                     placeholder="Ex. I usually get compliments about my graphic illustrations, I'm 
                                     an effective communicator, I'm good at teaching beginners."
                                     onChange={handleChange}
-                                />
+                                    />
                             </div>
                         </label>
             <label className="strengths__form-content">
-                What tools or methodologies are you most comfortable working with?
-                <br/>
-                <h6>PLEASE LIMIT YOUR RESPONSE TO 5 TOOLS</h6>
+                <p className="strengths__form-instructions-a">What tools or methodologies are you most comfortable working with?</p>
+                <h6 className='strengths__form-instructions-b'>PLEASE LIMIT YOUR RESPONSE TO 5 TOOLS</h6>
                     <div className="tools-component">
                         <div className="tools-label">
                             <label className="text-label">
-                                Tool/Methodology
+                                TOOL/METHODOLOGY
                             </label>
                             <label className="dropdown-label">
-                                Skills Level
+                                SKILLS
                             </label>
                         </div>
                         
@@ -192,7 +199,7 @@ const Strengths = ({strengths, setStrengths}) => {
                         
                                     </div>
                                     {strengths.tools.length > 1 && (
-                                        <button type="button" className=".button__delete">
+                                        <button type="button" className="button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
@@ -203,7 +210,7 @@ const Strengths = ({strengths, setStrengths}) => {
                     
                                 {strengths.tools.length - 1 === index && strengths.tools.length < 5 && (
                                     <div className="add-row">
-                                        <button type="button" className=".button__add-row"
+                                        <button type="button" className="button__add-row"
                                         onClick={handleToolsAdd}>+ Add Row</button>
                                     </div>
                                 )}
@@ -212,16 +219,15 @@ const Strengths = ({strengths, setStrengths}) => {
                 </div>
             </label>
              <label className="strengths__form-content">
-                What intrapersonal skills do you have that can be applied to any role?
-                <br/>
-                <h6>PLEASE LIMIT YOUR RESPONSE TO 5 SKILLS</h6>
+                <p className="strengths__form-instructions-a">What intrapersonal skills do you have that can be applied to any role?</p>
+                <h6 className="strengths__form-instructions-b">PLEASE LIMIT YOUR RESPONSE TO 5 SKILLS</h6>
                     <div className="skills-component">
                         <div className="skills-label">
                             <label className="text-label">
-                                Skill
+                                SKILL
                             </label>
                             <label className="dropdown-label">
-                                Skills Level
+                                SKILLS LEVEL
                             </label>
                         </div>
                         
@@ -235,7 +241,7 @@ const Strengths = ({strengths, setStrengths}) => {
                                         className='text_input'
                                         name='skills'
                                         // id='skills'
-                                        placeholder='Ex. JIRA'
+                                        placeholder='Ex. Presentations'
                                         onChange={(e) => handleSkillsChange(e, index)}
                                         ></input>
                                         <select className="dropdown"
@@ -259,7 +265,7 @@ const Strengths = ({strengths, setStrengths}) => {
                         
                                     </div>
                                     {strengths.softSkills.length > 1 && (
-                                        <button type="button" className=".button__delete">
+                                        <button type="button" className="button__delete">
                                             <img className='delete-icon' 
                                             src={deleteIcon} 
                                             alt='Delete'
@@ -270,14 +276,17 @@ const Strengths = ({strengths, setStrengths}) => {
                     
                                 {strengths.softSkills.length - 1 === index && strengths.softSkills.length < 5 && (
                                     <div className="add-row">
-                                        <button type="button" className=".button__add-row"
+                                        <button type="button" className="button__add-row"
                                         onClick={handleSkillsAdd}>+ Add Row</button>
                                     </div>
                                 )}
                         </div>
                     ))}               
                 </div>
-            </label>        
+            </label>  
+            </div>
+            <img className='desktop-image' src={desktopImage} alt=''/>      
+        </div>            
                     <footer>
                         <button 
                             className="button__next" 

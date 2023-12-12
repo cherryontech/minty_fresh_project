@@ -20,8 +20,10 @@ const Index = () => {
                 <image src='../../assets/icons/icon.png'></image>
             </button>
         </div>
+        <div className='index__intro-container'>
             <h2 className='index__title'> Impostor syndrome tethering you down? </h2>
             <p className='index__intro'> Here are Untether's steps for building your confidence:</p>
+        </div>
             <div className='index__step'> 
                 <div className='index__box'>
                     <div>
@@ -104,6 +106,8 @@ const Index = () => {
                 </div>
             </div>
             <div className='index__button-container'>
+                <footer>
+
                 <button 
                     className="index__button-next" 
                     onClick={(e) => {
@@ -112,6 +116,7 @@ const Index = () => {
                     }}
                     > Build my confidence
                 </button>
+                    </footer>
             </div>
         </div>
     )

@@ -45,17 +45,17 @@ const Homepage = () => {
                 <h2 className="untether-yourself">How Untether boosts your confidence</h2>
                 <h2>
                     <br/>
-                    <img src={iconEmpower} alt=""/>
+                    <img className="icon-empower" src={iconEmpower} alt=""/>
                     Unleash your best self
     
                 </h2>
                 <p>We help you brainstorm about your best qualities to create a personal profile</p>
                 <h2>
-                <img src={iconExternal} alt=""/>
+                <img className="icon-external" src={iconExternal} alt=""/>
                     Externalize your imposter</h2>
                 <p>We enable you to personify your insecurities into a gremlin you can tame</p>
                 <h2>
-                    <img src={build} alt=""/>
+                    <img className="icon-build" src={build} alt=""/>
                     Gear up for job interviews</h2>
                 <p>We create personalized interview answers as you shape your profile and gremlin</p>
             </div>

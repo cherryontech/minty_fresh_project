@@ -1,5 +1,6 @@
 import './PastAcc.scss';
 import { useNavigate } from "react-router-dom";
+import desktopImage from '../../assets/desktop/4_illustration_past.png';
 
 const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
 
@@ -48,42 +49,50 @@ const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
                     </div>
                 </div>
             </div>
-            <h1 className='accomplishments__title'>Let's talk about your past & accomplishments</h1>
-            <form className='accomplishments__form'>
-                <label>
-                <div className='accomplishments__instructions'>
-                    <p className='accomplishments__instructions-a'> How will you use the skills you previously listed in the role you're pursuing?</p>
-                    <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
+            
+            
+            <div className='accomplishments__with-image'>
+                <div className='accomplishments__inputs-only'>
+
+                    <h1 className='accomplishments__title'>Let's talk about your past & accomplishments</h1>
+                    <form className='accomplishments__form'>
+                        <label>
+                        <div className='accomplishments__instructions'>
+                            <p className='accomplishments__instructions-a'> How will you use the skills you previously listed in the role you're pursuing?</p>
+                            <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
+                        </div>
+                        <div className='accomplishments__form-input'>
+                            <textarea className='accomplishments__form-textarea'
+                                type="text"
+                                required
+                                name='accomplishments'
+                                placeholder='Ex. I will use my Adobe suite skills to design pixel-perfect game graphics, I will use my communication skills to effectively
+                                collaborate with the game development team, I will use my presentation skills to discuss my work during art reviews and pitch 
+                                ideas during meetings.'
+                                onChange={handleChange}
+                                />
+                        </div>
+                        </label>
+                        <label>
+                        <div className='accomplishments__instructions'>
+                            <p className='accomplishments__instructions-a'> Share moments in your career when you felt most proud of yourself?</p>
+                            <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
+                        </div>
+                        <div className='accomplishments__form-input'>
+                            <textarea className='accomplishments__form-textarea'
+                                type="text"
+                                required
+                                name='accomplishments'
+                                placeholder='Ex. I was offered a teaching opportunity after an art exhibition, I helped a student build a portfolio that landed them a job.'
+                                onChange={handleChange}
+                                />
+                        </div>
+                        </label>
+                    </form>
                 </div>
-                <div className='accomplishments__form-input'>
-                    <textarea className='accomplishments__form-textarea'
-                        type="text"
-                        required
-                        name='accomplishments'
-                        placeholder='Ex. I will use my Adobe suite skills to design pixel-perfect game graphics, I will use my communication skills to effectively
-                        collaborate with the game development team, I will use my presentation skills to discuss my work during art reviews and pitch 
-                        ideas during meetings.'
-                        onChange={handleChange}
-                    />
-                </div>
-                </label>
-                <label>
-                <div className='accomplishments__instructions'>
-                    <p className='accomplishments__instructions-a'> Share moments in your career when you felt most proud of yourself?</p>
-                    <p className='accomplishments__instructions-b'> IF YOU HAVE MORE THAN ONE RESPONSE, PLEASE SEPARATE THEM WITH COMMAS.</p>
-                </div>
-                <div className='accomplishments__form-input'>
-                    <textarea className='accomplishments__form-textarea'
-                        type="text"
-                        required
-                        name='accomplishments'
-                        placeholder='Ex. I was offered a teaching opportunity after an art exhibition, I helped a student build a portfolio that landed them a job.'
-                        onChange={handleChange}
-                    />
-                </div>
-                </label>
-            </form>
-            <div className='accomplishments__footer' >
+                <img className='desktop-image' src={desktopImage} alt=''/>
+            </div>
+            <footer>
                 <button 
                     className='accomplishments__button' 
                     type='button' 
@@ -93,7 +102,7 @@ const PastAccomplishments = ({accomplishments, setAccomplishments}) => {
                     }}
                 > Next
                 </button>
-            </div>
+            </footer>
         </div>
     )
 }
